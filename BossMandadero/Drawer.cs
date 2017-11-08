@@ -10,6 +10,8 @@ using static Android.Widget.AdapterView;
 using Android.Content;
 using BossMandadero.Activities;
 using Android.Graphics;
+using Android.Support.Design.Widget;
+using CoreLogic;
 
 namespace BossMandadero
 {
@@ -45,8 +47,12 @@ namespace BossMandadero
 
             arrayList = new List<DrawerElement>();
 
-            arrayList.Add(new DrawerElement("Status", DrawerPosition.Status));
+            arrayList.Add(new DrawerElement("Mandados Pendientes", DrawerPosition.PendingOrders));
             arrayList.Add(new DrawerElement("Perfil", DrawerPosition.Perfil));
+
+
+            TextView name = activity.FindViewById<TextView>(Resource.Id.tv_drawer_name);
+            name.Text = User.Usuario.Nombre;
 
             DrawerAdapter adapter = new DrawerAdapter(arrayList, activity);
             drawer.Adapter = adapter;
@@ -65,8 +71,8 @@ namespace BossMandadero
                     nextActivity = new Intent(activity, typeof(ProfileActivity));
                     activity.StartActivity(nextActivity);
                     break;
-                case DrawerPosition.Status:
-                    nextActivity = new Intent(activity, typeof(WelcomeActivity));
+                case DrawerPosition.PendingOrders:
+                    nextActivity = new Intent(activity, typeof(PendingOrdersActivity));
                     activity.StartActivity(nextActivity);
                     break;
             }

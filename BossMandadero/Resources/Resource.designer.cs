@@ -26,6 +26,8 @@ namespace BossMandadero
 		
 		public static void UpdateIdValues()
 		{
+			global::Common.Resource.String.library_name = global::BossMandadero.Resource.String.library_name;
+			global::CoreLogic.Resource.String.library_name = global::BossMandadero.Resource.String.library_name;
 			global::CoreLogic.Resource.String.title_activity_webview = global::BossMandadero.Resource.String.title_activity_webview;
 		}
 		
@@ -2108,26 +2110,26 @@ namespace BossMandadero
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f02006e
-			public const int avd_hide_password_1 = 2130837614;
+			// aapt resource value: 0x7f020071
+			public const int avd_hide_password_1 = 2130837617;
 			
-			// aapt resource value: 0x7f02006f
-			public const int avd_hide_password_2 = 2130837615;
+			// aapt resource value: 0x7f020072
+			public const int avd_hide_password_2 = 2130837618;
 			
-			// aapt resource value: 0x7f020070
-			public const int avd_hide_password_3 = 2130837616;
+			// aapt resource value: 0x7f020073
+			public const int avd_hide_password_3 = 2130837619;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020071
-			public const int avd_show_password_1 = 2130837617;
+			// aapt resource value: 0x7f020074
+			public const int avd_show_password_1 = 2130837620;
 			
-			// aapt resource value: 0x7f020072
-			public const int avd_show_password_2 = 2130837618;
+			// aapt resource value: 0x7f020075
+			public const int avd_show_password_2 = 2130837621;
 			
-			// aapt resource value: 0x7f020073
-			public const int avd_show_password_3 = 2130837619;
+			// aapt resource value: 0x7f020076
+			public const int avd_show_password_3 = 2130837622;
 			
 			// aapt resource value: 0x7f020055
 			public const int Boton_VerMas = 2130837589;
@@ -2163,46 +2165,55 @@ namespace BossMandadero
 			public const int Gmail = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int Loading = 2130837600;
+			public const int Icono_Chat = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int navigation_empty_icon = 2130837601;
+			public const int Loading = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int notification_action_background = 2130837602;
+			public const int Logo_Inicio = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int notification_bg = 2130837603;
+			public const int Moto_Menu = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int notification_bg_low = 2130837604;
+			public const int navigation_empty_icon = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int notification_bg_low_normal = 2130837605;
+			public const int notification_action_background = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int notification_bg_low_pressed = 2130837606;
+			public const int notification_bg = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int notification_bg_normal = 2130837607;
+			public const int notification_bg_low = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int notification_bg_normal_pressed = 2130837608;
+			public const int notification_bg_low_normal = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int notification_icon_background = 2130837609;
-			
-			// aapt resource value: 0x7f02006c
-			public const int notification_template_icon_bg = 2130837612;
-			
-			// aapt resource value: 0x7f02006d
-			public const int notification_template_icon_low_bg = 2130837613;
+			public const int notification_bg_low_pressed = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int notification_tile_bg = 2130837610;
+			public const int notification_bg_normal = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int notify_panel_notification_icon_bg = 2130837611;
+			public const int notification_bg_normal_pressed = 2130837611;
+			
+			// aapt resource value: 0x7f02006c
+			public const int notification_icon_background = 2130837612;
+			
+			// aapt resource value: 0x7f02006f
+			public const int notification_template_icon_bg = 2130837615;
+			
+			// aapt resource value: 0x7f020070
+			public const int notification_template_icon_low_bg = 2130837616;
+			
+			// aapt resource value: 0x7f02006d
+			public const int notification_tile_bg = 2130837613;
+			
+			// aapt resource value: 0x7f02006e
+			public const int notify_panel_notification_icon_bg = 2130837614;
 			
 			static Drawable()
 			{
@@ -2217,11 +2228,14 @@ namespace BossMandadero
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080085
-			public const int VerticalLayout = 2131230853;
+			// aapt resource value: 0x7f0800ab
+			public const int OrdersListView = 2131230891;
 			
-			// aapt resource value: 0x7f08008f
-			public const int action0 = 2131230863;
+			// aapt resource value: 0x7f080089
+			public const int VerticalLayout = 2131230857;
+			
+			// aapt resource value: 0x7f080091
+			public const int action0 = 2131230865;
 			
 			// aapt resource value: 0x7f080064
 			public const int action_bar = 2131230820;
@@ -2244,17 +2258,17 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080041
 			public const int action_bar_title = 2131230785;
 			
-			// aapt resource value: 0x7f08008c
-			public const int action_container = 2131230860;
+			// aapt resource value: 0x7f08008e
+			public const int action_container = 2131230862;
 			
 			// aapt resource value: 0x7f080065
 			public const int action_context_bar = 2131230821;
 			
-			// aapt resource value: 0x7f080093
-			public const int action_divider = 2131230867;
+			// aapt resource value: 0x7f080095
+			public const int action_divider = 2131230869;
 			
-			// aapt resource value: 0x7f08008d
-			public const int action_image = 2131230861;
+			// aapt resource value: 0x7f08008f
+			public const int action_image = 2131230863;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -2271,11 +2285,11 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080043
 			public const int action_mode_close_button = 2131230787;
 			
-			// aapt resource value: 0x7f08008e
-			public const int action_text = 2131230862;
+			// aapt resource value: 0x7f080090
+			public const int action_text = 2131230864;
 			
-			// aapt resource value: 0x7f08009c
-			public const int actions = 2131230876;
+			// aapt resource value: 0x7f08009e
+			public const int actions = 2131230878;
 			
 			// aapt resource value: 0x7f080044
 			public const int activity_chooser_view_content = 2131230788;
@@ -2301,17 +2315,20 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080028
 			public const int bottom = 2131230760;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int btn_Continue = 2131230892;
+			// aapt resource value: 0x7f0800b2
+			public const int btn_Continue = 2131230898;
 			
-			// aapt resource value: 0x7f08008a
-			public const int btn_Register = 2131230858;
+			// aapt resource value: 0x7f0800a7
+			public const int btn_Posicion = 2131230887;
+			
+			// aapt resource value: 0x7f08008c
+			public const int btn_Register = 2131230860;
 			
 			// aapt resource value: 0x7f08004b
 			public const int buttonPanel = 2131230795;
 			
-			// aapt resource value: 0x7f080090
-			public const int cancel_action = 2131230864;
+			// aapt resource value: 0x7f080092
+			public const int cancel_action = 2131230866;
 			
 			// aapt resource value: 0x7f080030
 			public const int center = 2131230768;
@@ -2325,8 +2342,8 @@ namespace BossMandadero
 			// aapt resource value: 0x7f08005b
 			public const int checkbox = 2131230811;
 			
-			// aapt resource value: 0x7f080098
-			public const int chronometer = 2131230872;
+			// aapt resource value: 0x7f08009a
+			public const int chronometer = 2131230874;
 			
 			// aapt resource value: 0x7f080039
 			public const int clip_horizontal = 2131230777;
@@ -2379,14 +2396,14 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080081
 			public const int drawer = 2131230849;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int drawer_layout = 2131230884;
+			// aapt resource value: 0x7f0800a9
+			public const int drawer_layout = 2131230889;
 			
 			// aapt resource value: 0x7f080082
 			public const int drawer_txt = 2131230850;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int editText1 = 2131230888;
+			// aapt resource value: 0x7f0800ae
+			public const int editText1 = 2131230894;
 			
 			// aapt resource value: 0x7f080066
 			public const int edit_query = 2131230822;
@@ -2394,8 +2411,8 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080021
 			public const int end = 2131230753;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int end_padder = 2131230882;
+			// aapt resource value: 0x7f0800a4
+			public const int end_padder = 2131230884;
 			
 			// aapt resource value: 0x7f08002a
 			public const int enterAlways = 2131230762;
@@ -2433,8 +2450,8 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080049
 			public const int icon = 2131230793;
 			
-			// aapt resource value: 0x7f08009d
-			public const int icon_group = 2131230877;
+			// aapt resource value: 0x7f08009f
+			public const int icon_group = 2131230879;
 			
 			// aapt resource value: 0x7f080025
 			public const int ifRoom = 2131230757;
@@ -2442,11 +2459,11 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080046
 			public const int image = 2131230790;
 			
-			// aapt resource value: 0x7f080087
-			public const int imageView1 = 2131230855;
+			// aapt resource value: 0x7f080086
+			public const int imageView1 = 2131230854;
 			
-			// aapt resource value: 0x7f080099
-			public const int info = 2131230873;
+			// aapt resource value: 0x7f08009b
+			public const int info = 2131230875;
 			
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
@@ -2457,17 +2474,17 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080034
 			public const int left = 2131230772;
 			
-			// aapt resource value: 0x7f080084
-			public const int leftMargin = 2131230852;
-			
-			// aapt resource value: 0x7f08009e
-			public const int line1 = 2131230878;
+			// aapt resource value: 0x7f080088
+			public const int leftMargin = 2131230856;
 			
 			// aapt resource value: 0x7f0800a0
-			public const int line3 = 2131230880;
+			public const int line1 = 2131230880;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int linearLayout1 = 2131230885;
+			// aapt resource value: 0x7f0800a2
+			public const int line3 = 2131230882;
+			
+			// aapt resource value: 0x7f080083
+			public const int linearLayout1 = 2131230851;
 			
 			// aapt resource value: 0x7f08000f
 			public const int listMode = 2131230735;
@@ -2475,11 +2492,11 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080048
 			public const int list_item = 2131230792;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int masked = 2131230894;
+			// aapt resource value: 0x7f0800b4
+			public const int masked = 2131230900;
 			
-			// aapt resource value: 0x7f080092
-			public const int media_actions = 2131230866;
+			// aapt resource value: 0x7f080094
+			public const int media_actions = 2131230868;
 			
 			// aapt resource value: 0x7f080022
 			public const int middle = 2131230754;
@@ -2490,17 +2507,17 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080019
 			public const int multiply = 2131230745;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int nav_discussion = 2131230898;
+			// aapt resource value: 0x7f0800b8
+			public const int nav_discussion = 2131230904;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int nav_friends = 2131230897;
+			// aapt resource value: 0x7f0800b7
+			public const int nav_friends = 2131230903;
 			
-			// aapt resource value: 0x7f0800af
-			public const int nav_home = 2131230895;
+			// aapt resource value: 0x7f0800b5
+			public const int nav_home = 2131230901;
 			
-			// aapt resource value: 0x7f0800b0
-			public const int nav_messages = 2131230896;
+			// aapt resource value: 0x7f0800b6
+			public const int nav_messages = 2131230902;
 			
 			// aapt resource value: 0x7f08007b
 			public const int navigation_header_container = 2131230843;
@@ -2514,20 +2531,23 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080010
 			public const int normal = 2131230736;
 			
-			// aapt resource value: 0x7f08009b
-			public const int notification_background = 2131230875;
+			// aapt resource value: 0x7f08009d
+			public const int notification_background = 2131230877;
 			
-			// aapt resource value: 0x7f080095
-			public const int notification_main_column = 2131230869;
+			// aapt resource value: 0x7f080097
+			public const int notification_main_column = 2131230871;
 			
-			// aapt resource value: 0x7f080094
-			public const int notification_main_column_container = 2131230868;
+			// aapt resource value: 0x7f080096
+			public const int notification_main_column_container = 2131230870;
 			
 			// aapt resource value: 0x7f080037
 			public const int parallax = 2131230775;
 			
 			// aapt resource value: 0x7f08004d
 			public const int parentPanel = 2131230797;
+			
+			// aapt resource value: 0x7f0800aa
+			public const int pending_title = 2131230890;
 			
 			// aapt resource value: 0x7f080038
 			public const int pin = 2131230776;
@@ -2544,14 +2564,14 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080035
 			public const int right = 2131230773;
 			
-			// aapt resource value: 0x7f08008b
-			public const int rightMargin = 2131230859;
+			// aapt resource value: 0x7f08008d
+			public const int rightMargin = 2131230861;
 			
-			// aapt resource value: 0x7f08009a
-			public const int right_icon = 2131230874;
+			// aapt resource value: 0x7f08009c
+			public const int right_icon = 2131230876;
 			
-			// aapt resource value: 0x7f080096
-			public const int right_side = 2131230870;
+			// aapt resource value: 0x7f080098
+			public const int right_side = 2131230872;
 			
 			// aapt resource value: 0x7f08001a
 			public const int screen = 2131230746;
@@ -2646,8 +2666,8 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080036
 			public const int start = 2131230774;
 			
-			// aapt resource value: 0x7f080091
-			public const int status_bar_latest_event_content = 2131230865;
+			// aapt resource value: 0x7f080093
+			public const int status_bar_latest_event_content = 2131230867;
 			
 			// aapt resource value: 0x7f08005e
 			public const int submenuarrow = 2131230814;
@@ -2658,11 +2678,11 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080011
 			public const int tabMode = 2131230737;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int text = 2131230881;
+			// aapt resource value: 0x7f0800a3
+			public const int text = 2131230883;
 			
-			// aapt resource value: 0x7f08009f
-			public const int text2 = 2131230879;
+			// aapt resource value: 0x7f0800a1
+			public const int text2 = 2131230881;
 			
 			// aapt resource value: 0x7f080052
 			public const int textSpacerNoButtons = 2131230802;
@@ -2670,17 +2690,17 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080051
 			public const int textSpacerNoTitle = 2131230801;
 			
-			// aapt resource value: 0x7f080086
-			public const int textView1 = 2131230854;
+			// aapt resource value: 0x7f080084
+			public const int textView1 = 2131230852;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int textView2 = 2131230889;
+			// aapt resource value: 0x7f0800af
+			public const int textView2 = 2131230895;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int textView4 = 2131230890;
+			// aapt resource value: 0x7f0800b0
+			public const int textView4 = 2131230896;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int textView5 = 2131230887;
+			// aapt resource value: 0x7f0800ad
+			public const int textView5 = 2131230893;
 			
 			// aapt resource value: 0x7f080080
 			public const int text_input_password_toggle = 2131230848;
@@ -2691,8 +2711,8 @@ namespace BossMandadero
 			// aapt resource value: 0x7f08000d
 			public const int textinput_error = 2131230733;
 			
-			// aapt resource value: 0x7f080097
-			public const int time = 2131230871;
+			// aapt resource value: 0x7f080099
+			public const int time = 2131230873;
 			
 			// aapt resource value: 0x7f08004a
 			public const int title = 2131230794;
@@ -2703,8 +2723,8 @@ namespace BossMandadero
 			// aapt resource value: 0x7f080057
 			public const int title_template = 2131230807;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int toolbar = 2131230883;
+			// aapt resource value: 0x7f0800a8
+			public const int toolbar = 2131230888;
 			
 			// aapt resource value: 0x7f080029
 			public const int top = 2131230761;
@@ -2721,17 +2741,26 @@ namespace BossMandadero
 			// aapt resource value: 0x7f08000b
 			public const int transition_scene_layoutid_cache = 2131230731;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int txt_Efectivo = 2131230891;
-			
-			// aapt resource value: 0x7f080088
-			public const int txt_Email = 2131230856;
+			// aapt resource value: 0x7f0800a5
+			public const int tv_Mandado = 2131230885;
 			
 			// aapt resource value: 0x7f0800a6
-			public const int txt_Name = 2131230886;
+			public const int tv_Referencia = 2131230886;
 			
-			// aapt resource value: 0x7f080089
-			public const int txt_Password = 2131230857;
+			// aapt resource value: 0x7f080085
+			public const int tv_drawer_name = 2131230853;
+			
+			// aapt resource value: 0x7f0800b1
+			public const int txt_Efectivo = 2131230897;
+			
+			// aapt resource value: 0x7f08008a
+			public const int txt_Email = 2131230858;
+			
+			// aapt resource value: 0x7f0800ac
+			public const int txt_Name = 2131230892;
+			
+			// aapt resource value: 0x7f08008b
+			public const int txt_Password = 2131230859;
 			
 			// aapt resource value: 0x7f080009
 			public const int up = 2131230729;
@@ -2742,11 +2771,11 @@ namespace BossMandadero
 			// aapt resource value: 0x7f08000e
 			public const int view_offset_helper = 2131230734;
 			
-			// aapt resource value: 0x7f0800ad
-			public const int visible = 2131230893;
+			// aapt resource value: 0x7f0800b3
+			public const int visible = 2131230899;
 			
-			// aapt resource value: 0x7f080083
-			public const int webLoadingIcon = 2131230851;
+			// aapt resource value: 0x7f080087
+			public const int webLoadingIcon = 2131230855;
 			
 			// aapt resource value: 0x7f080027
 			public const int withText = 2131230759;
@@ -2937,76 +2966,85 @@ namespace BossMandadero
 			public const int Drawer_item = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int Loading = 2130968619;
+			public const int DrawerHeader = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int LoginLayout = 2130968620;
+			public const int Loading = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int Main = 2130968621;
+			public const int LoginLayout = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int notification_action = 2130968622;
+			public const int Main = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_action_tombstone = 2130968623;
+			public const int notification_action = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_media_action = 2130968624;
+			public const int notification_action_tombstone = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_media_cancel_action = 2130968625;
+			public const int notification_media_action = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_big_media = 2130968626;
+			public const int notification_media_cancel_action = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_big_media_custom = 2130968627;
+			public const int notification_template_big_media = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_big_media_narrow = 2130968628;
+			public const int notification_template_big_media_custom = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_big_media_narrow_custom = 2130968629;
+			public const int notification_template_big_media_narrow = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_custom_big = 2130968630;
+			public const int notification_template_big_media_narrow_custom = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_icon_group = 2130968631;
+			public const int notification_template_custom_big = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_lines_media = 2130968632;
+			public const int notification_template_icon_group = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int notification_template_media = 2130968633;
+			public const int notification_template_lines_media = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int notification_template_media_custom = 2130968634;
+			public const int notification_template_media = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int notification_template_part_chronometer = 2130968635;
+			public const int notification_template_media_custom = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int notification_template_part_time = 2130968636;
+			public const int notification_template_part_chronometer = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int ProfileLayout = 2130968637;
+			public const int notification_template_part_time = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int select_dialog_item_material = 2130968638;
+			public const int PendingOrderItem = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int select_dialog_multichoice_material = 2130968639;
+			public const int PendingOrdersLayout = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int select_dialog_singlechoice_material = 2130968640;
+			public const int ProfileLayout = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int support_simple_spinner_dropdown_item = 2130968641;
+			public const int select_dialog_item_material = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int WelcomeLayout = 2130968642;
+			public const int select_dialog_multichoice_material = 2130968642;
+			
+			// aapt resource value: 0x7f040043
+			public const int select_dialog_singlechoice_material = 2130968643;
+			
+			// aapt resource value: 0x7f040044
+			public const int support_simple_spinner_dropdown_item = 2130968644;
+			
+			// aapt resource value: 0x7f040045
+			public const int WelcomeLayout = 2130968645;
 			
 			static Layout()
 			{
@@ -3146,14 +3184,14 @@ namespace BossMandadero
 			// aapt resource value: 0x7f090012
 			public const int abc_toolbar_collapse_description = 2131296274;
 			
-			// aapt resource value: 0x7f090029
-			public const int app_name = 2131296297;
+			// aapt resource value: 0x7f09002a
+			public const int app_name = 2131296298;
 			
 			// aapt resource value: 0x7f090021
 			public const int appbar_scrolling_view_behavior = 2131296289;
 			
-			// aapt resource value: 0x7f09002a
-			public const int azure_URL = 2131296298;
+			// aapt resource value: 0x7f09002b
+			public const int azure_URL = 2131296299;
 			
 			// aapt resource value: 0x7f090022
 			public const int bottom_sheet_behavior = 2131296290;
@@ -3161,20 +3199,23 @@ namespace BossMandadero
 			// aapt resource value: 0x7f090023
 			public const int character_counter_pattern = 2131296291;
 			
-			// aapt resource value: 0x7f09002c
-			public const int empty = 2131296300;
+			// aapt resource value: 0x7f09002d
+			public const int empty = 2131296301;
 			
-			// aapt resource value: 0x7f09002e
-			public const int login_email = 2131296302;
+			// aapt resource value: 0x7f090029
+			public const int library_name = 2131296297;
 			
 			// aapt resource value: 0x7f09002f
-			public const int login_password = 2131296303;
+			public const int login_email = 2131296303;
 			
 			// aapt resource value: 0x7f090030
-			public const int login_register = 2131296304;
+			public const int login_password = 2131296304;
 			
-			// aapt resource value: 0x7f09002d
-			public const int login_title = 2131296301;
+			// aapt resource value: 0x7f090031
+			public const int login_register = 2131296305;
+			
+			// aapt resource value: 0x7f09002e
+			public const int login_title = 2131296302;
 			
 			// aapt resource value: 0x7f090024
 			public const int password_toggle_content_description = 2131296292;
@@ -3191,32 +3232,47 @@ namespace BossMandadero
 			// aapt resource value: 0x7f090028
 			public const int path_password_strike_through = 2131296296;
 			
-			// aapt resource value: 0x7f09003b
-			public const int profile_address = 2131296315;
+			// aapt resource value: 0x7f090047
+			public const int pending_detail = 2131296327;
 			
-			// aapt resource value: 0x7f09003d
-			public const int profile_email = 2131296317;
+			// aapt resource value: 0x7f090045
+			public const int pending_mandado = 2131296325;
 			
-			// aapt resource value: 0x7f090039
-			public const int profile_hello = 2131296313;
+			// aapt resource value: 0x7f090044
+			public const int pending_position = 2131296324;
+			
+			// aapt resource value: 0x7f090046
+			public const int pending_reference = 2131296326;
+			
+			// aapt resource value: 0x7f090043
+			public const int pending_title = 2131296323;
 			
 			// aapt resource value: 0x7f09003c
-			public const int profile_noaddress = 2131296316;
+			public const int profile_address = 2131296316;
 			
 			// aapt resource value: 0x7f09003e
-			public const int profile_noemail = 2131296318;
+			public const int profile_email = 2131296318;
 			
 			// aapt resource value: 0x7f09003a
-			public const int profile_noname = 2131296314;
+			public const int profile_hello = 2131296314;
 			
-			// aapt resource value: 0x7f090040
-			public const int profile_noraiting = 2131296320;
-			
-			// aapt resource value: 0x7f090041
-			public const int profile_quantity = 2131296321;
+			// aapt resource value: 0x7f09003d
+			public const int profile_noaddress = 2131296317;
 			
 			// aapt resource value: 0x7f09003f
-			public const int profile_raiting = 2131296319;
+			public const int profile_noemail = 2131296319;
+			
+			// aapt resource value: 0x7f09003b
+			public const int profile_noname = 2131296315;
+			
+			// aapt resource value: 0x7f090041
+			public const int profile_noraiting = 2131296321;
+			
+			// aapt resource value: 0x7f090042
+			public const int profile_quantity = 2131296322;
+			
+			// aapt resource value: 0x7f090040
+			public const int profile_raiting = 2131296320;
 			
 			// aapt resource value: 0x7f090013
 			public const int search_menu_title = 2131296275;
@@ -3224,32 +3280,32 @@ namespace BossMandadero
 			// aapt resource value: 0x7f090014
 			public const int status_bar_notification_info_overflow = 2131296276;
 			
-			// aapt resource value: 0x7f09002b
-			public const int title_activity_webview = 2131296299;
-			
-			// aapt resource value: 0x7f090034
-			public const int welcome_active = 2131296308;
-			
-			// aapt resource value: 0x7f090038
-			public const int welcome_continue = 2131296312;
-			
-			// aapt resource value: 0x7f090031
-			public const int welcome_hello = 2131296305;
-			
-			// aapt resource value: 0x7f090037
-			public const int welcome_quantity = 2131296311;
-			
-			// aapt resource value: 0x7f090032
-			public const int welcome_start = 2131296306;
-			
-			// aapt resource value: 0x7f090033
-			public const int welcome_status = 2131296307;
+			// aapt resource value: 0x7f09002c
+			public const int title_activity_webview = 2131296300;
 			
 			// aapt resource value: 0x7f090035
-			public const int welcome_unactive = 2131296309;
+			public const int welcome_active = 2131296309;
+			
+			// aapt resource value: 0x7f090039
+			public const int welcome_continue = 2131296313;
+			
+			// aapt resource value: 0x7f090032
+			public const int welcome_hello = 2131296306;
+			
+			// aapt resource value: 0x7f090038
+			public const int welcome_quantity = 2131296312;
+			
+			// aapt resource value: 0x7f090033
+			public const int welcome_start = 2131296307;
+			
+			// aapt resource value: 0x7f090034
+			public const int welcome_status = 2131296308;
 			
 			// aapt resource value: 0x7f090036
-			public const int welcome_wallet = 2131296310;
+			public const int welcome_unactive = 2131296310;
+			
+			// aapt resource value: 0x7f090037
+			public const int welcome_wallet = 2131296311;
 			
 			static String()
 			{

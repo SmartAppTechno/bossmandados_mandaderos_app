@@ -98,6 +98,8 @@
     <Compile Include="Activities\ProfileActivity.cs" />
     <Compile Include="Drawer.cs" />
     <Compile Include="Adapters\DrawerAdapter.cs" />
+    <Compile Include="Activities\PendingOrdersActivity.cs" />
+    <Compile Include="Adapters\PendingOrderAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -128,6 +130,12 @@
     <AndroidResource Include="Resources\layout\Drawer_item.axml" />
     <AndroidResource Include="Resources\layout\Loading.axml" />
     <AndroidResource Include="Resources\drawable\Loading.gif" />
+    <AndroidResource Include="Resources\layout\PendingOrdersLayout.axml" />
+    <AndroidResource Include="Resources\layout\PendingOrderItem.axml" />
+    <AndroidResource Include="Resources\drawable\Icono_Chat.png" />
+    <AndroidResource Include="Resources\layout\DrawerHeader.axml" />
+    <AndroidResource Include="Resources\drawable\Moto_Menu.png" />
+    <AndroidResource Include="Resources\drawable\Logo_Inicio.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

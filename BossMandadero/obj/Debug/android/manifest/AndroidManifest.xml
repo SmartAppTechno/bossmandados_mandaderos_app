@@ -14,6 +14,7 @@
     <activity android:label="LoginActivity" android:theme="@style/MainTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.LoginActivity" />
     <activity android:label="WelcomeActivity" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.WelcomeActivity" />
     <activity android:label="ProfileActivity" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.ProfileActivity" />
+    <activity android:label="PendingOrdersActivity" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.PendingOrdersActivity" />
     <activity android:label="Web Authenticator" android:name="md581ea35436e69ff6296ba639950f061de.FormAuthenticatorActivity" />
     <activity android:label="Web Authenticator" android:name="md581ea35436e69ff6296ba639950f061de.WebAuthenticatorActivity" />
     <receiver android:name="md581ea35436e69ff6296ba639950f061de.CustomTabsActionsBroadcastReceiver" />

@@ -97,6 +97,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ActivityData\LoginData.cs" />
     <Compile Include="ActivityData\WelcomeData.cs" />
+    <Compile Include="ActivityData\PendingOrdersData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -35,4 +35,11 @@
 	<string name="profile_noraiting">Noraiting</string>
 	<string name="profile_quantity">Cantidad en Efectivo</string>
 
+	<!--PENDING ORDERS -->
+    <string name="pending_title">MANDADOS PENDIENTES</string>
+	<string name="pending_position">Ver Ruta</string>
+	<string name="pending_mandado">Mandado</string>
+	<string name="pending_reference">Referencia</string>
+	<string name="pending_detail">Detalle</string>
+
 </resources>
