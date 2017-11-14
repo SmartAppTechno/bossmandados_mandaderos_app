@@ -110,7 +110,11 @@ class MonoPackageManager_Resources {
 		"Common.dll",
 		"CoreLogic.dll",
 		"Glide.dll",
+		"PInvoke.BCrypt.dll",
+		"PInvoke.Kernel32.dll",
+		"PInvoke.Windows.Core.dll",
 		"Refractored.GifImageView.dll",
+		"Validation.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Annotations.dll",
 		"Xamarin.Android.Support.Compat.dll",
@@ -129,12 +133,8 @@ class MonoPackageManager_Resources {
 		"Microsoft.Azure.Mobile.Client.dll",
 		"Xamarin.Android.Support.CustomTabs.dll",
 		"PCLCrypto.dll",
-		"PInvoke.BCrypt.dll",
-		"PInvoke.Windows.Core.dll",
-		"PInvoke.Kernel32.dll",
-		"Validation.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_25";
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_26";
 }

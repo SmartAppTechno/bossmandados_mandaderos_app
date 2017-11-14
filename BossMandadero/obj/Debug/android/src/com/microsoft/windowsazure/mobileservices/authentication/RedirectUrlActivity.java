@@ -12,7 +12,7 @@ public class RedirectUrlActivity
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"";
-		mono.android.Runtime.register ("Microsoft.WindowsAzure.MobileServices.RedirectUrlActivity, Microsoft.Azure.Mobile.Client, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", RedirectUrlActivity.class, __md_methods);
+		mono.android.Runtime.register ("Microsoft.WindowsAzure.MobileServices.RedirectUrlActivity, Microsoft.Azure.Mobile.Client, Version=4.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", RedirectUrlActivity.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class RedirectUrlActivity
 	{
 		super ();
 		if (getClass () == RedirectUrlActivity.class)
-			mono.android.TypeManager.Activate ("Microsoft.WindowsAzure.MobileServices.RedirectUrlActivity, Microsoft.Azure.Mobile.Client, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Microsoft.WindowsAzure.MobileServices.RedirectUrlActivity, Microsoft.Azure.Mobile.Client, Version=4.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "", this, new java.lang.Object[] {  });
 	}
 
 
