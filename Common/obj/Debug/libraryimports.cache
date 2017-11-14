@@ -4,6 +4,7 @@
     <ManifestDocument>obj/Debug/__library_projects__/Refractored.GifImageView/library_project_imports/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Refractored.GifImageView/library_project_imports/aapt/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Refractored.GifImageView/library_project_imports/manifest/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Arch.Lifecycle.Runtime/library_project_imports/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Support.Compat/library_project_imports/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Support.Core.UI/library_project_imports/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Support.Core.Utils/library_project_imports/AndroidManifest.xml</ManifestDocument>
@@ -16,6 +17,9 @@
   <Jars>
     <Jar>obj/Debug/__library_projects__/Glide/library_project_imports/glide-full-4.1.1.jar</Jar>
     <Jar>obj/Debug/__library_projects__/Refractored.GifImageView/library_project_imports/bin/classes.jar</Jar>
+    <Jar>obj/Debug/__library_projects__/Xamarin.Android.Arch.Core.Common/library_project_imports/arch-core-common.jar</Jar>
+    <Jar>obj/Debug/__library_projects__/Xamarin.Android.Arch.Lifecycle.Common/library_project_imports/arch-lifecycle-common.jar</Jar>
+    <Jar>obj/Debug/__library_projects__/Xamarin.Android.Arch.Lifecycle.Runtime/library_project_imports/bin/classes.jar</Jar>
     <Jar>obj/Debug/__library_projects__/Xamarin.Android.Support.Annotations/library_project_imports/support-annotations.jar</Jar>
     <Jar>obj/Debug/__library_projects__/Xamarin.Android.Support.Compat/library_project_imports/bin/classes.jar</Jar>
     <Jar>obj/Debug/__library_projects__/Xamarin.Android.Support.Core.UI/library_project_imports/bin/classes.jar</Jar>

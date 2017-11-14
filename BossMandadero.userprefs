@@ -2,7 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.CoreLogic PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="BossMandadero/MapInvoker.cs">
     <Files>
-      <File FileName="BossMandadero/MapInvoker.cs" Line="1" Column="1" />
+      <File FileName="BossMandadero/MapInvoker.cs" Line="16" Column="2" />
+      <File FileName="../bossmandados_mandaderos_app_error/BossMandadero/MapInvoker.cs" Line="9" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

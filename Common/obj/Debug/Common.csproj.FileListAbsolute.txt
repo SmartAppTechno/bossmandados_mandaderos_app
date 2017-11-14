@@ -67,3 +67,6 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/res/values/strings.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/R.cs.flag
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/uploadflags.txt
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Arch.Core.Common.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Arch.Lifecycle.Common.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Arch.Lifecycle.Runtime.dll
