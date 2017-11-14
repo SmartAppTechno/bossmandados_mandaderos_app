@@ -211,3 +211,14 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/PInvoke.BCrypt.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Validation.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Validation.xml
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.GooglePlayServices.Base.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.GooglePlayServices.Basement.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.GooglePlayServices.Maps.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.GooglePlayServices.Tasks.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.Android.Arch.Core.Common.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.Android.Arch.Lifecycle.Common.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.Android.Arch.Lifecycle.Runtime.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Basement.dll.stamp
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Tasks.dll.stamp
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Base.dll.stamp
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Maps.dll.stamp
