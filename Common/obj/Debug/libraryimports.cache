@@ -3,6 +3,7 @@
   <ManifestDocuments>
     <ManifestDocument>obj/Debug/__library_projects__/Refractored.GifImageView/library_project_imports/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Refractored.GifImageView/library_project_imports/aapt/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/__library_projects__/Refractored.GifImageView/library_project_imports/manifest/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Support.Compat/library_project_imports/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Support.Core.UI/library_project_imports/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Support.Core.Utils/library_project_imports/AndroidManifest.xml</ManifestDocument>
