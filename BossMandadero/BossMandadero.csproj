@@ -135,6 +135,7 @@
     <Compile Include="Activities\PendingOrdersActivity.cs" />
     <Compile Include="Adapters\PendingOrderAdapter.cs" />
     <Compile Include="MapInvoker.cs" />
+    <Compile Include="Activities\ActiveOrderActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

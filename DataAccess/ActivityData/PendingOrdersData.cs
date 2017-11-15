@@ -20,7 +20,7 @@ namespace DataAccess.ActivityData
         }
 
 
-        public async Task<List<Manboss_mandado>> PendingOrders(int repartidorID)
+        public async Task<List<Manboss_mandado>> PendingOrders(int repartidorID, int estado)
         {
             List<Manboss_mandado> mandados = new List<Manboss_mandado>();
 
@@ -29,7 +29,7 @@ namespace DataAccess.ActivityData
                 Dictionary<string, string> param = new Dictionary<string, string>
                 {
                     { "RepartidorID", repartidorID.ToString() },
-                    { "Estado", "2" }
+                    { "Estado", estado.ToString() }
                 };
                 mandados = await client.InvokeApiAsync<List<Manboss_mandado>>("MandadosActivos", HttpMethod.Post, param);
 
@@ -55,6 +55,25 @@ namespace DataAccess.ActivityData
             catch(Exception e)
             {}
             return ruta;
+        }
+        public async Task<Manboss_mandado> ActiveOrder(int repartidorID, int estado)
+        {
+            Manboss_mandado mandado = null;
+
+            try
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>
+                {
+                    { "RepartidorID", repartidorID.ToString() },
+                    { "Estado", estado.ToString() }
+                };
+                var mandados = await client.InvokeApiAsync<List<Manboss_mandado>>("MandadosActivos", HttpMethod.Post, param);
+                mandado = mandados[0];
+            }
+            catch (Exception e)
+            {
+            }
+            return mandado;
         }
     }
 }

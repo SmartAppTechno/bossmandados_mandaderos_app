@@ -110,6 +110,6 @@ namespace BossMandadero
 
     public enum MapType
     {
-        Dialog, Embedder
+        Dialog, Embedded
     }
 }

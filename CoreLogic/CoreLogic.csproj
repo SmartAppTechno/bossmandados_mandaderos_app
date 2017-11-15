@@ -66,6 +66,7 @@
     <Compile Include="ActivityCore\WelcomeCore.cs" />
     <Compile Include="User.cs" />
     <Compile Include="ActivityCore\PendingOrdersCore.cs" />
+    <Compile Include="ActivityCore\ActiveOrderCore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

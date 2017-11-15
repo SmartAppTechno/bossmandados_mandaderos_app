@@ -26,7 +26,7 @@ namespace CoreLogic.ActivityCore
         public async Task<List<Manboss_mandado>> PendingOrders()
         {
             int repartidorID = User.Repartidor.Id;
-            return await data.PendingOrders(repartidorID);
+            return await data.PendingOrders(repartidorID,2);
         }
 
         public async Task<List<Manboss_mandados_ruta>> Route()
@@ -34,5 +34,6 @@ namespace CoreLogic.ActivityCore
             route = await data.Route(OrderID);
             return route;
         }
+
     }
 }

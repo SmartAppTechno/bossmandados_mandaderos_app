@@ -28,7 +28,6 @@ namespace BossMandadero.Activities
         private MapInvoker map;
         private ListView ordersListView;
         private PendingOrdersCore core;
-        private List<Manboss_mandado> orders;
 
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -48,12 +47,11 @@ namespace BossMandadero.Activities
         {
             ordersListView = FindViewById<ListView>(Resource.Id.OrdersListView);
             PendingOrders();
-            //SetMap();
         }
 
         private async void PendingOrders()
         {
-            orders = await core.PendingOrders();
+            List<Manboss_mandado> orders = await core.PendingOrders();
 
             PendingOrderAdapter adapter = new PendingOrderAdapter(this, orders, map);
             ordersListView.Adapter = adapter;

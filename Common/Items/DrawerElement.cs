@@ -20,6 +20,6 @@ namespace Common.Items
 
     public enum DrawerPosition
     {
-        PendingOrders, Perfil
+        PendingOrders, Perfil, ActiveOrder
     }
 }

@@ -43,4 +43,9 @@
 	<string name="pending_reference">Referencia</string>
 	<string name="pending_detail">Detalle</string>
 
+	<!-- ACTIVE ORDER -->
+	<string name="active_order">Mandado: </string>
+	<string name="active_reference">Referencia: </string>
+	<string name="active_pending">Lugares Pendientes</string>
+
 </resources>
