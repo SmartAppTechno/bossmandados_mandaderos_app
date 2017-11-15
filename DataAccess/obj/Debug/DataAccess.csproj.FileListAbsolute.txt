@@ -87,6 +87,9 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/PInvoke.NCrypt.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/PInvoke.Windows.Core.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Validation.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Xamarin.Android.Arch.Core.Common.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Xamarin.Android.Arch.Lifecycle.Common.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Xamarin.Android.Arch.Lifecycle.Runtime.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Xamarin.Android.Support.Annotations.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Xamarin.Android.Support.Compat.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Xamarin.Android.Support.Core.UI.dll
@@ -102,8 +105,8 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/PInvoke.BCrypt.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/PInvoke.NCrypt.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Newtonsoft.Json.xml
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Validation.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Microsoft.Azure.Mobile.Client.xml
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Validation.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/obj/Debug/DataAccess.csprojResolveAssemblyReference.cache
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/obj/Debug/DataAccess.csproj.CoreCompileInputs.cache
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/obj/Debug/DataAccess.dll
@@ -112,6 +115,3 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/obj/Debug/res/values/strings.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/obj/Debug/R.cs.flag
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/obj/Debug/uploadflags.txt
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Xamarin.Android.Arch.Core.Common.dll
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Xamarin.Android.Arch.Lifecycle.Common.dll
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/DataAccess/bin/Debug/Xamarin.Android.Arch.Lifecycle.Runtime.dll

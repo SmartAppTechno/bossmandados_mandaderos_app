@@ -1,9 +1,13 @@
 ﻿<Properties StartupConfiguration="{373C909B-858F-4AD0-B649-D7A9DCC7B7EA}|Default">
   <MonoDevelop.Ide.ItemProperties.CoreLogic PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BossMandadero/MapInvoker.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Common/DBItems/Manboss_mandado.cs">
     <Files>
-      <File FileName="BossMandadero/MapInvoker.cs" Line="16" Column="2" />
-      <File FileName="../bossmandados_mandaderos_app_error/BossMandadero/MapInvoker.cs" Line="9" Column="9" />
+      <File FileName="BossMandadero/MapInvoker.cs" Line="77" Column="10" />
+      <File FileName="BossMandadero/Resources/values/Strings.xml" Line="7" Column="81" />
+      <File FileName="BossMandadero/Activities/PendingOrdersActivity.cs" Line="102" Column="28" />
+      <File FileName="BossMandadero/Adapters/PendingOrderAdapter.cs" Line="61" Column="56" />
+      <File FileName="Common/DBItems/Manboss_mandados_ruta.cs" Line="1" Column="1" />
+      <File FileName="Common/DBItems/Manboss_mandado.cs" Line="39" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

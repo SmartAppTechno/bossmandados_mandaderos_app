@@ -6,10 +6,6 @@ BossMandadero.DrawerAdapter, BossMandadero;md5f0df50de2868be123f4a356284f07269.D
 BossMandadero.DrawerAdapter, BossMandadero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f0df50de2868be123f4a356284f07269.DrawerAdapter
 BossMandadero.DrawerAdapter;md5f0df50de2868be123f4a356284f07269.DrawerAdapter
 bossmandadero.DrawerAdapter;md5f0df50de2868be123f4a356284f07269.DrawerAdapter
-BossMandadero.MapInvoker, BossMandadero;md5f0df50de2868be123f4a356284f07269.MapInvoker
-BossMandadero.MapInvoker, BossMandadero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f0df50de2868be123f4a356284f07269.MapInvoker
-BossMandadero.MapInvoker;md5f0df50de2868be123f4a356284f07269.MapInvoker
-bossmandadero.MapInvoker;md5f0df50de2868be123f4a356284f07269.MapInvoker
 BossMandadero.Adapters.PendingOrderAdapter, BossMandadero;md5060c8067076e9f785c08fd7c00a8406c.PendingOrderAdapter
 BossMandadero.Adapters.PendingOrderAdapter, BossMandadero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5060c8067076e9f785c08fd7c00a8406c.PendingOrderAdapter
 BossMandadero.Adapters.PendingOrderAdapter;md5060c8067076e9f785c08fd7c00a8406c.PendingOrderAdapter

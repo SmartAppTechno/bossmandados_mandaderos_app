@@ -51,6 +51,9 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Glide.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Newtonsoft.Json.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Refractored.GifImageView.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Arch.Core.Common.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Arch.Lifecycle.Common.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Arch.Lifecycle.Runtime.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Support.Annotations.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Support.Compat.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Support.Core.UI.dll
@@ -59,7 +62,6 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Support.Media.Compat.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Support.v4.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Newtonsoft.Json.xml
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/Common.csprojResolveAssemblyReference.cache
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/Common.csproj.CoreCompileInputs.cache
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/Common.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/Common.pdb
@@ -67,6 +69,4 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/res/values/strings.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/R.cs.flag
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/uploadflags.txt
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Arch.Core.Common.dll
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Arch.Lifecycle.Common.dll
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/bin/Debug/Xamarin.Android.Arch.Lifecycle.Runtime.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/Common.csprojResolveAssemblyReference.cache

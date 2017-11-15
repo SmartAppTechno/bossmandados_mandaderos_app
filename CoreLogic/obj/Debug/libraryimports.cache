@@ -3,7 +3,6 @@
   <ManifestDocuments>
     <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Arch.Lifecycle.Runtime/library_project_imports/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Support.Compat/library_project_imports/AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Support.Compat/library_project_imports/manifest/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/__library_projects__/Xamarin.Android.Support.CustomTabs/library_project_imports/AndroidManifest.xml</ManifestDocument>
   </ManifestDocuments>
   <NativeLibraries />
