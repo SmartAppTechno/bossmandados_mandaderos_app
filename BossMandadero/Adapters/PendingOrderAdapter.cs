@@ -3,20 +3,24 @@ using System.Collections.Generic;
 using Android.App;
 using Android.Views;
 using Android.Widget;
+using BossMandadero.Activities;
 using Common.DBItems;
 using Common.Utils;
+using static Android.Widget.AdapterView;
 
 namespace BossMandadero.Adapters
 {
     public class PendingOrderAdapter : BaseAdapter
     {
-        List<Manboss_mandado> pendingOrders;
-        Activity activity;
+        private List<Manboss_mandado> pendingOrders;
+        private Activity activity;
+        private MapInvoker map;
 
-        public PendingOrderAdapter(Activity activity, List<Manboss_mandado> pendingOrders)
+        public PendingOrderAdapter(Activity activity, List<Manboss_mandado> pendingOrders, MapInvoker map)
         {
             this.activity = activity;
             this.pendingOrders = pendingOrders;
+            this.map = map;
         }
 
         public override int Count
@@ -42,18 +46,21 @@ namespace BossMandadero.Adapters
 
             TextView tv_Referencia = view.FindViewById<TextView>(Resource.Id.tv_Referencia);
             Button btn_Posicion = view.FindViewById<Button>(Resource.Id.btn_Posicion);
+            btn_Posicion.Tag = position;
+
 
             tv_Referencia.Text = pendingOrders[position].Id.ToString();
-            btn_Posicion.Click += Position;
-
+            btn_Posicion.Click += ShowMap;
 
             return view;
         }
 
-        private void Position(object sender, EventArgs ea)
+        private void ShowMap(object sender, EventArgs ea)
         {
-            string message = "Click en Posicion";
-            Dialogs.CreateAndShowDialog(message,"DEBUG",activity,Resource.Style.AlertDialogDefault);
+            int DelPos = (int)((Button)sender).Tag;
+            int OrderID = pendingOrders[DelPos].Id;
+
+            ((PendingOrdersActivity)activity).SetMap(OrderID);
         }
     }
 }

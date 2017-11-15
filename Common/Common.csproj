@@ -92,6 +92,7 @@
     <Compile Include="DBItems\Manboss_repartidor.cs" />
     <Compile Include="GlobalValues.cs" />
     <Compile Include="DBItems\Manboss_mandado.cs" />
+    <Compile Include="DBItems\Manboss_mandados_ruta.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

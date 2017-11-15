@@ -39,5 +39,22 @@ namespace DataAccess.ActivityData
             }
             return mandados;
         }
+
+        public async Task<List<Manboss_mandados_ruta>> Route(int orderID)
+        {
+            List<Manboss_mandados_ruta> ruta = new List<Manboss_mandados_ruta>();
+
+            try
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>()
+                {
+                    { "MandadoID", orderID.ToString() }
+                };
+                ruta = await client.InvokeApiAsync<List<Manboss_mandados_ruta>>("MandadosActivos", HttpMethod.Post, param);
+            }
+            catch(Exception e)
+            {}
+            return ruta;
+        }
     }
 }

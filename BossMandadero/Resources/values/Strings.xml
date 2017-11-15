@@ -4,6 +4,7 @@
     
     <string name="app_name">BossMandadero</string>
     <string name="azure_URL">https://movilapitest.azurewebsites.net</string>
+	<string name="google_maps_key">AIzaSyAX0RG5aeJD1B6RTeYszWYSnQQPNhgOnFc</string>
 	<string name="title_activity_webview">web</string>
 	<string name="empty"></string>
 

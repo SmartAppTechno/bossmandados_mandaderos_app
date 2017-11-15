@@ -150,7 +150,6 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\layout\LoginLayout.axml" />
     <AndroidResource Include="Resources\values\Styles.xml" />
     <AndroidResource Include="Resources\drawable\Boton_VerMas_Hover.png" />
     <AndroidResource Include="Resources\drawable\Boton_VerMas.png" />
@@ -158,19 +157,22 @@
     <AndroidResource Include="Resources\drawable\Fondo_2.png" />
     <AndroidResource Include="Resources\drawable\Gmail.png" />
     <AndroidResource Include="Resources\values\Colors.xml" />
-    <AndroidResource Include="Resources\layout\WelcomeLayout.axml" />
     <AndroidResource Include="Resources\menu\Drawer.xml" />
-    <AndroidResource Include="Resources\layout\ProfileLayout.axml" />
     <AndroidResource Include="Resources\layout\Drawer.axml" />
     <AndroidResource Include="Resources\layout\Drawer_item.axml" />
     <AndroidResource Include="Resources\layout\Loading.axml" />
     <AndroidResource Include="Resources\drawable\Loading.gif" />
-    <AndroidResource Include="Resources\layout\PendingOrdersLayout.axml" />
     <AndroidResource Include="Resources\layout\PendingOrderItem.axml" />
     <AndroidResource Include="Resources\drawable\Icono_Chat.png" />
     <AndroidResource Include="Resources\layout\DrawerHeader.axml" />
     <AndroidResource Include="Resources\drawable\Moto_Menu.png" />
     <AndroidResource Include="Resources\drawable\Logo_Inicio.png" />
+    <AndroidResource Include="Resources\layout\LoginLayout.axml" />
+    <AndroidResource Include="Resources\layout\PendingOrdersLayout.axml" />
+    <AndroidResource Include="Resources\layout\ProfileLayout.axml" />
+    <AndroidResource Include="Resources\layout\WelcomeLayout.axml" />
+    <AndroidResource Include="Resources\layout\Map.axml" />
+    <AndroidResource Include="Resources\layout\ActiveOrderLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
