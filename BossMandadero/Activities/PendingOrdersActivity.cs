@@ -77,8 +77,9 @@ namespace BossMandadero.Activities
 
         //MAP 
 
-        public void SetMap()
+        public void SetMap(int OrderID)
         {
+            core.OrderID = OrderID;
             map.StartMap();
             map.MapFrag = MapFragment.NewInstance();
             map.MapFrag = FragmentManager.FindFragmentById(Resource.Id.map) as MapFragment;
@@ -96,9 +97,10 @@ namespace BossMandadero.Activities
             }
             map.MapFrag.GetMapAsync(this);
         }
-        public void OnMapReady(GoogleMap googleMap)
+        public async void OnMapReady(GoogleMap googleMap)
         {
             map.Map = googleMap;
+            map.Route = await core.Route();
             map.MapReady();
         }
     }

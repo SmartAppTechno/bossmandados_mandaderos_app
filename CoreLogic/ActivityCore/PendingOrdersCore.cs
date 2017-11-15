@@ -11,6 +11,12 @@ namespace CoreLogic.ActivityCore
     {
         private Context context;
         private PendingOrdersData data;
+
+        private List<Manboss_mandados_ruta> route;
+
+        public int OrderID { get; set; }
+
+
         public PendingOrdersCore(Context context)
         {
             this.context = context;
@@ -21,6 +27,12 @@ namespace CoreLogic.ActivityCore
         {
             int repartidorID = User.Repartidor.Id;
             return await data.PendingOrders(repartidorID);
+        }
+
+        public async Task<List<Manboss_mandados_ruta>> Route()
+        {
+            route = await data.Route(OrderID);
+            return route;
         }
     }
 }

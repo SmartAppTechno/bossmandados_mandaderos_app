@@ -12,6 +12,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Common.DBItems;
 
 namespace BossMandadero
 {
@@ -23,6 +24,9 @@ namespace BossMandadero
         private MapType mType;
 
         private Dialog mDialog;
+
+        public List<Manboss_mandados_ruta> Route { get; set; }
+        private List<Marker> markers;
         public bool Displayed { get; set; }
 
         public MapInvoker(Activity activity, MapType type)
@@ -30,6 +34,7 @@ namespace BossMandadero
             mAct = activity;
             mType = type;
             Displayed = false;
+            markers = new List<Marker>();
         }
         public bool StartMap()
         {
@@ -65,20 +70,46 @@ namespace BossMandadero
 
         public void MapReady()
         {
+            Map.UiSettings.ZoomControlsEnabled = true;
+
+            double lat = 21.88234;
+            double lng = -102.28259;
+
+            if(Route.Count() > 0)
+            {
+                lat = Route[0].Latitud;
+                lng = Route[0].Longitud;
+            }
+
             CameraPosition.Builder builder = new CameraPosition.Builder();
-            builder.Target(new LatLng(21.88234, -102.28259));
-            builder.Zoom(17);
-            builder.Bearing(90);
-            builder.Tilt(30);
+            builder.Target(new LatLng(lat, lng));
+            builder.Zoom(13);
             CameraPosition cameraPosition = builder.Build();
 
             CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
             Map.MoveCamera(cameraUpdate);
+
+            foreach (Marker m in markers)
+            {
+                m.Remove();
+            }
+            markers.Clear();
+            foreach(Manboss_mandados_ruta r in Route)
+            {
+                AddMarker(r.Latitud, r.Longitud);
+            }
+        }
+
+        private void AddMarker(double lat, double lng)
+        {
+            MarkerOptions marker = new MarkerOptions();
+            marker.SetPosition(new LatLng(lat,lng));
+            markers.Add(Map.AddMarker(marker)); 
         }
     }
 
     public enum MapType
     {
-        Dialog
+        Dialog, Embedder
     }
 }

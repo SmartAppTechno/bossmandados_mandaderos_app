@@ -58,7 +58,9 @@ namespace BossMandadero.Adapters
         private void ShowMap(object sender, EventArgs ea)
         {
             int DelPos = (int)((Button)sender).Tag;
-            ((PendingOrdersActivity)activity).SetMap();
+            int OrderID = pendingOrders[DelPos].Id;
+
+            ((PendingOrdersActivity)activity).SetMap(OrderID);
         }
     }
 }

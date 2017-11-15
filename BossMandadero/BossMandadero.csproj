@@ -172,6 +172,7 @@
     <AndroidResource Include="Resources\layout\ProfileLayout.axml" />
     <AndroidResource Include="Resources\layout\WelcomeLayout.axml" />
     <AndroidResource Include="Resources\layout\Map.axml" />
+    <AndroidResource Include="Resources\layout\ActiveOrderLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
