@@ -7,11 +7,13 @@ using System.Text;
 using Android.App;
 using Android.Content;
 using Android.Gms.Maps;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Common;
 using Common.DBItems;
 using CoreLogic.ActivityCore;
 
@@ -24,9 +26,11 @@ namespace BossMandadero.Activities
         private MapInvoker map;
         private ActiveOrderCore core;
 
-        private TextView tv_Order;
-        private TextView tv_Reference;
-        private ListView lv_Pending;
+        private TextView txt_Name, txt_Direction, txt_City, txt_Task, txt_Detail;
+        private Button btn_Map, btn_List;
+
+        private View mapView;
+        private View listView;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -43,22 +47,48 @@ namespace BossMandadero.Activities
 
         private async void SetResources()
         {
+            txt_Name = FindViewById<TextView>(Resource.Id.txt_Name);
+            txt_Direction = FindViewById<TextView>(Resource.Id.txt_Direction);
+            txt_City = FindViewById<TextView>(Resource.Id.txt_City);
+            txt_Task = FindViewById<TextView>(Resource.Id.txt_Task);
+            txt_Detail = FindViewById<TextView>(Resource.Id.txt_Detail);
 
-            tv_Order = FindViewById<TextView>(Resource.Id.tv_Order);
-            tv_Reference = FindViewById<TextView>(Resource.Id.tv_Reference);
-            lv_Pending = FindViewById<ListView>(Resource.Id.lv_pending);
+            mapView = FindViewById<View>(Resource.Id.layoutMap);
+            listView = FindViewById<View>(Resource.Id.layoutList);
+
+            btn_Map = FindViewById<Button>(Resource.Id.btn_Map);
+            btn_List = FindViewById<Button>(Resource.Id.btn_List);
+
+            mapView.Visibility = ViewStates.Visible;
+            mapView.Visibility = ViewStates.Invisible;
+
+            btn_Map.Click += TabMap;
+            btn_List.Click += TabList;
 
             Manboss_mandado mandado = await core.ActiveOrder();
 
-            if (mandado != null)
+            if(mandado != null)
             {
-                tv_Order.Text += mandado.Id;
-                tv_Reference.Text += mandado.Id;
-
                 SetMap();
             }
 
         }
+
+        public void TabMap(object sender, EventArgs ea)
+        {
+            mapView.Visibility = ViewStates.Visible;
+            listView.Visibility = ViewStates.Invisible;
+            btn_Map.SetBackgroundColor(Colors.TabActive);
+            btn_List.SetBackgroundColor(Colors.TabInactive);
+        }
+        public void TabList(object sender, EventArgs ea)
+        {
+            mapView.Visibility = ViewStates.Invisible;
+            listView.Visibility = ViewStates.Visible;
+            btn_Map.SetBackgroundColor(Colors.TabInactive);
+            btn_List.SetBackgroundColor(Colors.TabActive);
+        }
+
         public override void OnBackPressed()
         {
             Finish();

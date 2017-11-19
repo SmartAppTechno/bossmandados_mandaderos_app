@@ -2,18 +2,17 @@
   <MonoDevelop.Ide.ItemProperties.CoreLogic PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="BossMandadero/Activities/ActiveOrderActivity.cs">
     <Files>
-      <File FileName="BossMandadero/Activities/ActiveOrderActivity.cs" Line="45" Column="10" />
-      <File FileName="DataAccess/ActivityData/PendingOrdersData.cs" Line="71" Column="39" />
-      <File FileName="BossMandadero/MapInvoker.cs" Line="28" Column="49" />
-      <File FileName="BossMandadero/Activities/PendingOrdersActivity.cs" Line="78" Column="10" />
-      <File FileName="CoreLogic/ActivityCore/ActiveOrderCore.cs" Line="27" Column="55" />
+      <File FileName="BossMandadero/Resources/values/Strings.xml" Line="50" Column="43" />
+      <File FileName="BossMandadero/Resources/values/Styles.xml" Line="69" Column="94" />
+      <File FileName="BossMandadero/Activities/ActiveOrderActivity.cs" Line="77" Column="46" />
+      <File FileName="BossMandadero/Activities/LoginActivity.cs" Line="84" Column="67" />
+      <File FileName="Common/GlobalValues.cs" Line="1" Column="1" />
+      <File FileName="BossMandadero/Resources/values/Colors.xml" Line="22" Column="47" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/Activities/ActiveOrderActivity.cs" relfile="BossMandadero/Activities/ActiveOrderActivity.cs" line="53" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
