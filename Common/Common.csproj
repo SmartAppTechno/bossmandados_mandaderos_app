@@ -93,6 +93,8 @@
     <Compile Include="GlobalValues.cs" />
     <Compile Include="DBItems\Manboss_mandado.cs" />
     <Compile Include="DBItems\Manboss_mandados_ruta.cs" />
+    <Compile Include="Colors.cs" />
+    <Compile Include="DBItems\Manboss_cliente.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

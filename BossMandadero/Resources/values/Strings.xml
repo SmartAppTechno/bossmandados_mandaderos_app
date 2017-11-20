@@ -37,10 +37,20 @@
 	<string name="profile_quantity">Cantidad en Efectivo</string>
 
 	<!--PENDING ORDERS -->
-    <string name="pending_title">MANDADOS PENDIENTES</string>
+    <string name="pending_title">Sin mandado activo</string>
 	<string name="pending_position">Ver Ruta</string>
 	<string name="pending_mandado">Mandado</string>
 	<string name="pending_reference">Referencia</string>
 	<string name="pending_detail">Detalle</string>
+    <string name="pending_direction">NoDirection</string>
+	<string name="pending_city">NoCity</string>
+	<string name="pending_task">NoTask</string>
+	<string name="pending_details">Detalle</string>
+	<string name="pending_map">MAPA</string>
+	<string name="pending_pending">PENDIENTES</string>
+	<!-- ACTIVE ORDER -->
+	<string name="active_order">Mandado: </string>
+	<string name="active_reference">Referencia: </string>
+	<string name="active_pending">Lugares Pendientes</string>
 
 </resources>

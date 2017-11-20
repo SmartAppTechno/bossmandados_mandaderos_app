@@ -135,6 +135,8 @@
     <Compile Include="Activities\PendingOrdersActivity.cs" />
     <Compile Include="Adapters\PendingOrderAdapter.cs" />
     <Compile Include="MapInvoker.cs" />
+    <Compile Include="Activities\ActiveOrderActivity.cs" />
+    <Compile Include="Adapters\RouteAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -173,6 +175,7 @@
     <AndroidResource Include="Resources\layout\WelcomeLayout.axml" />
     <AndroidResource Include="Resources\layout\Map.axml" />
     <AndroidResource Include="Resources\layout\ActiveOrderLayout.axml" />
+    <AndroidResource Include="Resources\layout\RouteItem.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

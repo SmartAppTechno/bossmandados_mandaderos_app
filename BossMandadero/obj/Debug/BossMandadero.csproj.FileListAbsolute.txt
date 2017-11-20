@@ -224,3 +224,4 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/uploadflags.txt
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/map.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/activeorderlayout.xml
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/routeitem.xml

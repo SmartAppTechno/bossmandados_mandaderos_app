@@ -49,6 +49,7 @@ namespace BossMandadero
 
             arrayList.Add(new DrawerElement("Mandados Pendientes", DrawerPosition.PendingOrders));
             arrayList.Add(new DrawerElement("Perfil", DrawerPosition.Perfil));
+            arrayList.Add(new DrawerElement("Mandado Activo", DrawerPosition.ActiveOrder));
 
 
             TextView name = activity.FindViewById<TextView>(Resource.Id.tv_drawer_name);
@@ -75,13 +76,17 @@ namespace BossMandadero
                     nextActivity = new Intent(activity, typeof(PendingOrdersActivity));
                     activity.StartActivity(nextActivity);
                     break;
+                case DrawerPosition.ActiveOrder:
+                    nextActivity = new Intent(activity, typeof(ActiveOrderActivity));
+                    activity.StartActivity(nextActivity);
+                    break;
             }
 
         }
 
         public View GetView(int position, View convertView, ViewGroup parent){
 
-            convertView.SetBackgroundColor(new Color(Color.Red));
+            //convertView.SetBackgroundColor(new Color(Color.Red));
 
             return convertView;
         }
