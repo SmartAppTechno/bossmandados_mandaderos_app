@@ -14,6 +14,7 @@ namespace CoreLogic.ActivityCore
 
         private List<Manboss_mandados_ruta> route;
         private Manboss_mandado order;
+        public Manboss_cliente Client { get; set; }
 
         public ActiveOrderCore(Context context)
         {
@@ -25,6 +26,12 @@ namespace CoreLogic.ActivityCore
         {
             int repartidorID = User.Repartidor.Id;
             order = await data.ActiveOrder(repartidorID, 3);
+
+            if(order != null)
+            {
+                Client = await data.Client(order.Cliente);
+            }
+
             return order;
         }
 

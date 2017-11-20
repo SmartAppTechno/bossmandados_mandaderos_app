@@ -75,5 +75,23 @@ namespace DataAccess.ActivityData
             }
             return mandado;
         }
+        public async Task<Manboss_cliente> Client(int clientID)
+        {
+            Manboss_cliente cliente = null;
+
+            try
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>
+                {
+                    { "ClienteID", clientID.ToString() }
+                };
+                var current = await client.InvokeApiAsync<Manboss_cliente>("Cliente", HttpMethod.Post, param);
+                cliente = current;
+            }
+            catch (Exception e)
+            {
+            }
+            return cliente;
+        }
     }
 }

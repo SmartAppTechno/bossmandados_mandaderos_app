@@ -8,11 +8,13 @@ using Android.App;
 using Android.Content;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
+using Android.Locations;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Common.DBItems;
+using Java.Util;
 
 namespace BossMandadero
 {
@@ -105,6 +107,33 @@ namespace BossMandadero
             MarkerOptions marker = new MarkerOptions();
             marker.SetPosition(new LatLng(lat,lng));
             markers.Add(Map.AddMarker(marker)); 
+        }
+        public void GoTo(int position)
+        {
+            double lat = Route[position].Latitud;
+            double lng = Route[position].Longitud;
+
+            CameraPosition.Builder builder = new CameraPosition.Builder();
+            builder.Target(new LatLng(lat, lng));
+            builder.Zoom(13);
+            CameraPosition cameraPosition = builder.Build();
+
+            CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
+            Map.MoveCamera(cameraUpdate);
+        }
+        public String GetCity(double? lat, double? lng){
+
+            if (lat != null && lng != null)
+            {
+                Geocoder gcd = new Geocoder(mAct, Locale.Default);
+                IList<Address> addresses = gcd.GetFromLocation((double)lat, (double)lng, 1);
+                if (addresses.Count > 0)
+                {
+                    return addresses[0].Locality;
+                }
+            }
+
+            return string.Empty;
         }
     }
 
