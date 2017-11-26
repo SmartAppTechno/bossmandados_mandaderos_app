@@ -56,6 +56,12 @@ namespace BossMandadero.Activities
             PendingOrderAdapter adapter = new PendingOrderAdapter(this, orders, map);
             ordersListView.Adapter = adapter;
         }
+        public async void StartOrder(int OrderID)
+        {
+            await core.StartOrder(OrderID);
+            Intent intent = new Intent(this, typeof(ActiveOrderActivity));
+            this.StartActivity(intent);
+        }
 
 
 

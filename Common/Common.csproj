@@ -95,6 +95,7 @@
     <Compile Include="DBItems\Manboss_mandados_ruta.cs" />
     <Compile Include="Colors.cs" />
     <Compile Include="DBItems\Manboss_cliente.cs" />
+    <Compile Include="Services.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

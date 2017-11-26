@@ -4,6 +4,7 @@ using Android.App;
 using Android.Views;
 using Android.Widget;
 using BossMandadero.Activities;
+using Common;
 using Common.DBItems;
 using Common.Utils;
 
@@ -49,7 +50,9 @@ namespace BossMandadero.Adapters
 
             txt_Order.Text += " " + (position + 1);
             txt_Direction.Text = route[position].Calle + " " + route[position].Numero;
-            txt_Task.Text = route[position].Servicio.ToString();
+
+            int task = route[position].Servicio - 1;
+            txt_Task.Text = Services.Service[task];
 
 
             return view;

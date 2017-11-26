@@ -55,7 +55,7 @@ namespace Common.Utils
             WebView iv = view.FindViewById<WebView>(gif);
             //iv.SetBackgroundColor(Color.Azure);
             iv.LoadUrl(string.Format("file:///android_asset/Loading.gif"));
-            iv.SetBackgroundColor(Color.Green);
+            iv.SetBackgroundColor(Color.Transparent);
             iv.SetLayerType(LayerType.Software, null);
 
             _progressDialog.SetContentView(view);
