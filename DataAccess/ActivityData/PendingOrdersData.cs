@@ -93,5 +93,9 @@ namespace DataAccess.ActivityData
             }
             return cliente;
         }
+        public async Task<bool> SetOrder(int MandadoID, int State)
+        {
+            return true;
+        }
     }
 }

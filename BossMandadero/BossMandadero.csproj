@@ -137,6 +137,7 @@
     <Compile Include="MapInvoker.cs" />
     <Compile Include="Activities\ActiveOrderActivity.cs" />
     <Compile Include="Adapters\RouteAdapter.cs" />
+    <Compile Include="Route.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

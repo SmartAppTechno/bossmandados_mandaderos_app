@@ -31,6 +31,10 @@ namespace CoreLogic.ActivityCore
             orders =  await data.PendingOrders(repartidorID,2);
             active = await data.ActiveOrder(repartidorID, 3);
 
+            if(active!=null)
+            {
+                orders.Add(active);
+            }
 
             return orders;
         }
@@ -39,6 +43,10 @@ namespace CoreLogic.ActivityCore
         {
             route = await data.Route(OrderID);
             return route;
+        }
+        public async Task<bool> StartOrder(int OrderID)
+        {
+            return await data.SetOrder(OrderID, 3);
         }
 
     }

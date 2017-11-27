@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Android.App;
+using Android.Content;
 using Android.Views;
 using Android.Widget;
 using BossMandadero.Activities;
@@ -46,11 +47,33 @@ namespace BossMandadero.Adapters
 
             TextView tv_Referencia = view.FindViewById<TextView>(Resource.Id.tv_Referencia);
             Button btn_Posicion = view.FindViewById<Button>(Resource.Id.btn_Posicion);
+            ProgressBar bar = view.FindViewById<ProgressBar>(Resource.Id.progressBar);
             btn_Posicion.Tag = position;
 
 
             tv_Referencia.Text = pendingOrders[position].Id.ToString();
-            btn_Posicion.Click += ShowMap;
+
+            if(position == 0)
+            {
+                if(pendingOrders[0].Estado==2)
+                {
+                    btn_Posicion.Text = "Iniciar";
+                    btn_Posicion.Click += StartOrder;
+                    bar.Visibility = ViewStates.Gone;
+                }
+                else
+                {
+                    btn_Posicion.Text = "Detalles";
+                    btn_Posicion.Click += GoToOrder;
+                    bar.Visibility = ViewStates.Visible;
+                }
+            }
+            else
+            {
+                btn_Posicion.Click += ShowMap;
+                bar.Visibility = ViewStates.Gone;
+            }
+
 
             return view;
         }
@@ -61,6 +84,18 @@ namespace BossMandadero.Adapters
             int OrderID = pendingOrders[DelPos].Id;
 
             ((PendingOrdersActivity)activity).SetMap(OrderID);
+        }
+        private void StartOrder(object sender, EventArgs ea)
+        {
+            int pos = 0;
+            int OrderID = pendingOrders[pos].Id;
+
+            ((PendingOrdersActivity)activity).SetMap(OrderID);
+        }
+        private void GoToOrder(object sender, EventArgs ea)
+        {
+            Intent intent = new Intent(activity, typeof(ActiveOrderActivity));
+            activity.StartActivity(intent);
         }
     }
 }

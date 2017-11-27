@@ -37,6 +37,7 @@
 	<string name="profile_quantity">Cantidad en Efectivo</string>
 
 	<!--PENDING ORDERS -->
+	<string name="pending_header">Mandados Pendientes</string>
     <string name="pending_title">Sin mandado activo</string>
 	<string name="pending_position">Ver Ruta</string>
 	<string name="pending_mandado">Mandado</string>

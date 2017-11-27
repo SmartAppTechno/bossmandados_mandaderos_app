@@ -65,8 +65,8 @@ namespace BossMandadero.Activities
 
             routeListView = FindViewById<ListView>(Resource.Id.TaskList);
 
+            listView.Visibility = ViewStates.Invisible;
             mapView.Visibility = ViewStates.Visible;
-            mapView.Visibility = ViewStates.Invisible;
 
             btn_Map.Click += TabMap;
             btn_List.Click += TabList;
@@ -135,7 +135,8 @@ namespace BossMandadero.Activities
 
             if(map.Route.Count > 0 )
             {
-                txt_Task.Text = map.Route[0].Servicio.ToString();
+                int task = map.Route[0].Servicio - 1;
+                txt_Task.Text = Services.Service[task];
                 txt_Direction.Text = map.Route[0].Calle + " " + map.Route[0].Numero;
                 txt_Detail.Text = map.Route[0].Comentarios;
             }

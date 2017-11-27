@@ -29,10 +29,10 @@ namespace Common.DBItems
         public int Repartidor { get; set; }
 
         [JsonProperty(PropertyName = "tiempo_trayecto")]
-        public DateTime Tiempo_trayecto { get; set; }
+        public DateTime? Tiempo_trayecto { get; set; }
 
         [JsonProperty(PropertyName = "tiempo_total")]
-        public DateTime Tiempo_total { get; set; }
+        public DateTime? Tiempo_total { get; set; }
 
     }
     public class Manboss_mandadoWrapper : Java.Lang.Object

@@ -67,6 +67,7 @@
     <Compile Include="User.cs" />
     <Compile Include="ActivityCore\PendingOrdersCore.cs" />
     <Compile Include="ActivityCore\ActiveOrderCore.cs" />
+    <Compile Include="MapRoute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
