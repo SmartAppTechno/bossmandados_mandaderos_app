@@ -34,6 +34,8 @@ namespace Common.DBItems
         [JsonProperty(PropertyName = "tiempo_total")]
         public DateTime? Tiempo_total { get; set; }
 
+
+
     }
     public class Manboss_mandadoWrapper : Java.Lang.Object
     {

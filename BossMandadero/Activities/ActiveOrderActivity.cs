@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.Gms.Maps;
+using Android.Gms.Maps.Model;
 using Android.Graphics;
+using Android.Locations;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
@@ -16,25 +18,36 @@ using Android.Widget;
 using BossMandadero.Adapters;
 using Common;
 using Common.DBItems;
+using Common.Utils;
 using CoreLogic.ActivityCore;
 using static Android.App.ActionBar;
+using static Android.Gms.Maps.GoogleMap;
 
 namespace BossMandadero.Activities
 {
     [Activity(Label = "ActiveOrderActivity", Theme = "@style/AppDrawerTheme")]
-    public class ActiveOrderActivity : AppCompatActivity, IOnMapReadyCallback
+    public class ActiveOrderActivity : AppCompatActivity, IOnMapReadyCallback, IOnMarkerClickListener, ILocationListener
     {
         private Drawer drawer;
         private MapInvoker map;
+        private ChatInvoker chat;
         private ActiveOrderCore core;
 
         private TextView txt_Name, txt_Direction, txt_City, txt_Task, txt_Detail;
         private Button btn_Map, btn_List;
+        private ImageView img_Chat;
 
         private View mapView;
         private View listView;
 
         private ListView routeListView;
+
+        private Manboss_mandados_ruta r_actual;
+
+        Location _currentLocation;
+        LocationManager _locationManager;
+
+        string _locationProvider;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -43,12 +56,30 @@ namespace BossMandadero.Activities
 
             core = new ActiveOrderCore(this);
             map = new MapInvoker(this, MapType.Embedded);
+
             drawer = new Drawer(this);
 
-
+            InitializeLocationManager();
             SetResources();
         }
+        private void InitializeLocationManager()
+        {
+            _locationManager = (LocationManager)GetSystemService(LocationService);
+            Criteria criteriaForLocationService = new Criteria
+            {
+                Accuracy = Accuracy.Fine
+            };
+            IList<string> acceptableLocationProviders = _locationManager.GetProviders(criteriaForLocationService, true);
 
+            if (acceptableLocationProviders.Any())
+            {
+                _locationProvider = acceptableLocationProviders.First();
+            }
+            else
+            {
+                _locationProvider = string.Empty;
+            }
+        }
         private async void SetResources()
         {
             txt_Name = FindViewById<TextView>(Resource.Id.txt_Name);
@@ -63,19 +94,23 @@ namespace BossMandadero.Activities
             btn_Map = FindViewById<Button>(Resource.Id.btn_Map);
             btn_List = FindViewById<Button>(Resource.Id.btn_List);
 
+            img_Chat = FindViewById<ImageView>(Resource.Id.img_Chat);
+
             routeListView = FindViewById<ListView>(Resource.Id.TaskList);
 
-            listView.Visibility = ViewStates.Invisible;
+            listView.Visibility = ViewStates.Gone;
             mapView.Visibility = ViewStates.Visible;
 
             btn_Map.Click += TabMap;
             btn_List.Click += TabList;
+            img_Chat.Click += ShowChat;
 
             Manboss_mandado mandado = await core.ActiveOrder();
 
             if(mandado != null)
             {
                 Manboss_cliente client = core.Client;
+                chat = new ChatInvoker(this, mandado.Id);
                 txt_Name.Text = client.Nombre;
                 txt_City.Text = map.GetCity(client.Latitud, client.Longitud);
                 SetMap();
@@ -96,6 +131,10 @@ namespace BossMandadero.Activities
             listView.Visibility = ViewStates.Visible;
             btn_Map.SetBackgroundColor(Colors.TabInactive);
             btn_List.SetBackgroundColor(Colors.TabActive);
+        }
+        public void ShowChat(object sender, EventArgs ea)
+        {
+            chat.Display();
         }
 
         public override void OnBackPressed()
@@ -140,13 +179,82 @@ namespace BossMandadero.Activities
                 txt_Direction.Text = map.Route[0].Calle + " " + map.Route[0].Numero;
                 txt_Detail.Text = map.Route[0].Comentarios;
             }
-
+            map.Map.SetOnMarkerClickListener(this);
             map.MapReady();
         }
         public void GoToMap(int position)
         {
             map.GoTo(position);
             TabMap(null, null);
+        }
+
+        public bool OnMarkerClick(Marker marker)
+        {
+            r_actual = map.MarkerClick(marker);
+            if (r_actual != null)
+            {
+                Android.App.AlertDialog.Builder builder = Dialogs.YesNoDialog(
+                    "Punto en ruta", "¿Completar este punto en la ruta?", this, Resource.Style.AlertDialogDefault);
+                builder.SetPositiveButton("OK", RemoveMarker);
+                builder.Create().Show();
+            }
+            return true;
+        }
+        public async void RemoveMarker(object sender, DialogClickEventArgs e)
+        {
+            if(r_actual!=null)
+            {
+                await core.CompleteTask(r_actual);
+                r_actual = null;
+                if (core.route.Count == 1)
+                {
+                    Intent intent = new Intent(this, typeof(PendingOrdersActivity));
+                    this.StartActivity(intent);
+                }
+                else
+                {
+                    OnMapReady(map.Map);
+                }
+            }
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            _locationManager.RequestLocationUpdates(_locationProvider, 0, 0, this);
+        }
+        protected override void OnPause()
+        {
+            base.OnPause();
+            _locationManager.RemoveUpdates(this);
+        }
+
+        public void OnLocationChanged(Location location)
+        {
+            _currentLocation = location;
+            if (_currentLocation != null)
+            {
+                map.Position = new LatLng(location.Latitude, location.Longitude);
+                if(! map.routeDrawer.Complete )
+                {
+                    map.routeDrawer.StartDrawing(map.Position);
+                }
+            }
+        }
+
+        public void OnProviderDisabled(string provider)
+        {
+            //throw new NotImplementedException();
+        }
+
+        public void OnProviderEnabled(string provider)
+        {
+            //throw new NotImplementedException();
+        }
+
+        public void OnStatusChanged(string provider, [GeneratedEnum] Availability status, Bundle extras)
+        {
+            //throw new NotImplementedException();
         }
     }
 }

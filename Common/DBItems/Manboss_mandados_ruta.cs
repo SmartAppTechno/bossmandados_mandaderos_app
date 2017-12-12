@@ -34,5 +34,8 @@ namespace Common.DBItems
 
         [JsonProperty(PropertyName = "peso")]
         public double? Peso { get; set; }
+
+        [JsonProperty(PropertyName = "terminado")]
+        public int Terminado { get; set; }
     }
 }

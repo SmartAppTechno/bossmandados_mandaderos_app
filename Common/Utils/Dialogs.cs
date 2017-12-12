@@ -87,5 +87,14 @@ namespace Common.Utils
                 return ms.ToArray();
             }
         }
+
+        public static AlertDialog.Builder YesNoDialog(string title, string content, Context context, int style)
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(context, style));
+
+            builder.SetMessage(content);
+            builder.SetTitle(title);
+            return builder;
+        }
     }
 }

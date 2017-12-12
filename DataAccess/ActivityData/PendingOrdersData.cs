@@ -93,9 +93,43 @@ namespace DataAccess.ActivityData
             }
             return cliente;
         }
-        public async Task<bool> SetOrder(int MandadoID, int State)
+        public async Task<bool> SetOrder(int OrderID, int State)
         {
-            return true;
+            bool result = false;
+
+            try
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>
+                {
+                    { "MandadoID", OrderID.ToString() },
+                    { "Estado", State.ToString()}
+                };
+                var current = await client.InvokeApiAsync<bool>("MandadosActivos", HttpMethod.Post, param);
+                result = current;
+            }
+            catch (Exception e)
+            {
+            }
+            return result;
+        }
+
+        public async Task<bool> CompleteTask(int TaskID)
+        {
+            bool result = false;
+
+            try
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>
+                {
+                    { "RutaID", TaskID.ToString() }
+                };
+                var current = await client.InvokeApiAsync<bool>("MandadosActivos", HttpMethod.Post, param);
+                result = current;
+            }
+            catch (Exception e)
+            {
+            }
+            return result;
         }
     }
 }

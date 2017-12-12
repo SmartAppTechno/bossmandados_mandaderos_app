@@ -54,4 +54,7 @@
 	<string name="active_reference">Referencia: </string>
 	<string name="active_pending">Lugares Pendientes</string>
 
+	<!-- CHAT -->
+    <string name="chat_mensaje">Mensaje</string>
+	<string name="chat_ok">OK</string>
 </resources>
