@@ -96,6 +96,11 @@
     <Compile Include="Colors.cs" />
     <Compile Include="DBItems\Manboss_cliente.cs" />
     <Compile Include="Services.cs" />
+    <Compile Include="MapItems\CommonHelperClass.cs" />
+    <Compile Include="MapItems\Constants.cs" />
+    <Compile Include="MapItems\GoogleDirectionClass.cs" />
+    <Compile Include="MapItems\GoogleGeoCodeClass.cs" />
+    <Compile Include="MapItems\OnMapReadyClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -108,6 +113,7 @@
     <Folder Include="DBItems\" />
     <Folder Include="Utils\" />
     <Folder Include="Items\" />
+    <Folder Include="MapItems\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />

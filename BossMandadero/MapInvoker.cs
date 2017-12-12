@@ -12,8 +12,11 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using BossMandadero.Activities;
 using Common.DBItems;
+using Common.Utils;
 using Java.Util;
+using static Android.Gms.Maps.GoogleMap;
 
 namespace BossMandadero
 {
@@ -21,7 +24,9 @@ namespace BossMandadero
     {
         public GoogleMap Map { get; set; }
         public MapFragment MapFrag { get; set; }
-        private Activity mAct;
+        public Activity mAct;
+        public LatLng Position { get; set; }
+        public Route routeDrawer;
         private MapType mType;
 
         private Dialog mDialog;
@@ -29,6 +34,7 @@ namespace BossMandadero
         public List<Manboss_mandados_ruta> Route { get; set; }
         private List<Marker> markers;
         public bool Displayed { get; set; }
+
 
         public MapInvoker(Activity activity, MapType type)
         {
@@ -72,9 +78,9 @@ namespace BossMandadero
         public void MapReady()
         {
             Map.UiSettings.ZoomControlsEnabled = true;
-
-            double lat = 21.88234;
-            double lng = -102.28259;
+            Map.Clear();
+            double lat = 0;
+            double lng = 0;
 
             if(Route.Count() > 0)
             {
@@ -89,6 +95,7 @@ namespace BossMandadero
 
             CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
             Map.MoveCamera(cameraUpdate);
+            Map.MyLocationEnabled = true;
 
             foreach (Marker m in markers)
             {
@@ -99,13 +106,16 @@ namespace BossMandadero
             {
                 AddMarker(r.Latitud, r.Longitud);
             }
+
+            routeDrawer = new Route(this, Position);
         }
 
         private void AddMarker(double lat, double lng)
         {
             MarkerOptions marker = new MarkerOptions();
             marker.SetPosition(new LatLng(lat,lng));
-            markers.Add(Map.AddMarker(marker)); 
+            Marker aux = Map.AddMarker(marker);
+            markers.Add(aux); 
         }
         public void GoTo(int position)
         {
@@ -133,6 +143,23 @@ namespace BossMandadero
             }
 
             return string.Empty;
+        }
+
+
+
+        public Manboss_mandados_ruta MarkerClick(Marker marker)
+        {
+            int n = 0;
+            foreach(Marker m in markers)
+            {
+                if(m.Equals(marker))
+                {
+                    Manboss_mandados_ruta r = Route[n];
+                    return r;
+                }
+                n++;
+            }
+            return null;
         }
     }
 

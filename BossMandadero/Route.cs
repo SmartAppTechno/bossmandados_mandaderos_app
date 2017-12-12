@@ -1,196 +1,241 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Android.App;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
+using Common.MapItems;
 using Android.OS;
 using Android.Util;
 using Common.DBItems;
 using Java.IO;
 using Java.Lang;
-using Java.Net;
-using Java.Util;
-using Org.Json;
+using System.Threading.Tasks;
+using Android.Locations;
+using System.Linq;
+using System.Net;
+using Newtonsoft.Json;
 
-namespace CoreLogic
+namespace BossMandadero
 {
     public class Route
     {
-        /*
-        public void GetRoute(GoogleMap map, LatLng origin, LatLng dest)
+        private WebClient webclient;
+
+        private GoogleMap map;
+        private MapInvoker invoker;
+        private Activity act;
+
+        private LatLng latLngSource;
+        private LatLng latLngDestination;
+
+        private string source;
+        private string destination;
+
+        public bool Complete { get; set; }
+
+
+        public Route(MapInvoker invoker, LatLng position)
         {
-            string url = DirectionsURL(origin, dest);
-            DownloadTask downloadTask = new DownloadTask();
-            downloadTask.Execute(url);
+            Complete = false;
+            this.invoker = invoker;
+            this.map = invoker.Map;
+            this.act = invoker.mAct;
+            if(position!=null)
+                StartDrawing(position);
+
         }
 
-        private string DirectionsURL(LatLng origin, LatLng dest)
+        public void StartDrawing(LatLng position)
         {
-
-            // Origin of route
-            string str_origin = "origin=" + origin.Latitude + "," + origin.Longitude;
-
-            // Destination of route
-            string str_dest = "destination=" + dest.Latitude + "," + dest.Longitude;
-
-            // Sensor enabled
-            string sensor = "sensor=false";
-            string mode = "mode=driving";
-
-            // Building the parameters to the web service
-            string parameters = str_origin + "&" + str_dest + "&" + sensor + "&" + mode;
-
-            // Output format
-            string output = "json";
-
-            // Building the url to the web service
-            string url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters;
-
-            return url;
-        }
-        */
-
-    }
-}
-
-/*
-public class DownloadTask : AsyncTask
-{
-    
-    protected override Java.Lang.Object DoInBackground(params Java.Lang.Object[] @params)
-    {
-        string data = string.Empty;
-        try
-        {
-            data = DownloadUrl(@params[0]);
-        }
-        catch (System.Exception e)
-        {
-            //Log.d("Background Task", e.ToString());
-        }
-        return data;
-    }
-
-    private string DownloadUrl(string strUrl)
-    {
-        string data = "";
-        Stream iStream = null;
-        HttpURLConnection urlConnection = null;
-        try 
-        {
-            URL url = new URL(strUrl);
-            urlConnection = (HttpURLConnection)url.OpenConnection();
-            urlConnection.Connect();
-
-            iStream = urlConnection.InputStream;
-            BufferedReader br = new BufferedReader(new InputStreamReader(iStream));
-            StringBuffer sb = new StringBuffer();
-
-            string line = string.Empty;
-            while ((line = br.ReadLine()) != null)
+            
+            Complete = true;
+            int n = invoker.Route.Count - 1;
+            latLngSource = position;
+            latLngDestination = GetLatLng(invoker.Route[0]);
+            FnProcessOnMap();
+            for (int i = 0; i < n;i++)
             {
-                sb.Append(line);
+                latLngSource = GetLatLng(invoker.Route[i]);
+                latLngDestination = GetLatLng(invoker.Route[i+1]);
+                SetStrings();
+                FnProcessOnMap();
             }
 
-            data = sb.ToString();
-
-            br.Close();
-
-        } catch (System.Exception e)
-        {
-        //Log.D("Exception", e.toString());
-        } finally 
-        {
-            iStream.Close();
-            urlConnection.Disconnect();
         }
-        return data;
-    }
-    protected override void OnPostExecute(Java.Lang.Object result)
-    {
-        base.OnPostExecute(result);
-        ParserTask parserTask = new ParserTask();
-        parserTask.execute(result);
 
-    }
-
-}
-
-public class ParserTask : AsyncTask<string, Integer, List<List<HashMap>>>
-{
-    protected override List<List<HashMap>> RunInBackground(params string[] @params)
-    {
-        JSONObject jObject;
-        List<List<HashMap>> routes = null;
-
-        try
+        private LatLng GetLatLng(Manboss_mandados_ruta r)
         {
-            jObject = new JSONObject(jsonData[0]);
-            DirectionsJSONParser parser = new DirectionsJSONParser();
-
-            routes = parser.parse(jObject);
+            LatLng aux = new LatLng(r.Latitud, r.Longitud);
+            return aux;
         }
-        catch (Exception e)
+        private void SetStrings()
         {
-            e.printStackTrace();
+            source = latLngSource.Latitude.ToString() + "," + latLngSource.Longitude.ToString();
+            destination = latLngDestination.Latitude.ToString() + "," + latLngDestination.Longitude.ToString();
         }
-        return routes;
-    }
-}
 
-/*
-
-    }
-
-    private class ParserTask extends AsyncTask<String, Integer, List<List<HashMap>>> {
-
-    // Parsing the data in non-ui thread
-    @Override
-        protected List<List<HashMap>> doInBackground(String...jsonData)
-    {
-
-        
-    }
-
-    @Override
-        protected void onPostExecute(List<List<HashMap>> result)
-    {
-        ArrayList points = null;
-        PolylineOptions lineOptions = null;
-        MarkerOptions markerOptions = new MarkerOptions();
-
-        for (int i = 0; i < result.size(); i++)
+        private void FnProcessOnMap()
         {
-            points = new ArrayList();
-            lineOptions = new PolylineOptions();
 
-            List<HashMap> path = result.get(i);
-
-            for (int j = 0; j < path.size(); j++)
+            if (latLngSource != null && latLngDestination != null)
             {
-                HashMap point = path.get(j);
+                SetStrings();
+                FnDrawPath();
+            }
+        }
 
-                double lat = Double.parseDouble(point.get("lat"));
-                double lng = Double.parseDouble(point.get("lng"));
-                LatLng position = new LatLng(lat, lng);
-
-                points.add(position);
+        private async void FnDrawPath()
+        {
+            string strFullDirectionURL = string.Format(MapConstants.strGoogleDirectionUrl, source, destination);
+            string strJSONDirectionResponse = await FnHttpRequest(strFullDirectionURL);
+            if (strJSONDirectionResponse != MapConstants.strException)
+            {
+                FnSetDirectionQuery(strJSONDirectionResponse);
+            }
+            else
+            {
             }
 
-            lineOptions.addAll(points);
-            lineOptions.width(12);
-            lineOptions.color(Color.RED);
-            lineOptions.geodesic(true);
+        }
+        private async Task<string> FnHttpRequest(string strUri)
+        {
+            webclient = new WebClient();
+            string strResultData;
+            try
+            {
+                strResultData = await webclient.DownloadStringTaskAsync(new Uri(strUri));
+            }
+            catch
+            {
+                strResultData = MapConstants.strException;
+            }
+            finally
+            {
+                if (webclient != null)
+                {
+                    webclient.Dispose();
+                    webclient = null;
+                }
+            }
 
+            return strResultData;
         }
 
-        // Drawing polyline in the Google Map for the i-th route
-        mMap.addPolyline(lineOptions);
+
+        private void FnSetDirectionQuery(string strJSONDirectionResponse)
+        {
+            var objRoutes = JsonConvert.DeserializeObject<GoogleDirectionClass>(strJSONDirectionResponse);
+            //objRoutes.routes.Count  --may be more then one 
+            if (objRoutes.routes.Count > 0)
+            {
+                string encodedPoints = objRoutes.routes[0].overview_polyline.points;
+
+                var lstDecodedPoints = FnDecodePolylinePoints(encodedPoints);
+                //convert list of location point to array of latlng type
+                var latLngPoints = new LatLng[lstDecodedPoints.Count];
+                int index = 0;
+                foreach (Common.MapItems.Location loc in lstDecodedPoints)
+                {
+                    latLngPoints[index++] = new LatLng(loc.lat, loc.lng);
+                }
+
+                var polylineoption = new PolylineOptions();
+                polylineoption.InvokeColor(Android.Graphics.Color.Red);
+                polylineoption.Geodesic(true);
+                polylineoption.Add(latLngPoints);
+                act.RunOnUiThread(() =>
+                map.AddPolyline(polylineoption));
+            }
+        }
+
+        List<Common.MapItems.Location> FnDecodePolylinePoints(string encodedPoints)
+        {
+            if (string.IsNullOrEmpty(encodedPoints))
+                return null;
+            var poly = new List<Common.MapItems.Location>();
+            char[] polylinechars = encodedPoints.ToCharArray();
+            int index = 0;
+
+            int currentLat = 0;
+            int currentLng = 0;
+            int next5bits;
+            int sum;
+            int shifter;
+
+            try
+            {
+                while (index < polylinechars.Length)
+                {
+                    // calculate next latitude
+                    sum = 0;
+                    shifter = 0;
+                    do
+                    {
+                        next5bits = (int)polylinechars[index++] - 63;
+                        sum |= (next5bits & 31) << shifter;
+                        shifter += 5;
+                    } while (next5bits >= 32 && index < polylinechars.Length);
+
+                    if (index >= polylinechars.Length)
+                        break;
+
+                    currentLat += (sum & 1) == 1 ? ~(sum >> 1) : (sum >> 1);
+
+                    //calculate next longitude
+                    sum = 0;
+                    shifter = 0;
+                    do
+                    {
+                        next5bits = (int)polylinechars[index++] - 63;
+                        sum |= (next5bits & 31) << shifter;
+                        shifter += 5;
+                    } while (next5bits >= 32 && index < polylinechars.Length);
+
+                    if (index >= polylinechars.Length && next5bits >= 32)
+                        break;
+
+                    currentLng += (sum & 1) == 1 ? ~(sum >> 1) : (sum >> 1);
+                    Common.MapItems.Location p = new Common.MapItems.Location()
+                    {
+                        lat = Convert.ToDouble(currentLat) / 100000.0,
+                        lng = Convert.ToDouble(currentLng) / 100000.0
+                    };
+                    poly.Add(p);
+                }
+            }
+            catch
+            {
+                //act.RunOnUiThread(() =>
+                //  Toast.MakeText(this, MapConstants.strPleaseWait, ToastLength.Short).Show());
+            }
+            return poly;
+        }
+
+
+
+        string FnHttpRequestOnMainThread(string strUri)
+        {
+            webclient = new WebClient();
+            string strResultData;
+            try
+            {
+                strResultData = webclient.DownloadString(new Uri(strUri));
+            }
+            catch (System.Exception e)
+            {
+                strResultData = MapConstants.strException;
+            }
+            finally
+            {
+                if (webclient != null)
+                {
+                    webclient.Dispose();
+                    webclient = null;
+                }
+            }
+
+            return strResultData;
+        }
     }
 }
-
-
-
-
-}
-*/

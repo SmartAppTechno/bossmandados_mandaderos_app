@@ -12,7 +12,7 @@ namespace CoreLogic.ActivityCore
         private Context context;
         private PendingOrdersData data;
 
-        private List<Manboss_mandados_ruta> route;
+        public List<Manboss_mandados_ruta> route { get; set; }
         private Manboss_mandado order;
         public Manboss_cliente Client { get; set; }
 
@@ -39,6 +39,14 @@ namespace CoreLogic.ActivityCore
         {
             route = await data.Route(order.Id);
             return route;
+        }
+        public async Task<bool> CompleteTask(Manboss_mandados_ruta r)
+        {
+            if(route.Count == 1)
+            {
+                await data.SetOrder(order.Id, 4);
+            }
+            return await data.CompleteTask(r.Id);
         }
     }
 }

@@ -90,7 +90,7 @@ namespace BossMandadero.Adapters
             int pos = 0;
             int OrderID = pendingOrders[pos].Id;
 
-            ((PendingOrdersActivity)activity).SetMap(OrderID);
+            ((PendingOrdersActivity)activity).StartOrder(OrderID);
         }
         private void GoToOrder(object sender, EventArgs ea)
         {

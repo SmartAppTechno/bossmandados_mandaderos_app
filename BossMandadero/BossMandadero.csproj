@@ -122,6 +122,12 @@
     <Reference Include="Xamarin.Android.Support.Design">
       <HintPath>..\packages\Xamarin.Android.Support.Design.26.1.0.1\lib\MonoAndroid80\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -138,6 +144,7 @@
     <Compile Include="Activities\ActiveOrderActivity.cs" />
     <Compile Include="Adapters\RouteAdapter.cs" />
     <Compile Include="Route.cs" />
+    <Compile Include="ChatInvoker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -177,6 +184,7 @@
     <AndroidResource Include="Resources\layout\Map.axml" />
     <AndroidResource Include="Resources\layout\ActiveOrderLayout.axml" />
     <AndroidResource Include="Resources\layout\RouteItem.axml" />
+    <AndroidResource Include="Resources\layout\ChatLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
