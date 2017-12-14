@@ -141,7 +141,7 @@ namespace BossMandadero
                 }
 
                 var polylineoption = new PolylineOptions();
-                polylineoption.InvokeColor(Android.Graphics.Color.Red);
+                polylineoption.InvokeColor(new Android.Graphics.Color(99, 189, 181));
                 polylineoption.Geodesic(true);
                 polylineoption.Add(latLngPoints);
                 act.RunOnUiThread(() =>

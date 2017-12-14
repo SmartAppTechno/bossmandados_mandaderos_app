@@ -82,6 +82,7 @@ namespace BossMandadero.Activities
         }
         private async void SetResources()
         {
+            Window.SetSoftInputMode(SoftInput.StateHidden);
             txt_Name = FindViewById<TextView>(Resource.Id.txt_Name);
             txt_Direction = FindViewById<TextView>(Resource.Id.txt_Direction);
             txt_City = FindViewById<TextView>(Resource.Id.txt_City);

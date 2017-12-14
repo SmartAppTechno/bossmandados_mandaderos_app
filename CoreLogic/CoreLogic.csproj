@@ -68,6 +68,7 @@
     <Compile Include="ActivityCore\PendingOrdersCore.cs" />
     <Compile Include="ActivityCore\ActiveOrderCore.cs" />
     <Compile Include="MapRoute.cs" />
+    <Compile Include="ActivityCore\ChatCore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

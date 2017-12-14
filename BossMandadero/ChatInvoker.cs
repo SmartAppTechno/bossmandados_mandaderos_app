@@ -1,6 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using Android.App;
 using Android.Views;
+using Android.Widget;
+using BossMandadero.Adapters;
+using Common.DBItems;
+using CoreLogic.ActivityCore;
 
 namespace BossMandadero
 {
@@ -8,11 +13,25 @@ namespace BossMandadero
     {
         private Activity mAct;
         private Dialog mDialog;
+        private ChatCore core;
         public bool Displayed { get; set; }
+
+        private ListView chat;
+        private Button send;
+        private EditText message;
+
+        private ChatAdapter adapter;
+        private View view;
+
         public ChatInvoker(Activity activity, int mandadoID)
         {
             mAct = activity;
             Displayed = false;
+
+            core = new ChatCore(activity, mandadoID);
+            Display();
+            Hide();
+            SetResources();
         }
         public void Display()
         {
@@ -24,11 +43,60 @@ namespace BossMandadero
             {
                 mDialog = new Dialog(mAct, Resource.Style.AlertDialogDefault);
                 LayoutInflater inflater = mAct.LayoutInflater;
-                View view = inflater.Inflate(Resource.Layout.ChatLayout, null);
+                view = inflater.Inflate(Resource.Layout.ChatLayout, null);
                 mDialog.SetContentView(view);
+                mDialog.Window.SetSoftInputMode(SoftInput.StateHidden);
                 mDialog.Show();
                 Displayed = true;
             }
         }
+        public void Hide()
+        {
+            mDialog.Hide();
+            Displayed = false;
+        }
+        private async void SetResources()
+        {
+            
+            int id = await core.Chat();
+            List<Manboss_chat_mensaje> messages = null;
+            if (id != 0)
+            {
+                messages = await core.Conversation();
+            }
+
+            chat = view.FindViewById<ListView>(Resource.Id.chat);
+
+            chat.Divider = null;
+            chat.DividerHeight = 0;
+
+            send = view.FindViewById<Button>(Resource.Id.btn_send);
+            message = view.FindViewById<EditText>(Resource.Id.chat_mensaje);
+            send.Click += SendMessage;
+            send.Visibility = ViewStates.Invisible;
+
+
+            if(messages!=null)
+            {
+                adapter = new ChatAdapter(mAct, messages);
+                chat.Adapter = adapter;
+                if (messages.Count % 2 == 0)
+                {
+                    send.Visibility = ViewStates.Visible;
+                }
+
+            }
+
+        }
+
+        private async void SendMessage(object sender, EventArgs e)
+        {
+            string text = message.Text;
+            await core.Message(text);
+            message.Text = string.Empty;
+            SetResources();
+        }
+
+
     }
 }

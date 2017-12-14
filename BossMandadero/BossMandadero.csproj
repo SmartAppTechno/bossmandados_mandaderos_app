@@ -26,7 +26,6 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -145,6 +144,7 @@
     <Compile Include="Adapters\RouteAdapter.cs" />
     <Compile Include="Route.cs" />
     <Compile Include="ChatInvoker.cs" />
+    <Compile Include="Adapters\ChatAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -185,6 +185,8 @@
     <AndroidResource Include="Resources\layout\ActiveOrderLayout.axml" />
     <AndroidResource Include="Resources\layout\RouteItem.axml" />
     <AndroidResource Include="Resources\layout\ChatLayout.axml" />
+    <AndroidResource Include="Resources\layout\Chat_item.axml" />
+    <AndroidResource Include="Resources\drawable\mandado.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
