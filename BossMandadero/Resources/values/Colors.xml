@@ -25,4 +25,6 @@
     <item name="chat_cliente" type="color">#99B8F0</item>
 	<item name="chat_repartidor" type="color">#FFD8A6</item>
 	<item name="chat_message" type="color">#E0E0E0</item>
+
+	<item name="transparent" type="color">#000000</item>
 </resources>

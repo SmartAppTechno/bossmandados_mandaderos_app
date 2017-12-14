@@ -69,6 +69,7 @@
     <Compile Include="ActivityCore\ActiveOrderCore.cs" />
     <Compile Include="MapRoute.cs" />
     <Compile Include="ActivityCore\ChatCore.cs" />
+    <Compile Include="ActivityCore\ProfileCore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

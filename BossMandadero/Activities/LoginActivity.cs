@@ -18,6 +18,7 @@ using CoreLogic;
 using Felipecsl.GifImageViewLibrary;
 using System.IO;
 using Android.Webkit;
+using Android.Preferences;
 
 namespace BossMandadero.Activities
 {
@@ -71,6 +72,11 @@ namespace BossMandadero.Activities
 
             if (validation != null)
             {
+                ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
+                ISharedPreferencesEditor editor = prefs.Edit();
+                editor.PutInt("BossMandados_UserID", validation.Id);
+                editor.Apply();
+
                 Intent nextActivity = new Intent(this, typeof(WelcomeActivity));
                 StartActivity(nextActivity);
             }

@@ -19,10 +19,7 @@ namespace CoreLogic.ActivityCore
         }
 
         public async Task<double> CheckIntegrity(){
-            if (!User.CheckIntegrity())
-            {
-                User.Repartidor = await data.Repartidor(User.Usuario.Id);
-            }
+            await User.CheckIntegrity(context);
             return User.Repartidor.Efectivo;
         }
 
