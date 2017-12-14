@@ -113,6 +113,7 @@ namespace BossMandadero
         private void AddMarker(double lat, double lng)
         {
             MarkerOptions marker = new MarkerOptions();
+            marker.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.mandado));
             marker.SetPosition(new LatLng(lat,lng));
             Marker aux = Map.AddMarker(marker);
             markers.Add(aux); 

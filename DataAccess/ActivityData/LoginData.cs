@@ -46,6 +46,25 @@ namespace DataAccess.ActivityData
             return userReturn;
         }
 
+        public async Task<Manboss_usuario> GetUser(int UserID)
+        {
+            Manboss_usuario userReturn = null;
+
+            try
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>
+                {
+                    { "UsuarioID", UserID.ToString() }
+                };
+                var current = await client.InvokeApiAsync<Manboss_usuario>("Usuario", HttpMethod.Post, param);
+                userReturn = current;
+
+            }
+            catch (Exception e)
+            {
+            }
+            return userReturn;
+        }
         private void CreateAndShowDialog(Exception exception, String title)
         {
             CreateAndShowDialog(exception.Message, title);
@@ -59,5 +78,7 @@ namespace DataAccess.ActivityData
             builder.SetTitle(title);
             builder.Create().Show();
         }
+
+
     }
 }

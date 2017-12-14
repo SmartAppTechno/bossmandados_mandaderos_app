@@ -107,6 +107,7 @@
     <Compile Include="ActivityData\LoginData.cs" />
     <Compile Include="ActivityData\WelcomeData.cs" />
     <Compile Include="ActivityData\PendingOrdersData.cs" />
+    <Compile Include="ActivityData\ChatData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
