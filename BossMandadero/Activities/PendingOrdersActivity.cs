@@ -7,6 +7,8 @@ using System.Text;
 using Android.App;
 using Android.Content;
 using Android.Gms.Maps;
+using Android.Gms.Maps.Model;
+using Android.Locations;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
@@ -30,6 +32,11 @@ namespace BossMandadero.Activities
         private PendingOrdersCore core;
 
 
+        Location _currentLocation;
+        LocationManager _locationManager;
+
+        string _locationProvider;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -38,7 +45,6 @@ namespace BossMandadero.Activities
             core = new PendingOrdersCore(this);
             map = new MapInvoker(this, MapType.Dialog);
             drawer = new Drawer(this);
-
 
             SetResources();
         }
@@ -107,5 +113,10 @@ namespace BossMandadero.Activities
             map.Route = await core.Route();
             map.MapReady();
         }
+
+
+
+
+       
     }
 }

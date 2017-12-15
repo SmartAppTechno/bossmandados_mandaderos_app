@@ -70,6 +70,7 @@
     <Compile Include="MapRoute.cs" />
     <Compile Include="ActivityCore\ChatCore.cs" />
     <Compile Include="ActivityCore\ProfileCore.cs" />
+    <Compile Include="ActivityCore\ComissionsCore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
