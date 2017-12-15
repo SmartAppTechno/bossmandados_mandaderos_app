@@ -145,6 +145,8 @@
     <Compile Include="Route.cs" />
     <Compile Include="ChatInvoker.cs" />
     <Compile Include="Adapters\ChatAdapter.cs" />
+    <Compile Include="Activities\ComissionsActivity.cs" />
+    <Compile Include="Adapters\ComissionAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -187,6 +189,9 @@
     <AndroidResource Include="Resources\layout\ChatLayout.axml" />
     <AndroidResource Include="Resources\layout\Chat_item.axml" />
     <AndroidResource Include="Resources\drawable\mandado.png" />
+    <AndroidResource Include="Resources\layout\ComissionsLayout.axml" />
+    <AndroidResource Include="Resources\layout\Comission_item.axml" />
+    <AndroidResource Include="Resources\drawable\repartidor.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

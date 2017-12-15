@@ -102,6 +102,7 @@
     <Compile Include="MapItems\GoogleGeoCodeClass.cs" />
     <Compile Include="MapItems\OnMapReadyClass.cs" />
     <Compile Include="DBItems\Manboss_chat_mensaje.cs" />
+    <Compile Include="DBItems\Manboss_comision.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

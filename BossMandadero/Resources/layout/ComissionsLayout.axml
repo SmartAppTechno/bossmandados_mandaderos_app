@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/actionBarSize"
+        app:titleTextColor="#FFFFFF" />
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/AppDrawerTheme">
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_Name"
+                android:text="@string/comissions_header"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/green3"
+                android:textSize="35dp"
+                android:gravity="start"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="40dp" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout1"
+                android:padding="5dp">
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/spinner_year"
+                    android:layout_margin="5dp" />
+                <Spinner
+                    android:id="@+id/spinner_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp" />
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/spinner_day"
+                    android:layout_margin="5dp" />
+            </LinearLayout>
+            <ListView
+                android:id="@+id/ComissionsListView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="@color/green2"
+                android:dividerHeight="2px" />
+        </LinearLayout>
+        <include
+            layout="@layout/Drawer" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

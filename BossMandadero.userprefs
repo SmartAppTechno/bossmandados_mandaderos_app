@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{373C909B-858F-4AD0-B649-D7A9DCC7B7EA}|Default">
   <MonoDevelop.Ide.ItemProperties.CoreLogic PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CoreLogic/ActivityCore/ProfileCore.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BossMandadero/Resources/values/Styles.xml">
     <Files>
-      <File FileName="CoreLogic/User.cs" Line="53" Column="30" />
-      <File FileName="Common/DBItems/Manboss_usuario.cs" Line="1" Column="1" />
-      <File FileName="BossMandadero/Activities/ProfileActivity.cs" Line="66" Column="76" />
-      <File FileName="BossMandadero/Resources/values/Styles.xml" Line="53" Column="53" />
-      <File FileName="CoreLogic/ActivityCore/ProfileCore.cs" Line="23" Column="38" />
-      <File FileName="DataAccess/ActivityData/Welcomedata.cs" Line="15" Column="52" />
-      <File FileName="BossMandadero/Activities/WelcomeActivity.cs" Line="64" Column="59" />
-      <File FileName="CoreLogic/ActivityCore/WelcomeCore.cs" Line="44" Column="50" />
-      <File FileName="BossMandadero/Drawer.cs" Line="77" Column="58" />
+      <File FileName="BossMandadero/Adapters/ComissionAdapter.cs" Line="46" Column="67" />
+      <File FileName="BossMandadero/Activities/ActiveOrderActivity.cs" Line="239" Column="39" />
+      <File FileName="BossMandadero/MapInvoker.cs" Line="175" Column="83" />
+      <File FileName="BossMandadero/Activities/LoginActivity.cs" Line="91" Column="42" />
+      <File FileName="BossMandadero/Activities/WelcomeActivity.cs" Line="59" Column="13" />
+      <File FileName="CoreLogic/ActivityCore/ActiveOrderCore.cs" Line="25" Column="55" />
+      <File FileName="DataAccess/ActivityData/PendingOrdersData.cs" Line="76" Column="1" />
+      <File FileName="BossMandadero/Activities/PendingOrdersActivity.cs" Line="60" Column="41" />
+      <File FileName="CoreLogic/ActivityCore/PendingOrdersCore.cs" Line="36" Column="33" />
+      <File FileName="BossMandadero/Resources/values/Styles.xml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

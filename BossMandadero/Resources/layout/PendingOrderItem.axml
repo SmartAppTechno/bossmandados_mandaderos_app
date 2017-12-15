@@ -15,7 +15,7 @@
         <TextView
             android:text="@string/pending_mandado"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_Mandado"
             android:textColor="@color/black"
@@ -48,5 +48,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/progressBar"
         android:paddingTop="20dp"
-        android:progress="60" />
+        android:progress="30" />
 </LinearLayout>

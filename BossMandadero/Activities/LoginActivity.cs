@@ -56,11 +56,11 @@ namespace BossMandadero.Activities
         {
             
             int layout = Resource.Layout.Loading;
+            int style = Resource.Style.AlertDialogDefault;
+            Dialogs.CreateProgressDialog(this, style);
 
-            Dialogs.TestCreateProgressDialog(this, this, layout, Android.Resource.Style.ThemeTranslucentNoTitleBar, Resource.Id.webLoadingIcon);
             btn_Register.SetBackgroundColor(new Color(229, 85, 97));
 
-            int style = Resource.Style.AlertDialogDefault;
             string email = txt_Email.Text;
             string password = txt_Password.Text;
 
@@ -88,7 +88,7 @@ namespace BossMandadero.Activities
                 Dialogs.CreateAndShowDialog(message,title,this,style);
             }
             btn_Register.SetBackgroundColor(new Color(249, 00, 77));
-            Dialogs.TestDismissProgressDialog();
+            Dialogs.DismissProgressDialog();
 
         }
 

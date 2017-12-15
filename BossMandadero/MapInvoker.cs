@@ -33,6 +33,7 @@ namespace BossMandadero
 
         public List<Manboss_mandados_ruta> Route { get; set; }
         private List<Marker> markers;
+        private Marker Repartidor;
         public bool Displayed { get; set; }
 
 
@@ -161,6 +162,19 @@ namespace BossMandadero
                 n++;
             }
             return null;
+        }
+        public void PositionChanged()
+        {
+            if(Repartidor!=null)
+                Repartidor.Remove();
+            if (!routeDrawer.Complete)
+            {
+                routeDrawer.StartDrawing(Position);
+            }
+            MarkerOptions marker = new MarkerOptions();
+            marker.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.repartidor));
+            marker.SetPosition(new LatLng(Position.Latitude, Position.Longitude));
+            Repartidor = Map.AddMarker(marker);
         }
     }
 

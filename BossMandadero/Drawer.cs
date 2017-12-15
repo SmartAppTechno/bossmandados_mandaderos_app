@@ -49,7 +49,7 @@ namespace BossMandadero
 
             arrayList.Add(new DrawerElement("Mandados Pendientes", DrawerPosition.PendingOrders));
             arrayList.Add(new DrawerElement("Perfil", DrawerPosition.Perfil));
-            arrayList.Add(new DrawerElement("Mandado Activo", DrawerPosition.ActiveOrder));
+            arrayList.Add(new DrawerElement("Comisiones", DrawerPosition.Comissions));
 
 
             TextView name = activity.FindViewById<TextView>(Resource.Id.tv_drawer_name);
@@ -76,8 +76,8 @@ namespace BossMandadero
                     nextActivity = new Intent(activity, typeof(PendingOrdersActivity));
                     activity.StartActivity(nextActivity);
                     break;
-                case DrawerPosition.ActiveOrder:
-                    nextActivity = new Intent(activity, typeof(ActiveOrderActivity));
+                case DrawerPosition.Comissions:
+                    nextActivity = new Intent(activity, typeof(ComissionsActivity));
                     activity.StartActivity(nextActivity);
                     break;
             }

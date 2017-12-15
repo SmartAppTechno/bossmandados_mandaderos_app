@@ -236,10 +236,7 @@ namespace BossMandadero.Activities
             if (_currentLocation != null)
             {
                 map.Position = new LatLng(location.Latitude, location.Longitude);
-                if(! map.routeDrawer.Complete )
-                {
-                    map.routeDrawer.StartDrawing(map.Position);
-                }
+                map.PositionChanged();
             }
         }
 

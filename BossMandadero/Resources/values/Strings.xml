@@ -57,4 +57,7 @@
 	<!-- CHAT -->
     <string name="chat_mensaje">Mensaje</string>
 	<string name="chat_ok">OK</string>
+
+	<!-- COMISSIONS -->
+    <string name="comissions_header">Mis Comisiones</string>
 </resources>
