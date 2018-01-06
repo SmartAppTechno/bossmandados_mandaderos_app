@@ -1,17 +1,13 @@
 ﻿<Properties StartupConfiguration="{373C909B-858F-4AD0-B649-D7A9DCC7B7EA}|Default">
   <MonoDevelop.Ide.ItemProperties.CoreLogic PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BossMandadero/Resources/values/Styles.xml">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="BossMandadero/Adapters/ComissionAdapter.cs" Line="46" Column="67" />
-      <File FileName="BossMandadero/Activities/ActiveOrderActivity.cs" Line="239" Column="39" />
-      <File FileName="BossMandadero/MapInvoker.cs" Line="175" Column="83" />
-      <File FileName="BossMandadero/Activities/LoginActivity.cs" Line="91" Column="42" />
-      <File FileName="BossMandadero/Activities/WelcomeActivity.cs" Line="59" Column="13" />
-      <File FileName="CoreLogic/ActivityCore/ActiveOrderCore.cs" Line="25" Column="55" />
-      <File FileName="DataAccess/ActivityData/PendingOrdersData.cs" Line="76" Column="1" />
-      <File FileName="BossMandadero/Activities/PendingOrdersActivity.cs" Line="60" Column="41" />
-      <File FileName="CoreLogic/ActivityCore/PendingOrdersCore.cs" Line="36" Column="33" />
-      <File FileName="BossMandadero/Resources/values/Styles.xml" Line="1" Column="1" />
+      <File FileName="BossMandadero/ChatInvoker.cs" Line="94" Column="31" />
+      <File FileName="CoreLogic/ActivityCore/ChatCore.cs" Line="18" Column="50" />
+      <File FileName="DataAccess/ActivityData/ChatData.cs" Line="50" Column="34" />
+      <File FileName="BossMandadero/Adapters/ChatAdapter.cs" Line="46" Column="43" />
+      <File FileName="BossMandadero/MapInvoker.cs" Line="170" Column="1" />
+      <File FileName="BossMandadero/Activities/ActiveOrderActivity.cs" Line="138" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -23,5 +19,5 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.BossMandadero AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.ZY224G2L53" />
+  <MonoDevelop.Ide.ItemProperties.BossMandadero AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
 </Properties>

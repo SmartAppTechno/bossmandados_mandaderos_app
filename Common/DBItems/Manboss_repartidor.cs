@@ -16,6 +16,10 @@ namespace Common.DBItems
         [JsonProperty(PropertyName = "repartidor")]
         public int Repartidor { get; set; }
 
+        [JsonProperty(PropertyName = "direccion")]
+        public string Direccion { get; set; }
+
+
     }
     public class Manboss_repartidorWrapper : Java.Lang.Object
     {

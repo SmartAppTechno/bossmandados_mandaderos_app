@@ -58,13 +58,13 @@ namespace BossMandadero.Activities
             month = FindViewById<Spinner>(Resource.Id.spinner_month);
             year = FindViewById<Spinner>(Resource.Id.spinner_year);
 
-            List<int> days = core.Days;
-            List<int> months = core.Months;
-            List<int> years = core.Years;
+            List<string> days = core.Days;
+            List<string> months = core.Months;
+            List<string> years = core.Years;
 
-            for (int i = 0; i < 32; i++)
+            for (int i = 1; i < 32; i++)
             {
-                days.Add(i);
+                days.Add(i.ToString());
             }
 
             ArrayAdapter adapterDays = new ArrayAdapter(this,Android.Resource.Layout.SimpleListItem1, days);

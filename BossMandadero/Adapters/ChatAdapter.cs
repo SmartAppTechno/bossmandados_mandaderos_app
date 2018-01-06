@@ -42,18 +42,25 @@ namespace BossMandadero.Adapters
 
             TextView txt_Repartidor = view.FindViewById<TextView>(Resource.Id.txt_Repartidor);
             TextView txt_Cliente = view.FindViewById<TextView>(Resource.Id.txt_Cliente);
+            TextView lbl_Repartidor = view.FindViewById<TextView>(Resource.Id.label_Repartidor);
+            TextView lbl_Cliente = view.FindViewById<TextView>(Resource.Id.label_Cliente);
 
-            if(position%2 == 0)
+            if(messages[position].Rol == 2)
             {
                 txt_Repartidor.Visibility = ViewStates.Visible;
                 txt_Repartidor.Text = messages[position].Mensaje;
+                lbl_Repartidor.Visibility = ViewStates.Visible;
                 txt_Cliente.Visibility = ViewStates.Gone;
+                lbl_Cliente.Visibility = ViewStates.Gone;
             }
             else
             {
                 txt_Repartidor.Visibility = ViewStates.Gone;
+                lbl_Repartidor.Visibility = ViewStates.Gone;
+
                 txt_Cliente.Visibility = ViewStates.Visible;
                 txt_Cliente.Text = messages[position].Mensaje;
+                lbl_Cliente.Visibility = ViewStates.Visible;
             }
 
 

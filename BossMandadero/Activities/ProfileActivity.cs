@@ -27,6 +27,7 @@ namespace BossMandadero.Activities
         private TextView name;
         private TextView raiting;
         private TextView email;
+        private TextView address;
         private Button logout;
 
         private ProfileCore core;
@@ -48,10 +49,12 @@ namespace BossMandadero.Activities
             raiting = FindViewById<TextView>(Resource.Id.txt_Raiting);
             email = FindViewById<TextView>(Resource.Id.txt_Email);
             logout = FindViewById<Button>(Resource.Id.btn_End);
+            address = FindViewById<TextView>(Resource.Id.txt_Address);
             //Set the button methods
             name.Text = User.Usuario.Nombre;
             raiting.Text = User.Repartidor.Rating.ToString();
             email.Text = User.Usuario.Correo;
+            address.Text = User.Repartidor.Direccion;
 
             logout.Click += Logout;
         }

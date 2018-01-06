@@ -65,7 +65,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/profile_noaddress"
                     android:gravity="center_horizontal"
-                    android:padding="10dp" />
+                    android:padding="10dp"
+                    android:id="@+id/txt_Address" />
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:layout_width="match_parent"

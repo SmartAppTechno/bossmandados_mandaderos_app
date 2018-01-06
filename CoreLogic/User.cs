@@ -46,6 +46,8 @@ namespace CoreLogic
                 ISharedPreferencesEditor editor = prefs.Edit();
                 editor.Remove("BossMandados_UserID");
                 editor.Apply();
+                Usuario = null;
+                Repartidor = null;
                 return true;
             }
             catch

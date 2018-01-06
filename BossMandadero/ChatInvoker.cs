@@ -31,7 +31,7 @@ namespace BossMandadero
             core = new ChatCore(activity, mandadoID);
             Display();
             Hide();
-            SetResources();
+            SetResources(true);
         }
         public void Display()
         {
@@ -55,7 +55,7 @@ namespace BossMandadero
             mDialog.Hide();
             Displayed = false;
         }
-        private async void SetResources()
+        private async void SetResources(bool setClick)
         {
             
             int id = await core.Chat();
@@ -72,18 +72,15 @@ namespace BossMandadero
 
             send = view.FindViewById<Button>(Resource.Id.btn_send);
             message = view.FindViewById<EditText>(Resource.Id.chat_mensaje);
-            send.Click += SendMessage;
-            send.Visibility = ViewStates.Invisible;
+            if(setClick)
+                send.Click += SendMessage;
+            send.Visibility = ViewStates.Visible;
 
 
             if(messages!=null)
             {
                 adapter = new ChatAdapter(mAct, messages);
                 chat.Adapter = adapter;
-                if (messages.Count % 2 == 0)
-                {
-                    send.Visibility = ViewStates.Visible;
-                }
 
             }
 
@@ -94,7 +91,7 @@ namespace BossMandadero
             string text = message.Text;
             await core.Message(text);
             message.Text = string.Empty;
-            SetResources();
+            SetResources(false);
         }
 
 

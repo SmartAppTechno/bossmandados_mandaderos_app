@@ -46,7 +46,8 @@ namespace DataAccess.ActivityData
                 Dictionary<string, string> param = new Dictionary<string, string>
                 {
                     { "ChatID", chatID.ToString() },
-                    { "Mensaje", message }
+                    { "Mensaje", message },
+                    { "Rol", "2"}
                 };
                 var current = await client.InvokeApiAsync<bool>("Chat", HttpMethod.Post, param);
                 ans = current;

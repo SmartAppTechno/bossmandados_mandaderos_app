@@ -15,6 +15,8 @@ namespace CoreLogic.ActivityCore
         private int chatID;
         public List<Manboss_chat_mensaje> Mensajes { get; set; }
 
+        public string NombreCliente { get; set; }
+
         public ChatCore(Activity activity, int mandadoID)
         {
             this.act = activity;
