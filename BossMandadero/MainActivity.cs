@@ -7,7 +7,7 @@ using CoreLogic;
 
 namespace BossMandadero
 {
-    [Activity(Label = "BossMandadero", MainLauncher = true, Icon = "@mipmap/icon", Theme = "@style/MainTheme")]
+    [Activity(Label = "BossMandadero", MainLauncher = true, Icon = "@mipmap/icon", Theme = "@style/MainTheme", NoHistory = true)]
     public class MainActivity : Activity
     {
         private const int waitTime = 1000;

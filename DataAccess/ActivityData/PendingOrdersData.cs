@@ -40,17 +40,30 @@ namespace DataAccess.ActivityData
             return mandados;
         }
 
-        public async Task<List<Manboss_mandados_ruta>> Route(int orderID)
+        public async Task<List<Manboss_mandados_ruta>> Route(int orderID, int tipo)
         {
             List<Manboss_mandados_ruta> ruta = new List<Manboss_mandados_ruta>();
 
             try
             {
-                Dictionary<string, string> param = new Dictionary<string, string>()
+
+                if (tipo == 0)
                 {
-                    { "MandadoID", orderID.ToString() }
-                };
-                ruta = await client.InvokeApiAsync<List<Manboss_mandados_ruta>>("MandadosActivos", HttpMethod.Post, param);
+                    Dictionary<string, string> param = new Dictionary<string, string>()
+                    {
+                        { "MandadoID", orderID.ToString() }
+                    };
+                    ruta = await client.InvokeApiAsync<List<Manboss_mandados_ruta>>("MandadosActivos", HttpMethod.Post, param);
+                }
+                else
+                {
+                    Dictionary<string, string> param = new Dictionary<string, string>()
+                    {
+                        { "MandadoID", orderID.ToString() },
+                        { "Estado", "1"}
+                    };
+                    ruta = await client.InvokeApiAsync<List<Manboss_mandados_ruta>>("Mandados", HttpMethod.Post, param);
+                }
             }
             catch(Exception e)
             {}

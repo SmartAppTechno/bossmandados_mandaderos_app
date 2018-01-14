@@ -79,8 +79,8 @@ namespace BossMandadero.Activities
             }
             else
             {
-                Finish();
-                Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+                int style = Resource.Style.AlertDialogDefault;
+                Dialogs.ExitDialog(this, style);
             }
 
         }
@@ -110,7 +110,7 @@ namespace BossMandadero.Activities
         public async void OnMapReady(GoogleMap googleMap)
         {
             map.Map = googleMap;
-            map.Route = await core.Route();
+            map.Route = await core.Route(0);
             map.MapReady();
         }
 

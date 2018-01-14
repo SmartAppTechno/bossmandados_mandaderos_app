@@ -14,6 +14,9 @@ namespace Common.DBItems
         [JsonProperty(PropertyName = "chat")]
         public int Chat { get; set; }
 
+        [JsonProperty(PropertyName = "rol")]
+        public int Rol { get; set; }
+
     }
     public class Manboss_chat_mensajeWrapper : Java.Lang.Object
     {

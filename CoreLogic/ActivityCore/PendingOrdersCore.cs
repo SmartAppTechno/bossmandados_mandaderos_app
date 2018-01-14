@@ -39,9 +39,9 @@ namespace CoreLogic.ActivityCore
             return orders;
         }
 
-        public async Task<List<Manboss_mandados_ruta>> Route()
+        public async Task<List<Manboss_mandados_ruta>> Route(int tipo)
         {
-            route = await data.Route(OrderID);
+            route = await data.Route(OrderID,tipo);
             return route;
         }
         public async Task<bool> StartOrder(int OrderID)

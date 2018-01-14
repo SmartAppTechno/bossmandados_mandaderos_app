@@ -75,5 +75,23 @@ namespace DataAccess.ActivityData
             }
             return false;
         }
+
+        public async Task<Manboss_mandado> GetMandado(int mandadoID)
+        {
+            Manboss_mandado mandado = null;
+            try
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>
+                {
+                    { "MandadoID", mandadoID.ToString() }
+                };
+                mandado =  await client.InvokeApiAsync<Manboss_mandado>("Mandados", HttpMethod.Post, param);
+
+            }
+            catch (Exception e)
+            {
+            }
+            return mandado;
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Android.App;
 using Android.Views;
 using Android.Widget;
+using BossMandadero.Activities;
 using Common.DBItems;
 
 namespace BossMandadero.Adapters
@@ -11,6 +12,7 @@ namespace BossMandadero.Adapters
     {
         private List<Manboss_comision> comissions;
         private Activity activity;
+
 
         public ComissionAdapter(Activity activity, List<Manboss_comision> comissions)
         {
@@ -39,6 +41,7 @@ namespace BossMandadero.Adapters
                 Resource.Layout.Comission_item, parent, false);
 
             view.Tag = position;
+            view.Click += ComissionClick;
 
             TextView txt_Mandado = view.FindViewById<TextView>(Resource.Id.txt_Mandado);
             TextView txt_Comision = view.FindViewById<TextView>(Resource.Id.txt_Comision);
@@ -47,6 +50,13 @@ namespace BossMandadero.Adapters
             txt_Comision.Text += " " + comissions[position].Comision;
 
             return view;
+        }
+
+        private void ComissionClick(object sender, EventArgs ea)
+        {
+            int position = (int)((View)sender).Tag;
+            int id = comissions[position].Mandado;
+            ((ComissionsActivity)activity).GetOrder(id);
         }
     }
 }

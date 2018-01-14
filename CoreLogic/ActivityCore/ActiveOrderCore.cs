@@ -35,9 +35,9 @@ namespace CoreLogic.ActivityCore
             return order;
         }
 
-        public async Task<List<Manboss_mandados_ruta>> Route()
+        public async Task<List<Manboss_mandados_ruta>> Route(int tipo)
         {
-            route = await data.Route(order.Id);
+            route = await data.Route(order.Id, tipo);
             return route;
         }
         public async Task<bool> CompleteTask(Manboss_mandados_ruta r)
@@ -50,6 +50,12 @@ namespace CoreLogic.ActivityCore
 
             }
             return await data.CompleteTask(r.Id);
+        }
+        public async Task<Manboss_cliente> GetClient(Manboss_mandado order)
+        {
+            this.order = order;
+            Client = await data.Client(order.Cliente);
+            return Client;
         }
     }
 }

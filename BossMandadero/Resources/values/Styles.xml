@@ -64,6 +64,14 @@
 		<item name="android:padding">3dp</item>
     </style>
 
+	<style name="AlertDialogWhite">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:padding">3dp</item>
+    </style>
+
 	<style name="EditTextDefault" parent="android:Widget.Holo.Light.EditText">
         
     </style> 

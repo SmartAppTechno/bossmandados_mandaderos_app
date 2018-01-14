@@ -25,7 +25,7 @@ using static Android.Gms.Maps.GoogleMap;
 
 namespace BossMandadero.Activities
 {
-    [Activity(Label = "ActiveOrderActivity", Theme = "@style/AppDrawerTheme")]
+    [Activity(Label = "ActiveOrderActivity", Theme = "@style/AppDrawerTheme", NoHistory = true)]
     public class ActiveOrderActivity : AppCompatActivity, IOnMapReadyCallback, IOnMarkerClickListener, ILocationListener
     {
         private Drawer drawer;
@@ -36,6 +36,7 @@ namespace BossMandadero.Activities
         private TextView txt_Name, txt_Direction, txt_City, txt_Task, txt_Detail;
         private Button btn_Map, btn_List;
         private ImageView img_Chat;
+        private TextView txt_TipoPago;
 
         private View mapView;
         private View listView;
@@ -88,6 +89,7 @@ namespace BossMandadero.Activities
             txt_City = FindViewById<TextView>(Resource.Id.txt_City);
             txt_Task = FindViewById<TextView>(Resource.Id.txt_Task);
             txt_Detail = FindViewById<TextView>(Resource.Id.txt_Detail);
+            txt_TipoPago = FindViewById<TextView>(Resource.Id.txt_TipoPago);
 
             mapView = FindViewById<View>(Resource.Id.layoutMap);
             listView = FindViewById<View>(Resource.Id.layoutList);
@@ -114,6 +116,15 @@ namespace BossMandadero.Activities
                 chat = new ChatInvoker(this, mandado.Id);
                 txt_Name.Text = client.Nombre;
                 txt_City.Text = map.GetCity(client.Latitud, client.Longitud);
+
+                if(mandado.Tipo_pago == 0)
+                {
+                    txt_TipoPago.Text = "Efectivo";
+                }else
+                {
+                    txt_TipoPago.Text = "Tarjeta";
+                }
+
                 SetMap();
             }
 
@@ -138,11 +149,6 @@ namespace BossMandadero.Activities
             chat.Display();
         }
 
-        public override void OnBackPressed()
-        {
-            Finish();
-            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
-        }
 
 
         //MaP
@@ -168,7 +174,7 @@ namespace BossMandadero.Activities
         public async void OnMapReady(GoogleMap googleMap)
         {
             map.Map = googleMap;
-            map.Route = await core.Route();
+            map.Route = await core.Route(0);
 
             RouteAdapter adapter = new RouteAdapter(this, map.Route);
             routeListView.Adapter = adapter;

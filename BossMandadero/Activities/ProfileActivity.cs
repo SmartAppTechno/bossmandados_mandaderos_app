@@ -15,10 +15,11 @@ using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.V7.App;
 using CoreLogic;
 using CoreLogic.ActivityCore;
+using Common.Utils;
 
 namespace BossMandadero.Activities
 {
-    [Activity(Label = "ProfileActivity", Theme = "@style/AppDrawerTheme")]
+    [Activity(Label = "ProfileActivity", Theme = "@style/AppDrawerTheme", NoHistory = true)]
     public class ProfileActivity : AppCompatActivity
     {
 
@@ -27,6 +28,7 @@ namespace BossMandadero.Activities
         private TextView name;
         private TextView raiting;
         private TextView email;
+        private TextView address;
         private Button logout;
 
         private ProfileCore core;
@@ -48,18 +50,20 @@ namespace BossMandadero.Activities
             raiting = FindViewById<TextView>(Resource.Id.txt_Raiting);
             email = FindViewById<TextView>(Resource.Id.txt_Email);
             logout = FindViewById<Button>(Resource.Id.btn_End);
+            address = FindViewById<TextView>(Resource.Id.txt_Address);
             //Set the button methods
             name.Text = User.Usuario.Nombre;
             raiting.Text = User.Repartidor.Rating.ToString();
             email.Text = User.Usuario.Correo;
+            address.Text = User.Repartidor.Direccion;
 
             logout.Click += Logout;
         }
 
         public override void OnBackPressed()
         {
-            Finish();
-            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+            int style = Resource.Style.AlertDialogDefault;
+            Dialogs.ExitDialog(this, style);
         }
 
         private async void Logout(object sender, EventArgs e)

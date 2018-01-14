@@ -17,7 +17,7 @@ namespace Common.Utils
     {
         private static ProgressDialog progressDialog;
         private static Dialog _progressDialog;
-
+        private static Activity mAct;
         public static void CreateAndShowDialog(Exception exception, String title, Context context, int style)
         {
             CreateAndShowDialog(exception.Message, title, context,style);
@@ -95,6 +95,29 @@ namespace Common.Utils
             builder.SetMessage(content);
             builder.SetTitle(title);
             return builder;
+        }
+
+        public static void ExitDialog(Activity activity, int style)
+        {
+
+            mAct = activity;
+            AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(activity, style));
+
+            builder.SetMessage("¿Desea salir de la aplicación?");
+            builder.SetTitle("Advertencia");
+            builder.SetPositiveButton("OK", ExitApp);
+            builder.SetNegativeButton("Cancelar",Cancel);
+            builder.Create().Show();
+        }
+
+        private static void ExitApp(object sender, EventArgs e)
+        {
+            mAct.Finish();
+        }
+
+        private static void Cancel(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -15,9 +15,9 @@ namespace CoreLogic.ActivityCore
 
         public List<Manboss_comision> Comissions { get; set; }
 
-        public List<int> Days = new List<int>();
-        public List<int> Months = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-        public List<int> Years = new List<int>() { 0, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 };
+        public List<string> Days = new List<string>() { "Día" };
+        public List<string> Months = new List<string>() { "Mes", "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"};
+        public List<string> Years = new List<string>() { "Año", "2016", "2017", "2018", "2019", "2020", "2021", "2022" };
 
         public ComissionsCore(Context context)
         {
@@ -35,6 +35,10 @@ namespace CoreLogic.ActivityCore
             if (year!=0)  year += 2015;
             Comissions = await data.Filter(User.Repartidor.Id, year, month, day);
             return Comissions;
+        }
+        public async Task<Manboss_mandado> GetMandado(int mandadoID)
+        {
+            return await data.GetMandado(mandadoID);
         }
     }
 }

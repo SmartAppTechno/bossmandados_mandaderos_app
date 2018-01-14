@@ -147,6 +147,7 @@
     <Compile Include="Adapters\ChatAdapter.cs" />
     <Compile Include="Activities\ComissionsActivity.cs" />
     <Compile Include="Adapters\ComissionAdapter.cs" />
+    <Compile Include="OrderInvoker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
