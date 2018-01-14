@@ -17,7 +17,7 @@ using CoreLogic;
 
 namespace BossMandadero.Activities
 {
-    [Activity(Label = "WelcomeActivity", Theme = "@style/AppDrawerTheme")]
+    [Activity(Label = "WelcomeActivity", Theme = "@style/AppDrawerTheme", NoHistory = true)]
     public class WelcomeActivity : AppCompatActivity
     {
         private WelcomeCore core;
@@ -82,8 +82,8 @@ namespace BossMandadero.Activities
 
         public override void OnBackPressed()
         {
-            Finish();
-            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+            int style = Resource.Style.AlertDialogDefault;
+            Dialogs.ExitDialog(this, style);
         }
     }
 }

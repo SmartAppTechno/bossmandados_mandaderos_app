@@ -22,7 +22,7 @@ using Android.Preferences;
 
 namespace BossMandadero.Activities
 {
-    [Activity(Label = "LoginActivity", Theme = "@style/MainTheme")]
+    [Activity(Label = "LoginActivity", Theme = "@style/MainTheme", NoHistory = true)]
     public class LoginActivity : Activity
     {
         private LoginCore loginCore;
@@ -90,6 +90,11 @@ namespace BossMandadero.Activities
             btn_Register.SetBackgroundColor(new Color(249, 00, 77));
             Dialogs.DismissProgressDialog();
 
+        }
+
+        public override void OnBackPressed()
+        {
+            Finish();
         }
 
 

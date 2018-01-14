@@ -6,6 +6,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Gms.Maps;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
@@ -13,17 +14,19 @@ using Android.Views;
 using Android.Widget;
 using BossMandadero.Adapters;
 using Common.DBItems;
+using Common.Utils;
 using CoreLogic.ActivityCore;
 
 namespace BossMandadero.Activities
 {
-    [Activity(Label = "ComissionsActivity", Theme = "@style/AppDrawerTheme")]
-    public class ComissionsActivity : AppCompatActivity
+    [Activity(Label = "ComissionsActivity", Theme = "@style/AppDrawerTheme", NoHistory = true)]
+    public class ComissionsActivity : AppCompatActivity, IOnMapReadyCallback
     {
 
         private ComissionsCore core;
         private Drawer drawer;
         private ListView list;
+        private OrderInvoker orderInvoker;
 
         private Spinner day, month, year;
 
@@ -37,6 +40,7 @@ namespace BossMandadero.Activities
 
             drawer = new Drawer(this);
             core = new ComissionsCore(this);
+            orderInvoker = new OrderInvoker(this);
             SetResources();
 
         }
@@ -91,6 +95,53 @@ namespace BossMandadero.Activities
             List<Manboss_comision> comissions = await core.Filter(i_year,i_month,i_day);
             ComissionAdapter adapter = new ComissionAdapter(this, comissions);
             list.Adapter = adapter;
+        }
+
+        public async void GetOrder(int id)
+        {
+            Manboss_mandado order = await core.GetMandado(id);
+            orderInvoker.Display(order);
+        }
+
+        public override void OnBackPressed()
+        {
+            if (orderInvoker.mDialog.IsShowing)
+            {
+                orderInvoker.Hide();
+            }
+            else
+            {
+                int style = Resource.Style.AlertDialogWhite;
+                Dialogs.ExitDialog(this, style);
+            }
+        }
+
+        public void SetMap()
+        {
+            orderInvoker.map.StartMap();
+            orderInvoker.map.MapFrag = MapFragment.NewInstance();
+            orderInvoker.map.MapFrag = FragmentManager.FindFragmentById(Resource.Id.map) as MapFragment;
+            if (orderInvoker.map.MapFrag == null)
+            {
+                GoogleMapOptions mapOptions = new GoogleMapOptions()
+                    .InvokeMapType(GoogleMap.MapTypeSatellite)
+                    .InvokeZoomControlsEnabled(false)
+                    .InvokeCompassEnabled(true);
+
+                FragmentTransaction fragTx = FragmentManager.BeginTransaction();
+                orderInvoker.map.MapFrag = MapFragment.NewInstance(mapOptions);
+                fragTx.Add(Resource.Id.map, orderInvoker.map.MapFrag, "map");
+                fragTx.Commit();
+            }
+            orderInvoker.map.MapFrag.GetMapAsync(this);
+        }
+        public async void OnMapReady(GoogleMap googleMap)
+        {
+            orderInvoker.map.Map = googleMap;
+            orderInvoker.map.Route = await orderInvoker.core.Route(1);
+            orderInvoker.map.MapReady();
+
+            orderInvoker.RouteReady();
         }
     }
 }

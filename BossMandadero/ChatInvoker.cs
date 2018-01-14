@@ -12,7 +12,7 @@ namespace BossMandadero
     public class ChatInvoker
     {
         private Activity mAct;
-        private Dialog mDialog;
+        public Dialog mDialog;
         private ChatCore core;
         public bool Displayed { get; set; }
 

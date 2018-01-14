@@ -36,5 +36,9 @@ namespace CoreLogic.ActivityCore
             Comissions = await data.Filter(User.Repartidor.Id, year, month, day);
             return Comissions;
         }
+        public async Task<Manboss_mandado> GetMandado(int mandadoID)
+        {
+            return await data.GetMandado(mandadoID);
+        }
     }
 }

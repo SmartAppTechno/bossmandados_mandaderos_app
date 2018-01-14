@@ -15,10 +15,11 @@ using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.V7.App;
 using CoreLogic;
 using CoreLogic.ActivityCore;
+using Common.Utils;
 
 namespace BossMandadero.Activities
 {
-    [Activity(Label = "ProfileActivity", Theme = "@style/AppDrawerTheme")]
+    [Activity(Label = "ProfileActivity", Theme = "@style/AppDrawerTheme", NoHistory = true)]
     public class ProfileActivity : AppCompatActivity
     {
 
@@ -61,8 +62,8 @@ namespace BossMandadero.Activities
 
         public override void OnBackPressed()
         {
-            Finish();
-            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+            int style = Resource.Style.AlertDialogDefault;
+            Dialogs.ExitDialog(this, style);
         }
 
         private async void Logout(object sender, EventArgs e)

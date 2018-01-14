@@ -15,18 +15,18 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <activity android:icon="@mipmap/icon" android:label="BossMandadero" android:theme="@style/MainTheme" android:name="md5f0df50de2868be123f4a356284f07269.MainActivity">
+    <activity android:icon="@mipmap/icon" android:label="BossMandadero" android:noHistory="true" android:theme="@style/MainTheme" android:name="md5f0df50de2868be123f4a356284f07269.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:label="LoginActivity" android:theme="@style/MainTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.LoginActivity" />
-    <activity android:label="WelcomeActivity" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.WelcomeActivity" />
-    <activity android:label="ProfileActivity" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.ProfileActivity" />
+    <activity android:label="LoginActivity" android:noHistory="true" android:theme="@style/MainTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.LoginActivity" />
+    <activity android:label="WelcomeActivity" android:noHistory="true" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.WelcomeActivity" />
+    <activity android:label="ProfileActivity" android:noHistory="true" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.ProfileActivity" />
     <activity android:label="PendingOrdersActivity" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.PendingOrdersActivity" />
-    <activity android:label="ActiveOrderActivity" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.ActiveOrderActivity" />
-    <activity android:label="ComissionsActivity" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.ComissionsActivity" />
+    <activity android:label="ActiveOrderActivity" android:noHistory="true" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.ActiveOrderActivity" />
+    <activity android:label="ComissionsActivity" android:noHistory="true" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.ComissionsActivity" />
     <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.FormAuthenticatorActivity" />
     <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorActivity" />
     <activity android:label="Web Authenticator Native Broswer" android:launchMode="singleTop" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorNativeBrowserActivity" />

@@ -14,7 +14,6 @@ public class ActiveOrderActivity
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
-			"n_onBackPressed:()V:GetOnBackPressedHandler\n" +
 			"n_onResume:()V:GetOnResumeHandler\n" +
 			"n_onPause:()V:GetOnPauseHandler\n" +
 			"n_onMapReady:(Lcom/google/android/gms/maps/GoogleMap;)V:GetOnMapReady_Lcom_google_android_gms_maps_GoogleMap_Handler:Android.Gms.Maps.IOnMapReadyCallbackInvoker, Xamarin.GooglePlayServices.Maps\n" +
@@ -42,14 +41,6 @@ public class ActiveOrderActivity
 	}
 
 	private native void n_onCreate (android.os.Bundle p0);
-
-
-	public void onBackPressed ()
-	{
-		n_onBackPressed ();
-	}
-
-	private native void n_onBackPressed ();
 
 
 	public void onResume ()
