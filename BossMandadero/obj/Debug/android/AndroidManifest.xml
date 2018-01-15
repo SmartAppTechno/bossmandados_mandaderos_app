@@ -21,6 +21,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <service android:name="md52e0a55589b48d5e8d64958135c9b98c4.ServiceGPS" />
     <activity android:label="LoginActivity" android:noHistory="true" android:theme="@style/MainTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.LoginActivity" />
     <activity android:label="WelcomeActivity" android:noHistory="true" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.WelcomeActivity" />
     <activity android:label="ProfileActivity" android:noHistory="true" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.ProfileActivity" />

@@ -42,7 +42,8 @@ namespace BossMandadero.Activities
             drawer = new Drawer(this);
             core = new ProfileCore(this);
             SetResources();
-            //StartService(new Intent(this, typeof(ServiceGPS)));
+            ServiceGPS.mContext = this;
+            StartService(new Intent(this, typeof(ServiceGPS)));
         }
 
         private void SetResources()

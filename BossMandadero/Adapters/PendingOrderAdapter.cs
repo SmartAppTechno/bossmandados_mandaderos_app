@@ -47,6 +47,8 @@ namespace BossMandadero.Adapters
 
             TextView tv_Referencia = view.FindViewById<TextView>(Resource.Id.tv_Referencia);
             Button btn_Posicion = view.FindViewById<Button>(Resource.Id.btn_Posicion);
+            btn_Posicion.TransformationMethod = null;
+            btn_Posicion.SetAllCaps(false);
             ProgressBar bar = view.FindViewById<ProgressBar>(Resource.Id.progressBar);
             btn_Posicion.Tag = position;
 

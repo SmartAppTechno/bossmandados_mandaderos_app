@@ -204,7 +204,9 @@ namespace BossMandadero.Activities
                 Android.App.AlertDialog.Builder builder = Dialogs.YesNoDialog(
                     "Punto en ruta", "¿Completar este punto en la ruta?", this, Resource.Style.AlertDialogDefault);
                 builder.SetPositiveButton("OK", RemoveMarker);
-                builder.Create().Show();
+                Dialog d = builder.Show();
+                int dividerId = d.Context.Resources.GetIdentifier("android:id/titleDivider", null, null);
+
             }
             return true;
         }

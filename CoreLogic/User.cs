@@ -66,7 +66,7 @@ namespace CoreLogic
 
             WelcomeData data = new WelcomeData(context);
             await data.SetUbicacion(location.Latitude, location.Longitude, Repartidor.Id);
-            await Task.Delay(10000);
+            await Task.Delay(1000);
 
             CanSetUbicacion = true;
         }

@@ -9,9 +9,10 @@ using CoreLogic;
 
 namespace BossMandadero.Services
 {
+    [Service]
     public class ServiceGPS : Service, ILocationListener
     {
-        private Context mContext;
+        public static Context mContext;
         private bool isGPSEnabled = false;
         private bool isNetworkEnabled = false;
         private bool canGetLocation = false;
@@ -20,12 +21,16 @@ namespace BossMandadero.Services
         private double longitude;
 
         private static Int64 MIN_DISTANCE_CHANGE_FOR_UPDATES = 10;
-        private static  Int64 MIN_TIME_BW_UPDATES = 1000 * 60 * 1;
+        private static  Int64 MIN_TIME_BW_UPDATES = 1000 * 1 * 1;
         protected LocationManager locationManager;
 
         public ServiceGPS(Context context)
         {
-            this.mContext = context;
+            GetLocation();
+        }
+
+        public ServiceGPS()
+        {
             GetLocation();
         }
 
