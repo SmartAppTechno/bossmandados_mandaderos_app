@@ -44,14 +44,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:id="@+id/spinner_year"
+                    android:backgroundTint="@color/orange"
                     android:layout_margin="0dp" />
                 <Spinner
                     android:id="@+id/spinner_month"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:backgroundTint="@color/orange"
                     android:layout_margin="0dp" />
                 <Spinner
                     android:layout_width="wrap_content"
+                    android:backgroundTint="@color/orange"
                     android:layout_height="match_parent"
                     android:id="@+id/spinner_day"
                     android:layout_margin="0dp" />

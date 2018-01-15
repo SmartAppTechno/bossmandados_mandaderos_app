@@ -52,7 +52,7 @@ namespace BossMandadero.Adapters
             txt_Direction.Text = route[position].Calle + " " + route[position].Numero;
 
             int task = route[position].Servicio - 1;
-            txt_Task.Text = Services.Service[task];
+            txt_Task.Text = Common.Services.Service[task];
 
 
             return view;

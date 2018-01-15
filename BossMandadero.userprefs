@@ -1,16 +1,14 @@
 ﻿<Properties StartupConfiguration="{373C909B-858F-4AD0-B649-D7A9DCC7B7EA}|Default">
   <MonoDevelop.Ide.ItemProperties.CoreLogic PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CoreLogic/ActivityCore/PendingOrdersCore.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BossMandadero/Activities/ActiveOrderActivity.cs">
     <Files>
-      <File FileName="Common/Utils/Dialogs.cs" Line="110" Column="37" />
-      <File FileName="BossMandadero/Activities/ComissionsActivity.cs" Line="141" Column="69" />
-      <File FileName="BossMandadero/Adapters/ComissionAdapter.cs" Line="15" Column="9" />
-      <File FileName="BossMandadero/OrderInvoker.cs" Line="115" Column="14" />
-      <File FileName="BossMandadero/Activities/ActiveOrderActivity.cs" Line="177" Column="43" />
-      <File FileName="CoreLogic/ActivityCore/ActiveOrderCore.cs" Line="30" Column="30" />
-      <File FileName="BossMandadero/Activities/PendingOrdersActivity.cs" Line="74" Column="45" />
-      <File FileName="DataAccess/ActivityData/PendingOrdersData.cs" Line="53" Column="27" />
-      <File FileName="CoreLogic/ActivityCore/PendingOrdersCore.cs" Line="44" Column="32" />
+      <File FileName="BossMandadero/Activities/WelcomeActivity.cs" Line="1" Column="1" />
+      <File FileName="BossMandadero/Services/ServiceGPS.cs" Line="182" Column="1" />
+      <File FileName="BossMandadero/Activities/ProfileActivity.cs" Line="45" Column="40" />
+      <File FileName="CoreLogic/User.cs" Line="69" Column="34" />
+      <File FileName="BossMandadero/Resources/values/Styles.xml" Line="58" Column="48" />
+      <File FileName="Common/Utils/Dialogs.cs" Line="91" Column="47" />
+      <File FileName="BossMandadero/Activities/ActiveOrderActivity.cs" Line="208" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -94,6 +94,8 @@ namespace Common.Utils
 
             builder.SetMessage(content);
             builder.SetTitle(title);
+
+
             return builder;
         }
 

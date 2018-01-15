@@ -19,6 +19,7 @@ using BossMandadero.Adapters;
 using Common;
 using Common.DBItems;
 using Common.Utils;
+using CoreLogic;
 using CoreLogic.ActivityCore;
 using static Android.App.ActionBar;
 using static Android.Gms.Maps.GoogleMap;
@@ -182,7 +183,7 @@ namespace BossMandadero.Activities
             if(map.Route.Count > 0 )
             {
                 int task = map.Route[0].Servicio - 1;
-                txt_Task.Text = Services.Service[task];
+                txt_Task.Text = Common.Services.Service[task];
                 txt_Direction.Text = map.Route[0].Calle + " " + map.Route[0].Numero;
                 txt_Detail.Text = map.Route[0].Comentarios;
             }
@@ -203,7 +204,9 @@ namespace BossMandadero.Activities
                 Android.App.AlertDialog.Builder builder = Dialogs.YesNoDialog(
                     "Punto en ruta", "¿Completar este punto en la ruta?", this, Resource.Style.AlertDialogDefault);
                 builder.SetPositiveButton("OK", RemoveMarker);
-                builder.Create().Show();
+                Dialog d = builder.Show();
+                int dividerId = d.Context.Resources.GetIdentifier("android:id/titleDivider", null, null);
+
             }
             return true;
         }
@@ -243,6 +246,10 @@ namespace BossMandadero.Activities
             {
                 map.Position = new LatLng(location.Latitude, location.Longitude);
                 map.PositionChanged();
+            }
+            if(User.CanSetUbicacion)
+            {
+                User.UpdateLocation(location,this);
             }
         }
 

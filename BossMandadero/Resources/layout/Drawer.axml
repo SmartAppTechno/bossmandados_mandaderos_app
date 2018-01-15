@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="240dp"
     android:layout_height="match_parent"
-    android:layout_gravity="left">
+    android:layout_gravity="left|top">
     <include
         layout="@layout/DrawerHeader" />
     <ListView

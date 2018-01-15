@@ -29,7 +29,7 @@
 	<string name="profile_hello">¡Hola!</string>
 	<string name="profile_noname">NoName,</string>
 	<string name="profile_address">Dirección Principal</string>
-	<string name="profile_noaddress">NoAdress</string>
+	<string name="profile_noaddress">NoAddress</string>
     <string name="profile_email">Correo</string>
 	<string name="profile_noemail">NoEmail</string>
     <string name="profile_raiting">Raiting</string>
@@ -41,7 +41,7 @@
     <string name="pending_title">Sin mandado activo</string>
 	<string name="pending_position">Ver Ruta</string>
 	<string name="pending_mandado">Mandado</string>
-	<string name="pending_reference">Referencia</string>
+	<string name="pending_reference">#</string>
 	<string name="pending_detail">Detalle</string>
     <string name="pending_direction">NoDirection</string>
 	<string name="pending_city">NoCity</string>

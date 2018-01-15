@@ -64,6 +64,27 @@ namespace DataAccess.ActivityData
             }
             return result;
         }
+        public async Task<bool> SetUbicacion(double latitud, double longitud, int RepartidorID)
+        {
+            bool result = false;
+
+            try
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>
+                {
+                    { "Latitud", latitud.ToString() },
+                    { "Longitud", longitud.ToString() },
+                    { "RepartidorID", RepartidorID.ToString()}
+                };
+                result = await client.InvokeApiAsync<bool>("Repartidor", HttpMethod.Post, param);
+
+            }
+            catch (Exception e)
+            {
+
+            }
+            return result;
+        }
         public async Task<bool> SetStatus(bool status, int RepartidorID)
         {
             bool result = false;

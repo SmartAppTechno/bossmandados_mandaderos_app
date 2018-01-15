@@ -136,11 +136,6 @@
 /Users/ricardo_espinosa/Projects/BossMandados_Repartidor/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/drawable/loading.gif
 /Users/ricardo_espinosa/Projects/BossMandados_Repartidor/bossmandados_mandaderos_app/BossMandadero/obj/Debug/R.cs.flag
 /Users/ricardo_espinosa/Projects/BossMandados_Repartidor/bossmandados_mandaderos_app/BossMandadero/obj/Debug/uploadflags.txt
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/BossMandadero.csprojResolveAssemblyReference.cache
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Basement.dll.stamp
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Tasks.dll.stamp
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Base.dll.stamp
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Maps.dll.stamp
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/BossMandadero.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/BossMandadero.pdb
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/com.smartapptech.BossMandadero.apk
@@ -148,6 +143,7 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Common.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/CoreLogic.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Glide.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Newtonsoft.Json.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/PInvoke.BCrypt.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/PInvoke.Kernel32.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/PInvoke.Windows.Core.dll
@@ -173,7 +169,6 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.GooglePlayServices.Basement.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.GooglePlayServices.Maps.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.GooglePlayServices.Tasks.dll
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Newtonsoft.Json.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/DataAccess.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Microsoft.Azure.Mobile.Client.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.Android.Support.CustomTabs.dll
@@ -188,6 +183,11 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/DataAccess.pdb
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Microsoft.Azure.Mobile.Client.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/PCLCrypto.xml
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/BossMandadero.csprojResolveAssemblyReference.cache
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Basement.dll.stamp
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Tasks.dll.stamp
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Base.dll.stamp
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Maps.dll.stamp
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/BossMandadero.csproj.CoreCompileInputs.cache
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/BossMandadero.dll
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/BossMandadero.pdb
@@ -220,8 +220,6 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/pendingorderslayout.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/profilelayout.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/welcomelayout.xml
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/R.cs.flag
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/uploadflags.txt
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/map.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/activeorderlayout.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/routeitem.xml
@@ -231,3 +229,5 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/comissionslayout.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/comission_item.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/drawable/repartidor.png
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/R.cs.flag
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/uploadflags.txt

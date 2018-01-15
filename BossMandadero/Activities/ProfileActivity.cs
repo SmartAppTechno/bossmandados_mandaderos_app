@@ -16,6 +16,7 @@ using Android.Support.V7.App;
 using CoreLogic;
 using CoreLogic.ActivityCore;
 using Common.Utils;
+using BossMandadero.Services;
 
 namespace BossMandadero.Activities
 {
@@ -41,6 +42,8 @@ namespace BossMandadero.Activities
             drawer = new Drawer(this);
             core = new ProfileCore(this);
             SetResources();
+            ServiceGPS.mContext = this;
+            StartService(new Intent(this, typeof(ServiceGPS)));
         }
 
         private void SetResources()
