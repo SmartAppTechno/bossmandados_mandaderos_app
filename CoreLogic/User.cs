@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Android.Content;
+using Android.Locations;
 using Android.Preferences;
 using Common.DBItems;
 using DataAccess.ActivityData;
@@ -11,9 +12,11 @@ namespace CoreLogic
     {
         public static Manboss_usuario Usuario { get; set; }
         public static Manboss_repartidor Repartidor { get; set; }
+        public static bool CanSetUbicacion { get; set; }
 
         public static async Task<bool> CheckIntegrity(Context context)
         {
+            CanSetUbicacion = true;
             if (Usuario == null)
             {
                 ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(context);
@@ -40,6 +43,7 @@ namespace CoreLogic
 
         public static bool Logout(Context context)
         {
+            CanSetUbicacion = false;
             try
             {
                 ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(context);
@@ -54,6 +58,17 @@ namespace CoreLogic
             {
                 return false;
             }
+        }
+
+        public static async void UpdateLocation(Location location, Context context)
+        {
+            CanSetUbicacion = false;
+
+            WelcomeData data = new WelcomeData(context);
+            await data.SetUbicacion(location.Latitude, location.Longitude, Repartidor.Id);
+            await Task.Delay(10000);
+
+            CanSetUbicacion = true;
         }
 
 

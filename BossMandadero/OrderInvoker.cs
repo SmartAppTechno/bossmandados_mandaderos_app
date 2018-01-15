@@ -139,7 +139,7 @@ namespace BossMandadero
             if (map.Route.Count > 0)
             {
                 int task = map.Route[0].Servicio - 1;
-                txt_Task.Text = Services.Service[task];
+                txt_Task.Text = Common.Services.Service[task];
                 txt_Direction.Text = map.Route[0].Calle + " " + map.Route[0].Numero;
                 txt_Detail.Text = map.Route[0].Comentarios;
             }

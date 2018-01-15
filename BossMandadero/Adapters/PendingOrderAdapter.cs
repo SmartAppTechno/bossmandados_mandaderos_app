@@ -51,7 +51,7 @@ namespace BossMandadero.Adapters
             btn_Posicion.Tag = position;
 
 
-            tv_Referencia.Text = pendingOrders[position].Id.ToString();
+            tv_Referencia.Text += pendingOrders[position].Id.ToString();
 
             if(position == 0)
             {

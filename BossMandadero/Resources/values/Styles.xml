@@ -8,7 +8,6 @@
 		<item name="android:windowBackground">@drawable/Fondo_1</item>
 		<item name="android:fontFamily">sans-serif-light</item>
 
-        <item name="android:buttonStyle">@style/ButtonDefault</item>
 		<item name="android:editTextStyle">@style/EditTextDefault</item>
 		
     </style>
@@ -32,7 +31,6 @@
         <item name="android:gravity">center</item>
 		
 		<item name="drawerArrowStyle">@style/ArrowStyle</item>      
-		<item name="android:buttonStyle">@style/ButtonDefault</item>
         
     </style>
 
@@ -50,7 +48,6 @@
 	<style name="ButtonDefault" parent="android:Widget.Holo.Light.Button">
 		
 		<item name="android:padding">5dp</item>
-		<item name="android:background">@color/pink</item>
 	    <item name="android:textColor">@color/white</item>
 		<item name="android:textSize">15dp</item>
         <item name="android:textStyle">bold</item>
