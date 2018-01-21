@@ -4,6 +4,7 @@ using Android.OS;
 using System.Threading.Tasks;
 using Android.Content;
 using CoreLogic;
+using Android.Util;
 
 namespace BossMandadero
 {
@@ -11,11 +12,22 @@ namespace BossMandadero
     public class MainActivity : Activity
     {
         private const int waitTime = 1000;
+        public const string TAG = "MainActivity";
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-
+            if (Intent.Extras != null)
+            {
+                foreach (var key in Intent.Extras.KeySet())
+                {
+                    if (key != null)
+                    {
+                        var value = Intent.Extras.GetString(key);
+                        Log.Debug(TAG, "Key: {0} Value: {1}", key, value);
+                    }
+                }
+            }
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 

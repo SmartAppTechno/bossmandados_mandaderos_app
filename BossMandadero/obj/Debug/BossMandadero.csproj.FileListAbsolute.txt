@@ -231,3 +231,17 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/drawable/repartidor.png
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/R.cs.flag
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/uploadflags.txt
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.Azure.NotificationHubs.Android.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.Firebase.Common.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.Firebase.Iid.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/bin/Debug/Xamarin.Firebase.Messaging.dll
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.Firebase.Common.dll.stamp
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.Firebase.Iid.dll.stamp
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/Xamarin.Firebase.Messaging.dll.stamp
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/googsvcsjson/values/goog_svcs_json.xml
+bin/Debug/Mono.Android.pdb
+obj/Debug/linksrc/BossMandadero.pdb
+obj/Debug/linksrc/Common.pdb
+obj/Debug/linksrc/CoreLogic.pdb
+obj/Debug/linksrc/Mono.Android.pdb
+obj/Debug/linksrc/DataAccess.pdb

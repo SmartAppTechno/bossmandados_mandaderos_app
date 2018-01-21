@@ -2,13 +2,9 @@
   <MonoDevelop.Ide.ItemProperties.CoreLogic PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="BossMandadero/Activities/WelcomeActivity.cs" Line="1" Column="1" />
-      <File FileName="DataAccess/ActivityData/LoginData.cs" Line="22" Column="67" />
-      <File FileName="Common/DBItems/Manboss_usuario.cs" Line="1" Column="1" />
-      <File FileName="DataAccess/ActivityData/ChatData.cs" Line="1" Column="1" />
-      <File FileName="BossMandadero/Services/ServiceGPS.cs" Line="186" Column="10" />
-      <File FileName="CoreLogic/User.cs" Line="49" Column="40" />
-      <File FileName="BossMandadero/Properties/AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="BossMandadero/Activities/LoginActivity.cs" Line="59" Column="59" />
+      <File FileName="BossMandadero/Activities/WelcomeActivity.cs" Line="59" Column="59" />
+      <File FileName="BossMandadero/Resources/values/Styles.xml" Line="4" Column="70" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -20,5 +16,5 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.BossMandadero AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.BossMandadero AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.ZY224G2L53" />
 </Properties>
