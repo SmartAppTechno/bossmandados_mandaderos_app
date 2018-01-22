@@ -59,8 +59,6 @@ namespace BossMandadero.Activities
             int style = Resource.Style.AlertDialogDefault;
             Dialogs.CreateProgressDialog(this, style);
 
-            btn_Register.SetBackgroundColor(new Color(229, 85, 97));
-
             string email = txt_Email.Text;
             string password = txt_Password.Text;
 

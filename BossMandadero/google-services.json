@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "723476985804",
+    "firebase_url": "https://mandadero-boss-mandados.firebaseio.com",
+    "project_id": "mandadero-boss-mandados",
+    "storage_bucket": "mandadero-boss-mandados.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723476985804:android:992b0eff93021378",
+        "android_client_info": {
+          "package_name": "com.smartapptech.BossMandadero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723476985804-69r766hl6nij5iou826hlv74eaj8qa7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSTWqbPz6Kyu54JX_v8JRRVwjjBTVRl_E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

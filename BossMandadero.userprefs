@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{373C909B-858F-4AD0-B649-D7A9DCC7B7EA}|Default">
   <MonoDevelop.Ide.ItemProperties.CoreLogic PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Common/Utils/Dialogs.cs">
     <Files>
-      <File FileName="BossMandadero/Activities/WelcomeActivity.cs" Line="1" Column="1" />
-      <File FileName="DataAccess/ActivityData/LoginData.cs" Line="22" Column="67" />
-      <File FileName="Common/DBItems/Manboss_usuario.cs" Line="1" Column="1" />
-      <File FileName="DataAccess/ActivityData/ChatData.cs" Line="1" Column="1" />
-      <File FileName="BossMandadero/Services/ServiceGPS.cs" Line="186" Column="10" />
-      <File FileName="CoreLogic/User.cs" Line="49" Column="40" />
-      <File FileName="BossMandadero/Properties/AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="BossMandadero/Route.cs" Line="1" Column="1" />
+      <File FileName="BossMandadero/OrderInvoker.cs" Line="1" Column="1" />
+      <File FileName="BossMandadero/MapInvoker.cs" Line="1" Column="1" />
+      <File FileName="BossMandadero/MainActivity.cs" Line="58" Column="1" />
+      <File FileName="BossMandadero/Drawer.cs" Line="1" Column="1" />
+      <File FileName="BossMandadero/Activities/LoginActivity.cs" Line="59" Column="59" />
+      <File FileName="Common/Utils/Dialogs.cs" Line="49" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

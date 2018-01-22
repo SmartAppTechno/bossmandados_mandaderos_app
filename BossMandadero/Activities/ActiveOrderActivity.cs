@@ -201,8 +201,14 @@ namespace BossMandadero.Activities
             r_actual = map.MarkerClick(marker);
             if (r_actual != null)
             {
-                Android.App.AlertDialog.Builder builder = Dialogs.YesNoDialog(
+                Android.App.AlertDialog.Builder builder;
+                if(map.Route.Count==1){
+                    builder = Dialogs.YesNoDialog(
+                    "Punto en ruta", "Este es el útlimo punto en la ruta, ¿Desea completarlo?", this, Resource.Style.AlertDialogDefault);
+                }else{
+                    builder = Dialogs.YesNoDialog(
                     "Punto en ruta", "¿Completar este punto en la ruta?", this, Resource.Style.AlertDialogDefault);
+                }
                 builder.SetPositiveButton("OK", RemoveMarker);
                 Dialog d = builder.Show();
                 int dividerId = d.Context.Resources.GetIdentifier("android:id/titleDivider", null, null);
