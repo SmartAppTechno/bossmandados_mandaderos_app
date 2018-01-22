@@ -12,7 +12,7 @@ namespace BossMandadero
     public class MainActivity : Activity
     {
         private const int waitTime = 1000;
-        public const string TAG = "MainActivity";
+        public const string TAG = "Mandadero";
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -55,6 +55,7 @@ namespace BossMandadero
 
 
         }
+
     }
 }
 

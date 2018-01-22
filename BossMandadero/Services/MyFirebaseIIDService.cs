@@ -5,6 +5,7 @@ using Android.Util;
 using WindowsAzure.Messaging;
 using System.Collections.Generic;
 using Common;
+using CoreLogic;
 
 namespace BossMandadero.Services
 {
@@ -19,17 +20,17 @@ namespace BossMandadero.Services
         {
             var refreshedToken = FirebaseInstanceId.Instance.Token;
             Log.Debug(TAG, "FCM token: " + refreshedToken);
-            SendRegistrationToServer(refreshedToken);
+            SendRegistrationToServer();
         }
 
-        void SendRegistrationToServer(string token)
+        void SendRegistrationToServer()
         {
             // Register with Notification Hubs
             hub = new NotificationHub(GlobalValues.NotificationHubName,
                                       GlobalValues.ListenConnectionString, this);
 
             var tags = new List<string>() { };
-            var regID = hub.Register(token, tags.ToArray()).RegistrationId;
+            var regID = hub.Register(User.Usuario.Correo, tags.ToArray()).RegistrationId;
 
             Log.Debug(TAG, $"Successful registration of ID {regID}");
         }

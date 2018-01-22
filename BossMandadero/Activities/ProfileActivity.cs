@@ -43,7 +43,10 @@ namespace BossMandadero.Activities
             core = new ProfileCore(this);
             SetResources();
             ServiceGPS.mContext = this;
+
             StartService(new Intent(this, typeof(ServiceGPS)));
+            StartService(new Intent(this, typeof(MyFirebaseIIDService)));
+            StartService(new Intent(this, typeof(MyFirebaseMessagingService)));
         }
 
         private void SetResources()
@@ -78,5 +81,6 @@ namespace BossMandadero.Activities
                 this.StartActivity(nextActivity);
             }
         }
+
     }
 }
