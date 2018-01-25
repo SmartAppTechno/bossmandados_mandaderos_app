@@ -45,8 +45,9 @@ namespace CoreLogic.ActivityCore
             if(route.Count == 1)
             {
                 ComissionsData cData = new ComissionsData(context);
-                await cData.AddComission(User.Repartidor.Id, order.Id);
+
                 await data.SetOrder(order.Id, 4);
+                await cData.AddComission(User.Repartidor.Id, order.Id);
 
             }
             return await data.CompleteTask(r.Id);

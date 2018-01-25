@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
   <Jars>
-    <Jar>obj/Debug/lp/0/jl/glide-full-4.1.1.jar</Jar>
-    <Jar>obj/Debug/lp/4/jl/arch-core-common.jar</Jar>
-    <Jar>obj/Debug/lp/5/jl/arch-lifecycle-common.jar</Jar>
-    <Jar>obj/Debug/lp/7/jl/support-annotations.jar</Jar>
     <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/lp/0/jl/glide-full-4.1.1.jar</Jar>
     <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/lp/10/jl/bin/classes.jar</Jar>
     <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Debug/lp/11/jl/bin/classes.jar</Jar>
