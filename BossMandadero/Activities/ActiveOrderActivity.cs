@@ -220,18 +220,28 @@ namespace BossMandadero.Activities
         {
             if(r_actual!=null)
             {
-                await core.CompleteTask(r_actual);
+                double total = await core.CompleteTask(r_actual);
                 r_actual = null;
                 if (core.route.Count == 1)
                 {
-                    Intent intent = new Intent(this, typeof(PendingOrdersActivity));
-                    this.StartActivity(intent);
+                    string result = string.Format("{0:0.0}", total);
+                    Android.App.AlertDialog.Builder builder = Dialogs.YesNoDialog(
+                        "Total","El total del mandado fué: \n\n  $ " + result +"0",this,Resource.Style.AlertDialogDefault);
+                    builder.SetPositiveButton("OK", EndOrder);
+                    Dialog d = builder.Show();
+                    
                 }
                 else
                 {
                     OnMapReady(map.Map);
                 }
             }
+        }
+
+        public async void EndOrder(object sender, DialogClickEventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(PendingOrdersActivity));
+            this.StartActivity(intent);
         }
 
         protected override void OnResume()
