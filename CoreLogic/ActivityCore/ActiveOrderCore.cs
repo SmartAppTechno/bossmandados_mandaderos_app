@@ -40,7 +40,7 @@ namespace CoreLogic.ActivityCore
             route = await data.Route(order.Id, tipo);
             return route;
         }
-        public async Task<bool> CompleteTask(Manboss_mandados_ruta r)
+        public async Task<double> CompleteTask(Manboss_mandados_ruta r)
         {
             if(route.Count == 1)
             {
@@ -49,8 +49,16 @@ namespace CoreLogic.ActivityCore
                 await data.SetOrder(order.Id, 4);
                 await cData.AddComission(User.Repartidor.Id, order.Id);
 
+                Manboss_mandado aux = await cData.GetMandado(order.Id);
+                return aux.Total;
+
             }
-            return await data.CompleteTask(r.Id);
+            if(await data.CompleteTask(r.Id))
+            {
+                return 1;
+            }else{
+                return 0;
+            }
         }
         public async Task<Manboss_cliente> GetClient(Manboss_mandado order)
         {
