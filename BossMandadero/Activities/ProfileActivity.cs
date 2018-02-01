@@ -17,6 +17,7 @@ using CoreLogic;
 using CoreLogic.ActivityCore;
 using Common.Utils;
 using BossMandadero.Services;
+using Android.Util;
 
 namespace BossMandadero.Activities
 {
@@ -33,6 +34,7 @@ namespace BossMandadero.Activities
         private Button logout;
 
         private ProfileCore core;
+        public const string TAG = "Profile";
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -44,9 +46,21 @@ namespace BossMandadero.Activities
             SetResources();
             ServiceGPS.mContext = this;
 
+            if (Intent.Extras != null)
+            {
+                foreach (var key in Intent.Extras.KeySet())
+                {
+                    if (key != null)
+                    {
+                        var value = Intent.Extras.GetString(key);
+                        Log.Debug(TAG, "Key: {0} Value: {1}", key, value);
+                    }
+                }
+            }
+
             StartService(new Intent(this, typeof(ServiceGPS)));
-            StartService(new Intent(this, typeof(MyFirebaseIIDService)));
-            StartService(new Intent(this, typeof(MyFirebaseMessagingService)));
+            //StartService(new Intent(this, typeof(MyFirebaseIIDService)));
+            //StartService(new Intent(this, typeof(MyFirebaseMessagingService)));
         }
 
         private void SetResources()

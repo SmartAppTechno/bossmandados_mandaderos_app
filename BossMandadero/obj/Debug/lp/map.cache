@@ -24,6 +24,10 @@ Xamarin.Android.Support.v4
 Xamarin.Android.Support.v7.AppCompat
 Xamarin.Android.Support.v7.RecyclerView
 Xamarin.Android.Support.Vector.Drawable
+Xamarin.Azure.NotificationHubs.Android
+Xamarin.Firebase.Common
+Xamarin.Firebase.Iid
+Xamarin.Firebase.Messaging
 Xamarin.GooglePlayServices.Base
 Xamarin.GooglePlayServices.Basement
 Xamarin.GooglePlayServices.Maps
@@ -32,7 +36,3 @@ DataAccess
 Microsoft.Azure.Mobile.Client
 Xamarin.Android.Support.CustomTabs
 PCLCrypto
-Xamarin.Azure.NotificationHubs.Android
-Xamarin.Firebase.Common
-Xamarin.Firebase.Iid
-Xamarin.Firebase.Messaging

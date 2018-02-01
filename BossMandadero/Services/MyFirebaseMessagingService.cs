@@ -8,8 +8,8 @@ using Firebase.Messaging;
 
 namespace BossMandadero.Services
 {
-    [Service]
-    [IntentFilter(new[] { "com.google.firebase.MESSAGING_EVENT" })]
+    //[Service]
+    //[IntentFilter(new[] { "com.google.firebase.MESSAGING_EVENT" })]
     public class MyFirebaseMessagingService : FirebaseMessagingService
     {
         const string TAG = "MyFirebaseMsgService";

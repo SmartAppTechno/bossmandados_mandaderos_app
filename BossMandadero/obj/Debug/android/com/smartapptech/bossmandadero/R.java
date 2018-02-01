@@ -3619,37 +3619,37 @@ containing a value of this type.
     public static final class string {
         public static final int ApplicationName=0x7f070008;
         public static final int Hello=0x7f070007;
-        public static final int abc_action_bar_home_description=0x7f07001e;
-        public static final int abc_action_bar_home_description_format=0x7f07001f;
-        public static final int abc_action_bar_home_subtitle_description_format=0x7f070020;
-        public static final int abc_action_bar_up_description=0x7f070021;
-        public static final int abc_action_menu_overflow_description=0x7f070022;
-        public static final int abc_action_mode_done=0x7f070023;
-        public static final int abc_activity_chooser_view_see_all=0x7f070024;
-        public static final int abc_activitychooserview_choose_application=0x7f070025;
-        public static final int abc_capital_off=0x7f070026;
-        public static final int abc_capital_on=0x7f070027;
-        public static final int abc_font_family_body_1_material=0x7f070033;
-        public static final int abc_font_family_body_2_material=0x7f070034;
-        public static final int abc_font_family_button_material=0x7f070035;
-        public static final int abc_font_family_caption_material=0x7f070036;
-        public static final int abc_font_family_display_1_material=0x7f070037;
-        public static final int abc_font_family_display_2_material=0x7f070038;
-        public static final int abc_font_family_display_3_material=0x7f070039;
-        public static final int abc_font_family_display_4_material=0x7f07003a;
-        public static final int abc_font_family_headline_material=0x7f07003b;
-        public static final int abc_font_family_menu_material=0x7f07003c;
-        public static final int abc_font_family_subhead_material=0x7f07003d;
-        public static final int abc_font_family_title_material=0x7f07003e;
-        public static final int abc_search_hint=0x7f070028;
-        public static final int abc_searchview_description_clear=0x7f070029;
-        public static final int abc_searchview_description_query=0x7f07002a;
-        public static final int abc_searchview_description_search=0x7f07002b;
-        public static final int abc_searchview_description_submit=0x7f07002c;
-        public static final int abc_searchview_description_voice=0x7f07002d;
-        public static final int abc_shareactionprovider_share_with=0x7f07002e;
-        public static final int abc_shareactionprovider_share_with_application=0x7f07002f;
-        public static final int abc_toolbar_collapse_description=0x7f070030;
+        public static final int abc_action_bar_home_description=0x7f07001d;
+        public static final int abc_action_bar_home_description_format=0x7f07001e;
+        public static final int abc_action_bar_home_subtitle_description_format=0x7f07001f;
+        public static final int abc_action_bar_up_description=0x7f070020;
+        public static final int abc_action_menu_overflow_description=0x7f070021;
+        public static final int abc_action_mode_done=0x7f070022;
+        public static final int abc_activity_chooser_view_see_all=0x7f070023;
+        public static final int abc_activitychooserview_choose_application=0x7f070024;
+        public static final int abc_capital_off=0x7f070025;
+        public static final int abc_capital_on=0x7f070026;
+        public static final int abc_font_family_body_1_material=0x7f070032;
+        public static final int abc_font_family_body_2_material=0x7f070033;
+        public static final int abc_font_family_button_material=0x7f070034;
+        public static final int abc_font_family_caption_material=0x7f070035;
+        public static final int abc_font_family_display_1_material=0x7f070036;
+        public static final int abc_font_family_display_2_material=0x7f070037;
+        public static final int abc_font_family_display_3_material=0x7f070038;
+        public static final int abc_font_family_display_4_material=0x7f070039;
+        public static final int abc_font_family_headline_material=0x7f07003a;
+        public static final int abc_font_family_menu_material=0x7f07003b;
+        public static final int abc_font_family_subhead_material=0x7f07003c;
+        public static final int abc_font_family_title_material=0x7f07003d;
+        public static final int abc_search_hint=0x7f070027;
+        public static final int abc_searchview_description_clear=0x7f070028;
+        public static final int abc_searchview_description_query=0x7f070029;
+        public static final int abc_searchview_description_search=0x7f07002a;
+        public static final int abc_searchview_description_submit=0x7f07002b;
+        public static final int abc_searchview_description_voice=0x7f07002c;
+        public static final int abc_shareactionprovider_share_with=0x7f07002d;
+        public static final int abc_shareactionprovider_share_with_application=0x7f07002e;
+        public static final int abc_toolbar_collapse_description=0x7f07002f;
         /**  ACTIVE ORDER 
          */
         public static final int active_order=0x7f07006b;
@@ -3657,11 +3657,11 @@ containing a value of this type.
         public static final int active_reference=0x7f07006c;
         /**  MAIN 
          */
-        public static final int app_name=0x7f07001d;
-        public static final int appbar_scrolling_view_behavior=0x7f07003f;
+        public static final int app_name=0x7f07001c;
+        public static final int appbar_scrolling_view_behavior=0x7f07003e;
         public static final int azure_URL=0x7f070047;
-        public static final int bottom_sheet_behavior=0x7f070040;
-        public static final int character_counter_pattern=0x7f070041;
+        public static final int bottom_sheet_behavior=0x7f07003f;
+        public static final int character_counter_pattern=0x7f070040;
         /**  CHAT 
          */
         public static final int chat_mensaje=0x7f07006e;
@@ -3669,26 +3669,26 @@ containing a value of this type.
         /**  COMISSIONS 
          */
         public static final int comissions_header=0x7f070070;
-        public static final int common_google_play_services_enable_button=0x7f07000c;
-        public static final int common_google_play_services_enable_text=0x7f07000d;
-        public static final int common_google_play_services_enable_title=0x7f07000e;
-        public static final int common_google_play_services_install_button=0x7f07000f;
-        public static final int common_google_play_services_install_text=0x7f070010;
-        public static final int common_google_play_services_install_title=0x7f070011;
-        public static final int common_google_play_services_notification_ticker=0x7f070012;
-        public static final int common_google_play_services_unknown_issue=0x7f07000b;
-        public static final int common_google_play_services_unsupported_text=0x7f070013;
-        public static final int common_google_play_services_update_button=0x7f070014;
-        public static final int common_google_play_services_update_text=0x7f070015;
-        public static final int common_google_play_services_update_title=0x7f070016;
-        public static final int common_google_play_services_updating_text=0x7f070017;
-        public static final int common_google_play_services_wear_update_text=0x7f070018;
-        public static final int common_open_on_phone=0x7f070019;
-        public static final int common_signin_button_text=0x7f07001a;
-        public static final int common_signin_button_text_long=0x7f07001b;
+        public static final int common_google_play_services_enable_button=0x7f07000b;
+        public static final int common_google_play_services_enable_text=0x7f07000c;
+        public static final int common_google_play_services_enable_title=0x7f07000d;
+        public static final int common_google_play_services_install_button=0x7f07000e;
+        public static final int common_google_play_services_install_text=0x7f07000f;
+        public static final int common_google_play_services_install_title=0x7f070010;
+        public static final int common_google_play_services_notification_ticker=0x7f070011;
+        public static final int common_google_play_services_unknown_issue=0x7f07000a;
+        public static final int common_google_play_services_unsupported_text=0x7f070012;
+        public static final int common_google_play_services_update_button=0x7f070013;
+        public static final int common_google_play_services_update_text=0x7f070014;
+        public static final int common_google_play_services_update_title=0x7f070015;
+        public static final int common_google_play_services_updating_text=0x7f070016;
+        public static final int common_google_play_services_wear_update_text=0x7f070017;
+        public static final int common_open_on_phone=0x7f070018;
+        public static final int common_signin_button_text=0x7f070019;
+        public static final int common_signin_button_text_long=0x7f07001a;
         public static final int default_web_client_id=0x7f070002;
         public static final int empty=0x7f070049;
-        public static final int fcm_fallback_notification_channel_label=0x7f07001c;
+        public static final int fcm_fallback_notification_channel_label=0x7f07001b;
         public static final int firebase_database_url=0x7f070003;
         public static final int gcm_defaultSenderId=0x7f070000;
         public static final int google_api_key=0x7f070004;
@@ -3696,18 +3696,18 @@ containing a value of this type.
         public static final int google_crash_reporting_api_key=0x7f070005;
         public static final int google_maps_key=0x7f070048;
         public static final int google_storage_bucket=0x7f070006;
-        public static final int library_name=0x7f07000a;
+        public static final int library_name=0x7f070046;
         public static final int login_email=0x7f07004b;
         public static final int login_password=0x7f07004c;
         public static final int login_register=0x7f07004d;
         /**  LOGIN 
          */
         public static final int login_title=0x7f07004a;
-        public static final int password_toggle_content_description=0x7f070042;
-        public static final int path_password_eye=0x7f070043;
-        public static final int path_password_eye_mask_strike_through=0x7f070044;
-        public static final int path_password_eye_mask_visible=0x7f070045;
-        public static final int path_password_strike_through=0x7f070046;
+        public static final int password_toggle_content_description=0x7f070041;
+        public static final int path_password_eye=0x7f070042;
+        public static final int path_password_eye_mask_strike_through=0x7f070043;
+        public static final int path_password_eye_mask_visible=0x7f070044;
+        public static final int path_password_strike_through=0x7f070045;
         public static final int pending_city=0x7f070066;
         public static final int pending_detail=0x7f070064;
         public static final int pending_details=0x7f070068;
@@ -3733,8 +3733,8 @@ containing a value of this type.
         public static final int profile_noraiting=0x7f07005d;
         public static final int profile_quantity=0x7f07005e;
         public static final int profile_raiting=0x7f07005c;
-        public static final int search_menu_title=0x7f070031;
-        public static final int status_bar_notification_info_overflow=0x7f070032;
+        public static final int search_menu_title=0x7f070030;
+        public static final int status_bar_notification_info_overflow=0x7f070031;
         public static final int title_activity_webview=0x7f070009;
         public static final int welcome_active=0x7f070051;
         public static final int welcome_continue=0x7f070055;

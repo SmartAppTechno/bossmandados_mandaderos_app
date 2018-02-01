@@ -1,9 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Android.App;
 using Android.Content;
 using Android.Locations;
 using Android.Preferences;
 using Common.DBItems;
+
 using DataAccess.ActivityData;
 
 namespace CoreLogic
@@ -13,6 +14,8 @@ namespace CoreLogic
         public static Manboss_usuario Usuario { get; set; }
         public static Manboss_repartidor Repartidor { get; set; }
         public static bool CanSetUbicacion { get; set; }
+
+        private static int nMandados { get; set; }
 
         public static async Task<bool> CheckIntegrity(Context context)
         {
@@ -37,6 +40,7 @@ namespace CoreLogic
             {
                 WelcomeData welcomedata = new WelcomeData(context);
                 Repartidor = await welcomedata.Repartidor(Usuario.Id);
+                nMandados = 0;
             }
             return Repartidor != null;
         }
@@ -60,16 +64,19 @@ namespace CoreLogic
             }
         }
 
-        public static async void UpdateLocation(Location location, Context context)
+        public static async Task<bool> UpdateLocation(Location location, Context context, int img)
         {
             CanSetUbicacion = false;
 
             WelcomeData data = new WelcomeData(context);
-            await data.SetUbicacion(location.Latitude, location.Longitude, Repartidor.Id);
+            int aux = await data.SetUbicacion(location.Latitude, location.Longitude, Repartidor.Id);
             await Task.Delay(20000);
-
             CanSetUbicacion = true;
+            bool ans = aux > nMandados;
+            nMandados = aux;
+            return ans;
         }
+
 
 
     }
