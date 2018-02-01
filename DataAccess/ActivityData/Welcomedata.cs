@@ -64,9 +64,9 @@ namespace DataAccess.ActivityData
             }
             return result;
         }
-        public async Task<bool> SetUbicacion(double latitud, double longitud, int RepartidorID)
+        public async Task<int> SetUbicacion(double latitud, double longitud, int RepartidorID)
         {
-            bool result = false;
+            int result = 0;
 
             try
             {
@@ -76,7 +76,7 @@ namespace DataAccess.ActivityData
                     { "Longitud", longitud.ToString() },
                     { "RepartidorID", RepartidorID.ToString()}
                 };
-                result = await client.InvokeApiAsync<bool>("Repartidor", HttpMethod.Post, param);
+                result = await client.InvokeApiAsync<int>("Repartidor", HttpMethod.Post, param);
 
             }
             catch (Exception e)

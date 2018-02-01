@@ -3,8 +3,11 @@ using Android;
 using Android.App;
 using Android.Content;
 using Android.Locations;
+using Android.Media;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V4.App;
+using BossMandadero.Activities;
 using CoreLogic;
 
 namespace BossMandadero.Services
@@ -181,7 +184,7 @@ namespace BossMandadero.Services
             GetLocation();
             if (User.CanSetUbicacion)
             {
-                User.UpdateLocation(location, this);
+                checkNotification(location);
             }
         }
         public void OnProviderDisabled(string provider)
@@ -202,6 +205,33 @@ namespace BossMandadero.Services
         public override IBinder OnBind(Intent intent)
         {
             return null;
+        }
+        private async void checkNotification(Location loc)
+        {
+            bool answer = await User.UpdateLocation(loc, this,Resource.Mipmap.Icon);
+            if (answer)
+            {
+                SendNotification("Tienes Nuevos Mandados");
+            }
+        }
+
+        public void SendNotification(string messageBody)
+        {
+            var intent = new Intent(this, typeof(PendingOrdersActivity));
+            intent.AddFlags(ActivityFlags.ClearTop);
+            var pendingIntent = PendingIntent.GetActivity(this, 0, intent, PendingIntentFlags.OneShot);
+
+            var notificationBuilder = new NotificationCompat.Builder(this)
+                        .SetContentTitle("BossMandados")
+                        .SetSmallIcon(Resource.Mipmap.Icon)
+                        .SetContentText(messageBody)
+                        .SetAutoCancel(true)
+                        .SetContentIntent(pendingIntent).SetSound(RingtoneManager.GetDefaultUri(RingtoneType.Notification));
+            
+
+            var notificationManager = NotificationManager.FromContext(this);
+
+            notificationManager.Notify(0, notificationBuilder.Build());
         }
     }
 }

@@ -22,19 +22,20 @@
     <ManifestDocument>obj/Debug/lp/24/jl/manifest/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/25/jl/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/26/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/26/jl/aapt/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/26/jl/manifest/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/27/jl/AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj/Debug/lp/27/jl/manifest/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/28/jl/AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj/Debug/lp/28/jl/manifest/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/29/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/29/jl/manifest/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/30/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/30/jl/manifest/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/31/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/31/jl/manifest/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/32/jl/AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj/Debug/lp/34/jl/AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj/Debug/lp/34/jl/aapt/AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj/Debug/lp/35/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/32/jl/manifest/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/33/jl/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/36/jl/AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj/Debug/lp/37/jl/AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj/Debug/lp/37/jl/manifest/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/7/jl/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/7/jl/aapt/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/7/jl/manifest/AndroidManifest.xml</ManifestDocument>
@@ -58,15 +59,15 @@
     <Jar>obj/Debug/lp/23/jl/bin/classes.jar</Jar>
     <Jar>obj/Debug/lp/24/jl/bin/classes.jar</Jar>
     <Jar>obj/Debug/lp/25/jl/bin/classes.jar</Jar>
-    <Jar>obj/Debug/lp/26/jl/classes.jar</Jar>
+    <Jar>obj/Debug/lp/26/jl/bin/classes.jar</Jar>
     <Jar>obj/Debug/lp/27/jl/classes.jar</Jar>
     <Jar>obj/Debug/lp/28/jl/classes.jar</Jar>
     <Jar>obj/Debug/lp/29/jl/classes.jar</Jar>
-    <Jar>obj/Debug/lp/32/jl/bin/classes.jar</Jar>
-    <Jar>obj/Debug/lp/34/jl/bin/classes.jar</Jar>
-    <Jar>obj/Debug/lp/35/jl/classes.jar</Jar>
-    <Jar>obj/Debug/lp/36/jl/classes.jar</Jar>
-    <Jar>obj/Debug/lp/37/jl/classes.jar</Jar>
+    <Jar>obj/Debug/lp/30/jl/classes.jar</Jar>
+    <Jar>obj/Debug/lp/31/jl/classes.jar</Jar>
+    <Jar>obj/Debug/lp/32/jl/classes.jar</Jar>
+    <Jar>obj/Debug/lp/33/jl/classes.jar</Jar>
+    <Jar>obj/Debug/lp/36/jl/bin/classes.jar</Jar>
     <Jar>obj/Debug/lp/7/jl/bin/classes.jar</Jar>
   </Jars>
 </Paths>

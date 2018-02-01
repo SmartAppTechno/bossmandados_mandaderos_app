@@ -262,11 +262,11 @@ namespace BossMandadero.Activities
             {
                 map.Position = new LatLng(location.Latitude, location.Longitude);
                 map.PositionChanged();
-            }
+            }/*
             if(User.CanSetUbicacion)
             {
                 User.UpdateLocation(location,this);
-            }
+            }*/
         }
 
         public void OnProviderDisabled(string provider)
