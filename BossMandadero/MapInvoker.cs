@@ -119,7 +119,7 @@ namespace BossMandadero
             Marker aux = Map.AddMarker(marker);
             markers.Add(aux); 
         }
-        public void GoTo(int position)
+        public Manboss_mandados_ruta GoTo(int position)
         {
             double lat = Route[position].Latitud;
             double lng = Route[position].Longitud;
@@ -131,6 +131,8 @@ namespace BossMandadero
 
             CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
             Map.MoveCamera(cameraUpdate);
+
+            return Route[position];
         }
         public String GetCity(double? lat, double? lng){
 
@@ -162,6 +164,21 @@ namespace BossMandadero
                 n++;
             }
             return null;
+        }
+
+        public string GetComentario(Marker marker)
+        {
+            int n = 0;
+            foreach (Marker m in markers)
+            {
+                if (m.Equals(marker))
+                {
+                    Manboss_mandados_ruta r = Route[n];
+                    return r.Comentarios;
+                }
+                n++;
+            }
+            return string.Empty;
         }
         public void PositionChanged()
         {
