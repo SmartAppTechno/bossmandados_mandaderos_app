@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.smartapptech.BossMandadero">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="16" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <application android:allowBackup="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:name="android.app.Application">
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/google_maps_key" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <activity android:icon="@mipmap/icon" android:label="BossMandadero" android:noHistory="true" android:theme="@style/MainTheme" android:name="md5f0df50de2868be123f4a356284f07269.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <service android:name="md52e0a55589b48d5e8d64958135c9b98c4.ServiceGPS" />
+    <activity android:label="LoginActivity" android:noHistory="true" android:theme="@style/MainTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.LoginActivity" />
+    <activity android:label="WelcomeActivity" android:noHistory="true" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.WelcomeActivity" />
+    <activity android:label="ProfileActivity" android:noHistory="true" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.ProfileActivity" />
+    <activity android:label="PendingOrdersActivity" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.PendingOrdersActivity" />
+    <activity android:label="ActiveOrderActivity" android:noHistory="true" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.ActiveOrderActivity" />
+    <activity android:label="ComissionsActivity" android:noHistory="true" android:theme="@style/AppDrawerTheme" android:name="md54d89054760f4143a5ac69151520cfeb3.ComissionsActivity" />
+    <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorActivity" />
+    <activity android:label="Web Authenticator Native Broswer" android:launchMode="singleTop" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorNativeBrowserActivity" />
+    <activity android:name="com.microsoft.windowsazure.mobileservices.authentication.RedirectUrlActivity" />
+    <service android:name="md59f70a99687498e7ba187118950981d26.KeepAliveService" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.smartapptech.BossMandadero.mono.MonoRuntimeProvider.__mono_init__" />
+    <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT" />
+    <meta-data android:name="android.support.VERSION" android:value="26.1.0" />
+    <provider android:authorities="com.smartapptech.BossMandadero.firebaseinitprovider" android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:initOrder="100" />
+    <!-- FirebaseMessagingService performs security checks at runtime,
+             no need for explicit permissions despite exported="true" -->
+    <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="true">
+      <intent-filter android:priority="-500">
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+      </intent-filter>
+    </service>
+    <!-- FirebaseMessagingService performs security checks at runtime,
+             no need for explicit permissions despite exported="true" -->
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+  </application>
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+</manifest>

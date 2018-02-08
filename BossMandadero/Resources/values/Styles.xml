@@ -18,7 +18,7 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@drawable/Fondo_2</item>
         <item name="android:fontFamily">sans-serif-light</item>
-		<item name="android:gravity">center</item>
+		<item name="android:gravity">center|top</item>
         
     </style>
 
@@ -28,7 +28,7 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@drawable/Fondo_2</item>
         <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:gravity">center</item>
+        <item name="android:gravity">center|top</item>
 		
 		<item name="drawerArrowStyle">@style/ArrowStyle</item>      
         
@@ -60,6 +60,7 @@
         <item name="android:typeface">monospace</item>
         <item name="android:textSize">18sp</item>
 		<item name="android:background">@color/green3</item>
+        <item name="windowNoTitle">true</item>
 		<item name="android:padding">3dp</item>
     </style>
 
@@ -67,6 +68,7 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:typeface">monospace</item>
         <item name="android:textSize">18sp</item>
+        <item name="windowNoTitle">true</item>
         <item name="android:background">@color/white</item>
         <item name="android:padding">3dp</item>
     </style>

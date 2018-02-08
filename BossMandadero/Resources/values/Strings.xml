@@ -53,6 +53,9 @@
 	<string name="active_order">Mandado: </string>
 	<string name="active_reference">Referencia: </string>
 	<string name="active_pending">Lugares Pendientes</string>
+    <string name="active_comments"><b>Comentarios:\n</b></string>
+    <string name="active_completePoint"><b>\n\n¿Completar este punto en la ruta?</b></string>
+    <string name="active_completeOrder"><b>\n\nEste es el útlimo punto en la ruta, ¿Desea completarlo?</b></string>
 
 	<!-- CHAT -->
     <string name="chat_mensaje">Mensaje</string>
@@ -60,4 +63,7 @@
 
 	<!-- COMISSIONS -->
     <string name="comissions_header">Mis Comisiones</string>
+
+
+    <string name="title_activity_webview">wv</string>
 </resources>

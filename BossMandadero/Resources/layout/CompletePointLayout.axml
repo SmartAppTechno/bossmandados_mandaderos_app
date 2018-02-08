@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:background="@color/green3"
+    android:gravity="top">
+    <TextView
+        android:layout_marginTop="3dp"
+        android:text="@string/active_comments"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#BBF9ED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_Comment" />
+    <TextView
+        android:layout_marginTop="1dp"
+        android:text="NoComments"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
+        android:textColor="#BBF9ED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_Comments" />
+    <TextView
+        android:layout_marginTop="12dp"
+        android:text="@string/active_completePoint"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#BBF9ED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_Complete" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:gravity="end"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <Button
+            android:text="OK"
+            android:background="@color/green3"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_ok" />
+    </LinearLayout>
+</LinearLayout>

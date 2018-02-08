@@ -31,6 +31,7 @@
   </Jars>
   <ResolvedResourceDirectories>
     <ResolvedResourceDirectory>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/lp/0/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/lp/1/jl/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/lp/7/jl/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/lp/15/jl/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/lp/18/jl/res</ResolvedResourceDirectory>
@@ -47,6 +48,7 @@
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj/Debug/lp/0/jl/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/lp/1/jl/assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj/Debug/lp/7/jl/assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj/Debug/lp/22/jl/assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj/Debug/lp/26/jl/assets</ResolvedAssetDirectory>
@@ -54,6 +56,7 @@
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
     <ResolvedResourceDirectoryStamp>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/lp/0.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/lp/1.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/lp/7.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/lp/15.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/lp/18.stamp</ResolvedResourceDirectoryStamp>

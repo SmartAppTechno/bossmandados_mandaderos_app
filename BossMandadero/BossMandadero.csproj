@@ -208,6 +208,7 @@
     <AndroidResource Include="Resources\layout\ComissionsLayout.axml" />
     <AndroidResource Include="Resources\layout\Comission_item.axml" />
     <AndroidResource Include="Resources\drawable\repartidor.png" />
+    <AndroidResource Include="Resources\layout\CompletePointLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

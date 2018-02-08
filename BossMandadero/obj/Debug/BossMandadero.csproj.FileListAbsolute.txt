@@ -239,14 +239,7 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/drawable/repartidor.png
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/R.cs.flag
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/uploadflags.txt
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/proguard/dc663e480.txt
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/dc663e48.proguard.stamp
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/0757626b.proguard.stamp
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/2f4d086a.proguard.stamp
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/ea5c07c4.proguard.stamp
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/1f4fd9cc.proguard.stamp
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/d9f2c52f.proguard.stamp
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/XbdMerge/04db0838.proguard.stamp
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/completepointlayout.xml
 bin/Debug/Mono.Android.pdb
 obj/Debug/linksrc/BossMandadero.pdb
 obj/Debug/linksrc/Common.pdb

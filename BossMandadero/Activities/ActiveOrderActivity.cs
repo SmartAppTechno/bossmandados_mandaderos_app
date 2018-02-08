@@ -45,7 +45,7 @@ namespace BossMandadero.Activities
         private ListView routeListView;
 
         private Manboss_mandados_ruta r_actual;
-
+        private Dialog mDialog;
         Location _currentLocation;
         LocationManager _locationManager;
 
@@ -182,42 +182,80 @@ namespace BossMandadero.Activities
 
             if(map.Route.Count > 0 )
             {
-                int task = map.Route[0].Servicio - 1;
-                txt_Task.Text = Common.Services.Service[task];
-                txt_Direction.Text = map.Route[0].Calle + " " + map.Route[0].Numero;
-                txt_Detail.Text = map.Route[0].Comentarios;
+                SetDetallesRuta(map.Route[0]);
             }
             map.Map.SetOnMarkerClickListener(this);
             map.MapReady();
         }
         public void GoToMap(int position)
         {
-            map.GoTo(position);
+            Manboss_mandados_ruta r = map.GoTo(position);
+            SetDetallesRuta(r);
             TabMap(null, null);
+        }
+
+        public void SetDetallesRuta(Manboss_mandados_ruta r)
+        {
+            int task = r.Servicio - 1;
+            txt_Task.Text = Common.Services.Service[task];
+            txt_Direction.Text = r.Calle + " " + r.Numero;
+            txt_Detail.Text = r.Comentarios;
         }
 
         public bool OnMarkerClick(Marker marker)
         {
+            string msg = string.Empty;
             r_actual = map.MarkerClick(marker);
             if (r_actual != null)
             {
-                Android.App.AlertDialog.Builder builder;
-                if(map.Route.Count==1){
-                    builder = Dialogs.YesNoDialog(
-                    "Punto en ruta", "Este es el útlimo punto en la ruta, ¿Desea completarlo?", this, Resource.Style.AlertDialogDefault);
-                }else{
-                    builder = Dialogs.YesNoDialog(
-                    "Punto en ruta", "¿Completar este punto en la ruta?", this, Resource.Style.AlertDialogDefault);
+
+                Android.App.AlertDialog.Builder builder = 
+                    Dialogs.YesNoDialog(string.Empty,string.Empty,this,Resource.Style.AlertDialogDefault);
+                mDialog = builder.Show();
+                LayoutInflater inflater = this.LayoutInflater;
+                View view = inflater.Inflate(Resource.Layout.CompletePointLayout, null);
+                mDialog.SetContentView(view);
+                mDialog.Window.SetSoftInputMode(SoftInput.StateHidden);
+                Window window = mDialog.Window;
+                window.SetLayout(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
+                mDialog.Show();
+
+
+                TextView txt_Comment = view.FindViewById<TextView>(Resource.Id.txt_Comment);
+                TextView txt_Comments = view.FindViewById<TextView>(Resource.Id.txt_Comments);
+                TextView txt_Complete = view.FindViewById<TextView>(Resource.Id.txt_Complete);
+                Button btn_ok = view.FindViewById<Button>(Resource.Id.btn_ok);
+
+                string aux = map.GetComentario(marker);
+                if(aux.Length>0)
+                {
+                    txt_Comments.Text = aux;
                 }
-                builder.SetPositiveButton("OK", RemoveMarker);
-                Dialog d = builder.Show();
-                int dividerId = d.Context.Resources.GetIdentifier("android:id/titleDivider", null, null);
+                else
+                {
+                    txt_Comment.Visibility = ViewStates.Gone;
+                    txt_Comments.Visibility = ViewStates.Gone;
+                }
+
+                if(map.Route.Count==1)
+                {
+                    txt_Complete.Text = this.Resources.GetString(Resource.String.active_completeOrder);
+
+                }else
+                {
+                    txt_Complete.Text = this.Resources.GetString(Resource.String.active_completePoint);
+                }
+
+                btn_ok.Click += RemoveMarker;
+
+
 
             }
             return true;
         }
-        public async void RemoveMarker(object sender, DialogClickEventArgs e)
+        public async void RemoveMarker(object sender, EventArgs e)
         {
+            mDialog.Dismiss();
             if(r_actual!=null)
             {
                 double total = await core.CompleteTask(r_actual);

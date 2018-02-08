@@ -1,17 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
-  <Jars>obj/Release/__library_projects__/Glide/library_project_imports/glide-full-4.1.1.jar;obj/Release/__library_projects__/Xamarin.Android.Support.Annotations/library_project_imports/support-annotations.jar;/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Glide/library_project_imports/glide-full-4.1.1.jar;/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Refractored.GifImageView/library_project_imports/bin/classes.jar;/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Xamarin.Android.Support.Annotations/library_project_imports/support-annotations.jar;/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Xamarin.Android.Support.Compat/library_project_imports/bin/classes.jar;/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Xamarin.Android.Support.Core.UI/library_project_imports/bin/classes.jar;/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Xamarin.Android.Support.Core.Utils/library_project_imports/bin/classes.jar;/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Xamarin.Android.Support.Fragment/library_project_imports/bin/classes.jar;/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Xamarin.Android.Support.Media.Compat/library_project_imports/bin/classes.jar;/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Xamarin.Android.Support.v4/library_project_imports/bin/classes.jar</Jars>
+  <Jars>
+    <Jar>obj/Release/lp/0/jl/glide-full-4.1.1.jar</Jar>
+    <Jar>obj/Release/lp/4/jl/arch-core-common.jar</Jar>
+    <Jar>obj/Release/lp/5/jl/arch-lifecycle-common.jar</Jar>
+    <Jar>obj/Release/lp/7/jl/support-annotations.jar</Jar>
+    <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/0/jl/glide-full-4.1.1.jar</Jar>
+    <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/10/jl/bin/classes.jar</Jar>
+    <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/11/jl/bin/classes.jar</Jar>
+    <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/12/jl/bin/classes.jar</Jar>
+    <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/13/jl/bin/classes.jar</Jar>
+    <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/2/jl/bin/classes.jar</Jar>
+    <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/4/jl/arch-core-common.jar</Jar>
+    <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/5/jl/arch-lifecycle-common.jar</Jar>
+    <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/6/jl/bin/classes.jar</Jar>
+    <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/7/jl/support-annotations.jar</Jar>
+    <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/8/jl/bin/classes.jar</Jar>
+    <Jar>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/9/jl/bin/classes.jar</Jar>
+  </Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Refractored.GifImageView/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Xamarin.Android.Support.v4/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/2/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/8/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/12/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/13/jl/res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
-    <ResolvedAssetDirectory>obj/Release/__library_projects__/Refractored.GifImageView/library_project_imports/assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>obj/Release/__library_projects__/Xamarin.Android.Support.v4/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Release/lp/2/jl/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Release/lp/13/jl/assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Refractored.GifImageView.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/__library_projects__/Xamarin.Android.Support.v4.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/2.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/8.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/12.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/Common/obj/Release/lp/13.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>
