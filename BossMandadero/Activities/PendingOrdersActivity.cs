@@ -57,10 +57,12 @@ namespace BossMandadero.Activities
 
         private async void PendingOrders()
         {
+            Dialogs.CreateProgressDialog(this, Resource.Style.AlertDialogDefault);
             List<Manboss_mandado> orders = await core.PendingOrders();
 
             PendingOrderAdapter adapter = new PendingOrderAdapter(this, orders, map);
             ordersListView.Adapter = adapter;
+            Dialogs.DismissProgressDialog();
         }
         public async void StartOrder(int OrderID)
         {

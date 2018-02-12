@@ -88,7 +88,9 @@ namespace BossMandadero.Activities
 
         private async void Logout(object sender, EventArgs e)
         {
+            Dialogs.CreateProgressDialog(this, Resource.Style.AlertDialogDefault);
             bool ans = await core.Logout();
+            Dialogs.DismissProgressDialog();
             if(ans)
             {
                 Intent nextActivity = new Intent(this, typeof(LoginActivity));

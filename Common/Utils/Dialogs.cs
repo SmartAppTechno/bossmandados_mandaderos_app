@@ -112,6 +112,15 @@ namespace Common.Utils
             builder.Create().Show();
         }
 
+        public static void BasicDialog(string message, string title, Context context)
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+            builder.SetMessage(message);
+            builder.SetTitle(title);
+            builder.Create().Show();
+        }
+
         private static void ExitApp(object sender, EventArgs e)
         {
             mAct.Finish();

@@ -46,14 +46,21 @@ namespace BossMandadero.Activities
         }
         private async void SetResources()
         {
+            Dialogs.CreateProgressDialog(this, Resource.Style.AlertDialogDefault);
             //Get reference to the needed resources
             list = FindViewById<ListView>(Resource.Id.ComissionsListView);
 
            
             SetSpinners();
             List<Manboss_comision> comissions = await core.GetComissions();
+            if (comissions == null)
+            {
+                Dialogs.DismissProgressDialog();
+                return;
+            }
             ComissionAdapter adapter = new ComissionAdapter(this, comissions);
             list.Adapter = adapter;
+            Dialogs.DismissProgressDialog();
 
         }
         private void SetSpinners()
@@ -93,6 +100,7 @@ namespace BossMandadero.Activities
             int i_year = year.SelectedItemPosition;
 
             List<Manboss_comision> comissions = await core.Filter(i_year,i_month,i_day);
+            if (comissions == null) return;
             ComissionAdapter adapter = new ComissionAdapter(this, comissions);
             list.Adapter = adapter;
         }
