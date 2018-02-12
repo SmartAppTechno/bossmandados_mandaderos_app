@@ -84,6 +84,7 @@ namespace BossMandadero.Activities
         }
         private async void SetResources()
         {
+            Dialogs.CreateProgressDialog(this,Resource.Style.AlertDialogDefault);
             Window.SetSoftInputMode(SoftInput.StateHidden);
             txt_Name = FindViewById<TextView>(Resource.Id.txt_Name);
             txt_Direction = FindViewById<TextView>(Resource.Id.txt_Direction);
@@ -128,6 +129,7 @@ namespace BossMandadero.Activities
 
                 SetMap();
             }
+            Dialogs.DismissProgressDialog();
 
         }
 
@@ -255,6 +257,7 @@ namespace BossMandadero.Activities
         }
         public async void RemoveMarker(object sender, EventArgs e)
         {
+            Dialogs.CreateProgressDialog(this,Resource.Style.AlertDialogDefault);
             mDialog.Dismiss();
             if(r_actual!=null)
             {
@@ -274,6 +277,7 @@ namespace BossMandadero.Activities
                     OnMapReady(map.Map);
                 }
             }
+            Dialogs.DismissProgressDialog();
         }
 
         public async void EndOrder(object sender, DialogClickEventArgs e)

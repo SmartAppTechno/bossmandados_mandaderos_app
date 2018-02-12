@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Android.Content;
 using Common;
 using Common.DBItems;
+using Common.Utils;
 using Microsoft.WindowsAzure.MobileServices;
 
 namespace DataAccess.ActivityData
@@ -36,6 +37,7 @@ namespace DataAccess.ActivityData
             }
             catch (Exception e)
             {
+                Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return mandados;
         }
@@ -66,7 +68,9 @@ namespace DataAccess.ActivityData
                 }
             }
             catch(Exception e)
-            {}
+            {
+                Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
+            }
             return ruta;
         }
         public async Task<Manboss_mandado> ActiveOrder(int repartidorID, int estado)
@@ -85,6 +89,7 @@ namespace DataAccess.ActivityData
             }
             catch (Exception e)
             {
+                Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return mandado;
         }
@@ -103,6 +108,7 @@ namespace DataAccess.ActivityData
             }
             catch (Exception e)
             {
+                Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return cliente;
         }
@@ -122,6 +128,7 @@ namespace DataAccess.ActivityData
             }
             catch (Exception e)
             {
+                Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return result;
         }
@@ -141,6 +148,7 @@ namespace DataAccess.ActivityData
             }
             catch (Exception e)
             {
+                Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return result;
         }

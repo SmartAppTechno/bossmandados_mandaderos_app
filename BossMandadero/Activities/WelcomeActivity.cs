@@ -38,6 +38,7 @@ namespace BossMandadero.Activities
 
         private void SetResources()
         {
+            Dialogs.CreateProgressDialog(this, Resource.Style.AlertDialogDefault);
             //Get reference to the needed resources
             txt_Efectivo = FindViewById<EditText>(Resource.Id.txt_Efectivo);
             btn_Continue = FindViewById<Button>(Resource.Id.btn_Continue);
@@ -52,6 +53,7 @@ namespace BossMandadero.Activities
             double efectivo = await core.CheckIntegrity();
             string cash = efectivo.ToString();
             txt_Efectivo.Text = cash;
+            Dialogs.DismissProgressDialog();
         }
 
         private async void Continue(object sender, EventArgs ea)

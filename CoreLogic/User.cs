@@ -36,6 +36,11 @@ namespace CoreLogic
 
             }
 
+            if(Usuario==null)
+            {
+                return false;
+            }
+
             if(Repartidor == null)
             {
                 WelcomeData welcomedata = new WelcomeData(context);
@@ -66,15 +71,22 @@ namespace CoreLogic
 
         public static async Task<bool> UpdateLocation(Location location, Context context, int img)
         {
-            CanSetUbicacion = false;
+            try
+            {
+                CanSetUbicacion = false;
 
-            WelcomeData data = new WelcomeData(context);
-            int aux = await data.SetUbicacion(location.Latitude, location.Longitude, Repartidor.Id);
-            await Task.Delay(20000);
-            CanSetUbicacion = true;
-            bool ans = aux > nMandados;
-            nMandados = aux;
-            return ans;
+                WelcomeData data = new WelcomeData(context);
+                int aux = await data.SetUbicacion(location.Latitude, location.Longitude, Repartidor.Id);
+                await Task.Delay(20000);
+                CanSetUbicacion = true;
+                bool ans = aux > nMandados;
+                nMandados = aux;
+                return ans;
+            }catch{
+                await Task.Delay(20000);
+                CanSetUbicacion = true;
+                return false;
+            }
         }
 
 

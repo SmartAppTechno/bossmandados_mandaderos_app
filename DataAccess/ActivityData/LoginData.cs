@@ -6,6 +6,7 @@ using Android.App;
 using Android.Content;
 using Common;
 using Common.DBItems;
+using Common.Utils;
 using Microsoft.WindowsAzure.MobileServices;
 
 
@@ -41,7 +42,7 @@ namespace DataAccess.ActivityData
             }
             catch (Exception e)
             {
-                CreateAndShowDialog(e, "Error");
+                Dialogs.BasicDialog("No se pudo establecer conexión","Error en al Red",context);
             }
             return userReturn;
         }
@@ -62,6 +63,7 @@ namespace DataAccess.ActivityData
             }
             catch (Exception e)
             {
+                Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return userReturn;
         }
