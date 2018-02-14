@@ -15,7 +15,7 @@ namespace Common.DBItems
         public int Mandado { get; set; }
 
         [JsonProperty(PropertyName = "comision")]
-        public int Comision { get; set; }
+        public double Comision { get; set; }
 
 
     }

@@ -237,9 +237,9 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/comissionslayout.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/comission_item.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/drawable/repartidor.png
+/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/completepointlayout.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/R.cs.flag
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/uploadflags.txt
-/Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/completepointlayout.xml
 bin/Debug/Mono.Android.pdb
 obj/Debug/linksrc/BossMandadero.pdb
 obj/Debug/linksrc/Common.pdb

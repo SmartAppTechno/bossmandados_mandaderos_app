@@ -3,7 +3,6 @@
   <ManifestDocuments>
     <ManifestDocument>obj/Debug/lp/5/jl/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/7/jl/AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj/Debug/lp/7/jl/manifest/AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj/Debug/lp/8/jl/AndroidManifest.xml</ManifestDocument>
   </ManifestDocuments>
   <NativeLibraries />

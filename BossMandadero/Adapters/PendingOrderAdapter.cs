@@ -34,6 +34,20 @@ namespace BossMandadero.Adapters
             return null;
         }
 
+        public override int ViewTypeCount
+        {
+            get
+            {
+                if (Count > 0) return Count;
+                else return 1;
+            }
+        }
+
+        public override int GetItemViewType(int position)
+        {
+            return position;
+        }
+
         public override long GetItemId(int position)
         {
             return pendingOrders[position].Id;
@@ -41,43 +55,48 @@ namespace BossMandadero.Adapters
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            View view = convertView ?? activity.LayoutInflater.Inflate(
-                Resource.Layout.PendingOrderItem, parent, false);
-
-
-            TextView tv_Referencia = view.FindViewById<TextView>(Resource.Id.tv_Referencia);
-            Button btn_Posicion = view.FindViewById<Button>(Resource.Id.btn_Posicion);
-            btn_Posicion.TransformationMethod = null;
-            btn_Posicion.SetAllCaps(false);
-            ProgressBar bar = view.FindViewById<ProgressBar>(Resource.Id.progressBar);
-            btn_Posicion.Tag = position;
-
-
-            tv_Referencia.Text += pendingOrders[position].Id.ToString();
-
-            if(position == 0)
+            if (convertView == null)
             {
-                if(pendingOrders[0].Estado==2)
+                View view = convertView ?? activity.LayoutInflater.Inflate(
+                    Resource.Layout.PendingOrderItem, parent, false);
+
+
+                TextView tv_Referencia = view.FindViewById<TextView>(Resource.Id.tv_Referencia);
+                Button btn_Posicion = view.FindViewById<Button>(Resource.Id.btn_Posicion);
+                btn_Posicion.TransformationMethod = null;
+                btn_Posicion.SetAllCaps(false);
+                ProgressBar bar = view.FindViewById<ProgressBar>(Resource.Id.progressBar);
+                btn_Posicion.Tag = position;
+
+
+                tv_Referencia.Text += pendingOrders[position].Id.ToString();
+
+                if (position == 0)
                 {
-                    btn_Posicion.Text = "Iniciar";
-                    btn_Posicion.Click += StartOrder;
-                    bar.Visibility = ViewStates.Gone;
+                    if (pendingOrders[0].Estado == 2)
+                    {
+                        btn_Posicion.Text = "Iniciar";
+                        btn_Posicion.Click += StartOrder;
+                        bar.Visibility = ViewStates.Gone;
+                    }
+                    else
+                    {
+                        btn_Posicion.Text = "Detalles";
+                        btn_Posicion.Click += GoToOrder;
+                        bar.Visibility = ViewStates.Visible;
+                    }
                 }
                 else
                 {
-                    btn_Posicion.Text = "Detalles";
-                    btn_Posicion.Click += GoToOrder;
-                    bar.Visibility = ViewStates.Visible;
+                    btn_Posicion.Click += ShowMap;
+                    bar.Visibility = ViewStates.Gone;
                 }
-            }
-            else
-            {
-                btn_Posicion.Click += ShowMap;
-                bar.Visibility = ViewStates.Gone;
-            }
 
 
-            return view;
+                return view;
+            }else{
+                return convertView;
+            }
         }
 
         private void ShowMap(object sender, EventArgs ea)

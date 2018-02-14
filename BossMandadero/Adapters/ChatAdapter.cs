@@ -28,6 +28,15 @@ namespace BossMandadero.Adapters
             return null;
         }
 
+        public override int ViewTypeCount
+        {
+            get {
+                if (Count > 0) return Count;
+                else return 1;
+            }
+        }
+
+
         public override long GetItemId(int position)
         {
             return messages[position].Id;

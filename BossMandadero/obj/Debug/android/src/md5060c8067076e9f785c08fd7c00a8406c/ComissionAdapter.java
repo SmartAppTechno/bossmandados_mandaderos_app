@@ -13,6 +13,8 @@ public class ComissionAdapter
 			"n_getCount:()I:GetGetCountHandler\n" +
 			"n_getItem:(I)Ljava/lang/Object;:GetGetItem_IHandler\n" +
 			"n_getItemId:(I)J:GetGetItemId_IHandler\n" +
+			"n_getViewTypeCount:()I:GetGetViewTypeCountHandler\n" +
+			"n_getItemViewType:(I)I:GetGetItemViewType_IHandler\n" +
 			"n_getView:(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;:GetGetView_ILandroid_view_View_Landroid_view_ViewGroup_Handler\n" +
 			"";
 		mono.android.Runtime.register ("BossMandadero.Adapters.ComissionAdapter, BossMandadero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", ComissionAdapter.class, __md_methods);
@@ -49,6 +51,22 @@ public class ComissionAdapter
 	}
 
 	private native long n_getItemId (int p0);
+
+
+	public int getViewTypeCount ()
+	{
+		return n_getViewTypeCount ();
+	}
+
+	private native int n_getViewTypeCount ();
+
+
+	public int getItemViewType (int p0)
+	{
+		return n_getItemViewType (p0);
+	}
+
+	private native int n_getItemViewType (int p0);
 
 
 	public android.view.View getView (int p0, android.view.View p1, android.view.ViewGroup p2)

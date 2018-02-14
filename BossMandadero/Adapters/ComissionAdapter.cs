@@ -35,21 +35,50 @@ namespace BossMandadero.Adapters
             return comissions[position].Id;
         }
 
+        public override int ViewTypeCount
+        {
+            get
+            {
+                if (Count > 0) return Count;
+                else return 1;
+            }
+        }
+
+        public override int GetItemViewType(int position)
+        {
+            return position;
+        }
+
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            View view = convertView ?? activity.LayoutInflater.Inflate(
-                Resource.Layout.Comission_item, parent, false);
+            
+            View view;
+            if (convertView == null)
+            {
+                view = convertView ?? activity.LayoutInflater.Inflate(
+                    Resource.Layout.Comission_item, parent, false);
+                TextView txt_Mandado = view.FindViewById<TextView>(Resource.Id.txt_Mandado);
+                TextView txt_Comision = view.FindViewById<TextView>(Resource.Id.txt_Comision);
+                txt_Mandado.Text += " " + comissions[position].Mandado;
 
-            view.Tag = position;
-            view.Click += ComissionClick;
+                string comision = string.Format("{0:0.00}", comissions[position].Comision);
 
-            TextView txt_Mandado = view.FindViewById<TextView>(Resource.Id.txt_Mandado);
-            TextView txt_Comision = view.FindViewById<TextView>(Resource.Id.txt_Comision);
+                txt_Comision.Text += " " + comision;
+                view.Tag = position;
+                view.Click += ComissionClick;
+                return view;
+            }
+            else{
+                //view = convertView;
+                return convertView;
+            }
 
-            txt_Mandado.Text += " " + comissions[position].Mandado;
-            txt_Comision.Text += " " + comissions[position].Comision;
 
-            return view;
+
+
+
+
+
         }
 
         private void ComissionClick(object sender, EventArgs ea)
