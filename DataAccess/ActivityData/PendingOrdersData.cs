@@ -89,7 +89,6 @@ namespace DataAccess.ActivityData
             }
             catch (Exception e)
             {
-                Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return mandado;
         }

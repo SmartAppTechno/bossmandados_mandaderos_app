@@ -267,7 +267,7 @@ namespace BossMandadero.Activities
                 {
                     string result = string.Format("{0:0.00}", total);
                     Android.App.AlertDialog.Builder builder = Dialogs.YesNoDialog(
-                        "Total","El total del mandado fué: \n\n  $ " + result +"0",this,Resource.Style.AlertDialogDefault);
+                        "Total","El total del mandado fué: \n\n  $ " + result ,this,Resource.Style.AlertDialogDefault);
                     builder.SetPositiveButton("OK", EndOrder);
                     Dialog d = builder.Show();
                     

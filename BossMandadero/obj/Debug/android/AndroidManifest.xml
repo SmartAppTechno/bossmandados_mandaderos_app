@@ -51,8 +51,6 @@
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
       </intent-filter>
     </service>
-    <!-- FirebaseMessagingService performs security checks at runtime,
-             no need for explicit permissions despite exported="true" -->
     <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
   </application>
   <uses-permission android:name="android.permission.WAKE_LOCK" />

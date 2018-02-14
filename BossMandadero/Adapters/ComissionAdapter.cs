@@ -37,7 +37,11 @@ namespace BossMandadero.Adapters
 
         public override int ViewTypeCount
         {
-            get { return Count; }
+            get
+            {
+                if (Count > 0) return Count;
+                else return 1;
+            }
         }
 
         public override int GetItemViewType(int position)

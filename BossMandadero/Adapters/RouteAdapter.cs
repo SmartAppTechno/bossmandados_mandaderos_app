@@ -30,15 +30,6 @@ namespace BossMandadero.Adapters
         {
             return null;
         }
-        public override int ViewTypeCount
-        {
-            get { return Count; }
-        }
-
-        public override int GetItemViewType(int position)
-        {
-            return position;
-        }
 
         public override long GetItemId(int position)
         {
@@ -47,31 +38,24 @@ namespace BossMandadero.Adapters
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            if (convertView == null)
-            {
-                View view = convertView ?? activity.LayoutInflater.Inflate(
-                    Resource.Layout.RouteItem, parent, false);
+            View view = convertView ?? activity.LayoutInflater.Inflate(
+                Resource.Layout.RouteItem, parent, false);
 
-                view.Tag = position;
-                view.Click += TaskClick;
+            view.Tag = position;
+            view.Click += TaskClick;
 
-                TextView txt_Order = view.FindViewById<TextView>(Resource.Id.txt_Order);
-                TextView txt_Direction = view.FindViewById<TextView>(Resource.Id.txt_Direction);
-                TextView txt_Task = view.FindViewById<TextView>(Resource.Id.txt_Task);
+            TextView txt_Order = view.FindViewById<TextView>(Resource.Id.txt_Order);
+            TextView txt_Direction = view.FindViewById<TextView>(Resource.Id.txt_Direction);
+            TextView txt_Task = view.FindViewById<TextView>(Resource.Id.txt_Task);
 
-                txt_Order.Text += " " + (position + 1);
-                txt_Direction.Text = route[position].Calle + " " + route[position].Numero;
+            txt_Order.Text += " " + (position + 1);
+            txt_Direction.Text = route[position].Calle + " " + route[position].Numero;
 
-                int task = route[position].Servicio - 1;
-                txt_Task.Text = Common.Services.Service[task];
+            int task = route[position].Servicio - 1;
+            txt_Task.Text = Common.Services.Service[task];
 
 
-                return view;
-            }
-            else
-            {
-                return convertView;
-            }
+            return view;
         }
         private void TaskClick(object sender, EventArgs ea)
         {
