@@ -28,6 +28,17 @@ namespace BossMandadero.Adapters
             return null;
         }
 
+        public override int ViewTypeCount
+        {
+            get { return Count; }
+        }
+
+        public override int GetItemViewType(int position)
+        {
+            return position;
+        }
+
+
         public override long GetItemId(int position)
         {
             return messages[position].Id;
@@ -35,36 +46,41 @@ namespace BossMandadero.Adapters
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            View view = convertView ?? activity.LayoutInflater.Inflate(
-                Resource.Layout.Chat_item, parent, false);
-
-            view.Tag = position;
-
-            TextView txt_Repartidor = view.FindViewById<TextView>(Resource.Id.txt_Repartidor);
-            TextView txt_Cliente = view.FindViewById<TextView>(Resource.Id.txt_Cliente);
-            TextView lbl_Repartidor = view.FindViewById<TextView>(Resource.Id.label_Repartidor);
-            TextView lbl_Cliente = view.FindViewById<TextView>(Resource.Id.label_Cliente);
-
-            if(messages[position].Rol == 2)
+            if (convertView == null)
             {
-                txt_Repartidor.Visibility = ViewStates.Visible;
-                txt_Repartidor.Text = messages[position].Mensaje;
-                lbl_Repartidor.Visibility = ViewStates.Visible;
-                txt_Cliente.Visibility = ViewStates.Gone;
-                lbl_Cliente.Visibility = ViewStates.Gone;
+                View view = convertView ?? activity.LayoutInflater.Inflate(
+                    Resource.Layout.Chat_item, parent, false);
+
+                view.Tag = position;
+
+                TextView txt_Repartidor = view.FindViewById<TextView>(Resource.Id.txt_Repartidor);
+                TextView txt_Cliente = view.FindViewById<TextView>(Resource.Id.txt_Cliente);
+                TextView lbl_Repartidor = view.FindViewById<TextView>(Resource.Id.label_Repartidor);
+                TextView lbl_Cliente = view.FindViewById<TextView>(Resource.Id.label_Cliente);
+
+                if (messages[position].Rol == 2)
+                {
+                    txt_Repartidor.Visibility = ViewStates.Visible;
+                    txt_Repartidor.Text = messages[position].Mensaje;
+                    lbl_Repartidor.Visibility = ViewStates.Visible;
+                    txt_Cliente.Visibility = ViewStates.Gone;
+                    lbl_Cliente.Visibility = ViewStates.Gone;
+                }
+                else
+                {
+                    txt_Repartidor.Visibility = ViewStates.Gone;
+                    lbl_Repartidor.Visibility = ViewStates.Gone;
+
+                    txt_Cliente.Visibility = ViewStates.Visible;
+                    txt_Cliente.Text = messages[position].Mensaje;
+                    lbl_Cliente.Visibility = ViewStates.Visible;
+                }
+
+
+                return view;
+            }else{
+                return convertView;
             }
-            else
-            {
-                txt_Repartidor.Visibility = ViewStates.Gone;
-                lbl_Repartidor.Visibility = ViewStates.Gone;
-
-                txt_Cliente.Visibility = ViewStates.Visible;
-                txt_Cliente.Text = messages[position].Mensaje;
-                lbl_Cliente.Visibility = ViewStates.Visible;
-            }
-
-
-            return view;
         }
     }
 }
