@@ -12,6 +12,7 @@ public class ChatAdapter
 		__md_methods = 
 			"n_getCount:()I:GetGetCountHandler\n" +
 			"n_getItem:(I)Ljava/lang/Object;:GetGetItem_IHandler\n" +
+			"n_getViewTypeCount:()I:GetGetViewTypeCountHandler\n" +
 			"n_getItemId:(I)J:GetGetItemId_IHandler\n" +
 			"n_getView:(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;:GetGetView_ILandroid_view_View_Landroid_view_ViewGroup_Handler\n" +
 			"";
@@ -41,6 +42,14 @@ public class ChatAdapter
 	}
 
 	private native java.lang.Object n_getItem (int p0);
+
+
+	public int getViewTypeCount ()
+	{
+		return n_getViewTypeCount ();
+	}
+
+	private native int n_getViewTypeCount ();
 
 
 	public long getItemId (int p0)

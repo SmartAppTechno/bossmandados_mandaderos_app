@@ -39,7 +39,7 @@ namespace CoreLogic.ActivityCore {
                 ComissionsData cData = new ComissionsData(context);
 
                 await data.SetOrder(order.Id, 4);
-                await cData.AddComission(User.Repartidor.Id, order.Id);
+                await cData.AddComission(User.Repartidor.Repartidor, order.Id);
 
                 Manboss_mandado aux = await cData.GetMandado(order.Id);
                 return aux.Total;

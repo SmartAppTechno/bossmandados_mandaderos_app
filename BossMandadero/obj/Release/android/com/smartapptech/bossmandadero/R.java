@@ -3648,28 +3648,28 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with=0x7f07002a;
         public static final int abc_shareactionprovider_share_with_application=0x7f07002b;
         public static final int abc_toolbar_collapse_description=0x7f07002c;
-        public static final int active_comments=0x7f07006b;
-        public static final int active_completeOrder=0x7f07006d;
-        public static final int active_completePoint=0x7f07006c;
+        public static final int active_comments=0x7f07006c;
+        public static final int active_completeOrder=0x7f07006e;
+        public static final int active_completePoint=0x7f07006d;
         /**  ACTIVE ORDER 
          */
-        public static final int active_order=0x7f070068;
-        public static final int active_pending=0x7f07006a;
-        public static final int active_reference=0x7f070069;
+        public static final int active_order=0x7f070069;
+        public static final int active_pending=0x7f07006b;
+        public static final int active_reference=0x7f07006a;
         /**  MAIN 
          */
         public static final int app_name=0x7f070019;
         public static final int appbar_scrolling_view_behavior=0x7f07003b;
-        public static final int azure_URL=0x7f070043;
+        public static final int azure_URL=0x7f070044;
         public static final int bottom_sheet_behavior=0x7f07003c;
         public static final int character_counter_pattern=0x7f07003d;
         /**  CHAT 
          */
-        public static final int chat_mensaje=0x7f07006e;
-        public static final int chat_ok=0x7f07006f;
+        public static final int chat_mensaje=0x7f07006f;
+        public static final int chat_ok=0x7f070070;
         /**  COMISSIONS 
          */
-        public static final int comissions_header=0x7f070070;
+        public static final int comissions_header=0x7f070071;
         public static final int common_google_play_services_enable_button=0x7f070008;
         public static final int common_google_play_services_enable_text=0x7f070009;
         public static final int common_google_play_services_enable_title=0x7f07000a;
@@ -3688,64 +3688,65 @@ containing a value of this type.
         public static final int common_signin_button_text=0x7f070016;
         public static final int common_signin_button_text_long=0x7f070017;
         public static final int default_web_client_id=0x7f070002;
-        public static final int empty=0x7f070046;
+        public static final int empty=0x7f070047;
         public static final int fcm_fallback_notification_channel_label=0x7f070018;
         public static final int firebase_database_url=0x7f070003;
         public static final int gcm_defaultSenderId=0x7f070000;
         public static final int google_api_key=0x7f070004;
         public static final int google_app_id=0x7f070001;
         public static final int google_crash_reporting_api_key=0x7f070005;
-        public static final int google_maps_key=0x7f070044;
+        public static final int google_maps_key=0x7f070045;
         public static final int google_storage_bucket=0x7f070006;
-        public static final int login_email=0x7f070048;
-        public static final int login_password=0x7f070049;
-        public static final int login_register=0x7f07004a;
+        public static final int library_name=0x7f070043;
+        public static final int login_email=0x7f070049;
+        public static final int login_password=0x7f07004a;
+        public static final int login_register=0x7f07004b;
         /**  LOGIN 
          */
-        public static final int login_title=0x7f070047;
+        public static final int login_title=0x7f070048;
         public static final int password_toggle_content_description=0x7f07003e;
         public static final int path_password_eye=0x7f07003f;
         public static final int path_password_eye_mask_strike_through=0x7f070040;
         public static final int path_password_eye_mask_visible=0x7f070041;
         public static final int path_password_strike_through=0x7f070042;
-        public static final int pending_city=0x7f070063;
-        public static final int pending_detail=0x7f070061;
-        public static final int pending_details=0x7f070065;
-        public static final int pending_direction=0x7f070062;
+        public static final int pending_city=0x7f070064;
+        public static final int pending_detail=0x7f070062;
+        public static final int pending_details=0x7f070066;
+        public static final int pending_direction=0x7f070063;
         /** PENDING ORDERS 
          */
-        public static final int pending_header=0x7f07005c;
-        public static final int pending_mandado=0x7f07005f;
-        public static final int pending_map=0x7f070066;
-        public static final int pending_pending=0x7f070067;
-        public static final int pending_position=0x7f07005e;
-        public static final int pending_reference=0x7f070060;
-        public static final int pending_task=0x7f070064;
-        public static final int pending_title=0x7f07005d;
-        public static final int profile_address=0x7f070055;
-        public static final int profile_email=0x7f070057;
+        public static final int pending_header=0x7f07005d;
+        public static final int pending_mandado=0x7f070060;
+        public static final int pending_map=0x7f070067;
+        public static final int pending_pending=0x7f070068;
+        public static final int pending_position=0x7f07005f;
+        public static final int pending_reference=0x7f070061;
+        public static final int pending_task=0x7f070065;
+        public static final int pending_title=0x7f07005e;
+        public static final int profile_address=0x7f070056;
+        public static final int profile_email=0x7f070058;
         /**  PROFILE 
          */
-        public static final int profile_hello=0x7f070053;
-        public static final int profile_noaddress=0x7f070056;
-        public static final int profile_noemail=0x7f070058;
-        public static final int profile_noname=0x7f070054;
-        public static final int profile_noraiting=0x7f07005a;
-        public static final int profile_quantity=0x7f07005b;
-        public static final int profile_raiting=0x7f070059;
+        public static final int profile_hello=0x7f070054;
+        public static final int profile_noaddress=0x7f070057;
+        public static final int profile_noemail=0x7f070059;
+        public static final int profile_noname=0x7f070055;
+        public static final int profile_noraiting=0x7f07005b;
+        public static final int profile_quantity=0x7f07005c;
+        public static final int profile_raiting=0x7f07005a;
         public static final int search_menu_title=0x7f07002d;
         public static final int status_bar_notification_info_overflow=0x7f07002e;
-        public static final int title_activity_webview=0x7f070045;
-        public static final int welcome_active=0x7f07004e;
-        public static final int welcome_continue=0x7f070052;
+        public static final int title_activity_webview=0x7f070046;
+        public static final int welcome_active=0x7f07004f;
+        public static final int welcome_continue=0x7f070053;
         /**  WELCOME 
          */
-        public static final int welcome_hello=0x7f07004b;
-        public static final int welcome_quantity=0x7f070051;
-        public static final int welcome_start=0x7f07004c;
-        public static final int welcome_status=0x7f07004d;
-        public static final int welcome_unactive=0x7f07004f;
-        public static final int welcome_wallet=0x7f070050;
+        public static final int welcome_hello=0x7f07004c;
+        public static final int welcome_quantity=0x7f070052;
+        public static final int welcome_start=0x7f07004d;
+        public static final int welcome_status=0x7f07004e;
+        public static final int welcome_unactive=0x7f070050;
+        public static final int welcome_wallet=0x7f070051;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0c009d;

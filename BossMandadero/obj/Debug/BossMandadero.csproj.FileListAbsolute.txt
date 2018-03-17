@@ -240,4 +240,5 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/completepointlayout.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/R.cs.flag
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/uploadflags.txt
+C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\bin\Debug\Common.dll
 C:\Projects\BossMandados\bossmandados_mandaderos_app\CoreLogic\bin\Debug\CoreLogic.dll

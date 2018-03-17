@@ -5,10 +5,8 @@ using Android.Content;
 using Common.DBItems;
 using DataAccess.ActivityData;
 
-namespace CoreLogic.ActivityCore
-{
-    public class PendingOrdersCore
-    {
+namespace CoreLogic.ActivityCore {
+    public class PendingOrdersCore {
         private Context context;
         private PendingOrdersData data;
 
@@ -34,13 +32,11 @@ namespace CoreLogic.ActivityCore
             return orders;
         }
 
-        public async Task<List<Manboss_mandados_ruta>> Route(int tipo)
-        {
-            route = await data.Route(OrderID,tipo);
+        public async Task<List<Manboss_mandados_ruta>> Route(int tipo) {
+            route = await data.Route(OrderID, tipo);
             return route;
         }
-        public async Task<bool> StartOrder(int OrderID)
-        {
+        public async Task<bool> StartOrder(int OrderID) {
             return await data.SetOrder(OrderID, 3);
         }
 
