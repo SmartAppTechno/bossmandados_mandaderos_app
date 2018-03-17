@@ -240,9 +240,4 @@
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/res/layout/completepointlayout.xml
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/R.cs.flag
 /Users/ricardo_espinosa/Projects/bossmandados_mandaderos_app/BossMandadero/obj/Debug/uploadflags.txt
-bin/Debug/Mono.Android.pdb
-obj/Debug/linksrc/BossMandadero.pdb
-obj/Debug/linksrc/Common.pdb
-obj/Debug/linksrc/CoreLogic.pdb
-obj/Debug/linksrc/Mono.Android.pdb
-obj/Debug/linksrc/DataAccess.pdb
+C:\Projects\BossMandados\bossmandados_mandaderos_app\CoreLogic\bin\Debug\CoreLogic.dll

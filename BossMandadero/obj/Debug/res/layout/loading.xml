@@ -1,5 +1,0 @@
-<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:minWidth="200px" android:minHeight="200px" android:background="#00000000" xmlns:android="http://schemas.android.com/apk/res/android"><!--<ImageView
-        android:src="@android:drawable/ic_menu_gallery"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/iv_gif" /> --><WebView android:id="@+id/webLoadingIcon" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center_horizontal|center_vertical" /></LinearLayout>

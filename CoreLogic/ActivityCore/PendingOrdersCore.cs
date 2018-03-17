@@ -17,23 +17,18 @@ namespace CoreLogic.ActivityCore
         private Manboss_mandado active;
 
         public int OrderID { get; set; }
-
-
-        public PendingOrdersCore(Context context)
-        {
+        public PendingOrdersCore(Context context) {
             this.context = context;
             data = new PendingOrdersData(context);
         }
 
-        public async Task<List<Manboss_mandado>> PendingOrders()
-        {
-            int repartidorID = User.Repartidor.Id;
-            orders =  await data.PendingOrders(repartidorID,2);
+        public async Task<List<Manboss_mandado>> PendingOrders() {
+            int repartidorID = User.Repartidor.Repartidor;
+            orders = await data.PendingOrders(repartidorID, 2);
             active = await data.ActiveOrder(repartidorID, 3);
 
-            if(active!=null)
-            {
-                orders.Insert(0,active);
+            if (active != null) {
+                orders.Insert(0, active);
             }
 
             return orders;
