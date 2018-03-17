@@ -8,27 +8,22 @@ using Common.DBItems;
 using Common.Utils;
 using Microsoft.WindowsAzure.MobileServices;
 
-namespace DataAccess.ActivityData
-{
-    public class WelcomeData
-    {
+namespace DataAccess.ActivityData {
+    public class WelcomeData {
         private MobileServiceClient client;
         private IMobileServiceTable<Manboss_usuario> userTable;
         private Context context;
-        public WelcomeData(Context context)
-        {
+        public WelcomeData(Context context) {
             this.context = context;
             client = new MobileServiceClient(GlobalValues.AppURL);
             userTable = client.GetTable<Manboss_usuario>();
         }
 
 
-        public async Task<Manboss_repartidor> Repartidor(int RepartidorID)
-        {
+        public async Task<Manboss_repartidor> Repartidor(int RepartidorID) {
             Manboss_repartidor userReturn = null;
 
-            try
-            {
+            try {
                 Dictionary<string, string> param = new Dictionary<string, string>
                 {
                     { "RepartidorID", RepartidorID.ToString() },
@@ -38,19 +33,16 @@ namespace DataAccess.ActivityData
                 userReturn = current;
 
             }
-            catch (Exception e)
-            {
+            catch (Exception e) {
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return userReturn;
         }
 
-        public async Task<bool> SetEfectivo(double efectivo, int RepartidorID)
-        {
+        public async Task<bool> SetEfectivo(double efectivo, int RepartidorID) {
             bool result = false;
 
-            try
-            {
+            try {
                 Dictionary<string, string> param = new Dictionary<string, string>
                 {
                     { "Efectivo", efectivo.ToString() },
@@ -59,18 +51,15 @@ namespace DataAccess.ActivityData
                 result = await client.InvokeApiAsync<bool>("Repartidor", HttpMethod.Post, param);
 
             }
-            catch (Exception e)
-            {
+            catch (Exception e) {
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return result;
         }
-        public async Task<int> SetUbicacion(double latitud, double longitud, int RepartidorID)
-        {
+        public async Task<int> SetUbicacion(double latitud, double longitud, int RepartidorID) {
             int result = 0;
 
-            try
-            {
+            try {
                 Dictionary<string, string> param = new Dictionary<string, string>
                 {
                     { "Latitud", latitud.ToString() },
@@ -80,18 +69,15 @@ namespace DataAccess.ActivityData
                 result = await client.InvokeApiAsync<int>("Repartidor", HttpMethod.Post, param);
 
             }
-            catch (Exception e)
-            {
+            catch (Exception e) {
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return result;
         }
-        public async Task<bool> SetStatus(bool status, int RepartidorID)
-        {
+        public async Task<bool> SetStatus(bool status, int RepartidorID) {
             bool result = false;
 
-            try
-            {
+            try {
                 Dictionary<string, string> param = new Dictionary<string, string>
                 {
                     { "Estado", status.ToString() },
@@ -100,8 +86,7 @@ namespace DataAccess.ActivityData
                 result = await client.InvokeApiAsync<bool>("Repartidor", HttpMethod.Post, param);
 
             }
-            catch (Exception e)
-            {
+            catch (Exception e) {
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return result;
