@@ -224,6 +224,7 @@ namespace BossMandadero
             }
             catch (System.Exception e)
             {
+                string m = e.Message;
                 strResultData = MapConstants.strException;
             }
             finally

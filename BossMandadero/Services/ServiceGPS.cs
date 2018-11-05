@@ -96,7 +96,8 @@ namespace BossMandadero.Services
             }
             catch (Exception e)
             {
-                
+                string m = e.Message;
+
             }
 
             return location;

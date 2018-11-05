@@ -32,10 +32,10 @@ namespace BossMandadero.Activities
         private PendingOrdersCore core;
 
 
-        Location _currentLocation;
-        LocationManager _locationManager;
+        //Location _currentLocation;
+        //LocationManager _locationManager;
 
-        string _locationProvider;
+        //string _locationProvider;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

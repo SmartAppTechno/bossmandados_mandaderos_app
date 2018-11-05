@@ -29,11 +29,12 @@ namespace DataAccess.ActivityData {
                     { "RepartidorID", RepartidorID.ToString() },
                     { "MetodoRepartidor", "true" }
                 };
-                var current = await client.InvokeApiAsync<Manboss_repartidor>("Perfil", HttpMethod.Post, param);
+                var current = await client.InvokeApiAsync<Manboss_repartidor>("Perfil/Repartidor", HttpMethod.Post, param);
                 userReturn = current;
 
             }
             catch (Exception e) {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return userReturn;
@@ -48,10 +49,11 @@ namespace DataAccess.ActivityData {
                     { "Efectivo", efectivo.ToString() },
                     { "RepartidorID", RepartidorID.ToString() }
                 };
-                result = await client.InvokeApiAsync<bool>("Repartidor", HttpMethod.Post, param);
+                result = await client.InvokeApiAsync<bool>("Repartidor/CantidadEfectivo", HttpMethod.Post, param);
 
             }
             catch (Exception e) {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return result;
@@ -66,10 +68,11 @@ namespace DataAccess.ActivityData {
                     { "Longitud", longitud.ToString() },
                     { "RepartidorID", RepartidorID.ToString()}
                 };
-                result = await client.InvokeApiAsync<int>("Repartidor", HttpMethod.Post, param);
+                result = await client.InvokeApiAsync<int>("Repartidor/Ubicacion", HttpMethod.Post, param);
 
             }
             catch (Exception e) {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return result;
@@ -83,10 +86,11 @@ namespace DataAccess.ActivityData {
                     { "Estado", status.ToString() },
                     { "RepartidorID", RepartidorID.ToString() }
                 };
-                result = await client.InvokeApiAsync<bool>("Repartidor", HttpMethod.Post, param);
+                result = await client.InvokeApiAsync<bool>("Repartidor/Estado", HttpMethod.Post, param);
 
             }
             catch (Exception e) {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return result;

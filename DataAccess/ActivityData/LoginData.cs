@@ -36,12 +36,14 @@ namespace DataAccess.ActivityData
                     { "correo", correo },
                     { "password", password }
                 };
-                var current = await client.InvokeApiAsync<Manboss_usuario>("Repartidor", HttpMethod.Post, param);
+                //Cliente/Login
+                var current = await client.InvokeApiAsync<Manboss_usuario>("Repartidor/Login", HttpMethod.Post, param);
                 userReturn = current;
 
             }
             catch (Exception e)
             {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión","Error en al Red",context);
             }
             return userReturn;
@@ -57,12 +59,13 @@ namespace DataAccess.ActivityData
                 {
                     { "UsuarioID", UserID.ToString() }
                 };
-                var current = await client.InvokeApiAsync<Manboss_usuario>("Usuario", HttpMethod.Post, param);
+                var current = await client.InvokeApiAsync<Manboss_usuario>("Usuario/GetUsuario", HttpMethod.Post, param);
                 userReturn = current;
 
             }
             catch (Exception e)
             {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return userReturn;

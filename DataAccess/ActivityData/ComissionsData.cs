@@ -29,12 +29,13 @@ namespace DataAccess.ActivityData
                 {
                     { "RepartidorID", repartidorID.ToString() }
                 };
-                var current = await client.InvokeApiAsync<List<Manboss_comision>>("Comision", HttpMethod.Post, param);
+                var current = await client.InvokeApiAsync<List<Manboss_comision>>("Comision/Comisiones", HttpMethod.Post, param);
                 ans = current;
 
             }
             catch (Exception e)
             {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return ans;
@@ -51,12 +52,13 @@ namespace DataAccess.ActivityData
                     { "Month", month.ToString() },
                     { "Year", year.ToString() },
                 };
-                var current = await client.InvokeApiAsync<List<Manboss_comision>>("Comision", HttpMethod.Post, param);
+                var current = await client.InvokeApiAsync<List<Manboss_comision>>("Comision/Filtrar", HttpMethod.Post, param);
                 ans = current;
 
             }
             catch (Exception e)
             {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return ans;
@@ -70,11 +72,12 @@ namespace DataAccess.ActivityData
                     { "RepartidorID", repartidorID.ToString() },
                     { "MandadoID", mandadoID.ToString() }
                 };
-                return await client.InvokeApiAsync<bool>("Comision", HttpMethod.Post, param);
+                return await client.InvokeApiAsync<bool>("Comision/Agregar", HttpMethod.Post, param);
 
             }
             catch (Exception e)
             {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return false;
@@ -89,11 +92,12 @@ namespace DataAccess.ActivityData
                 {
                     { "MandadoID", mandadoID.ToString() }
                 };
-                mandado =  await client.InvokeApiAsync<Manboss_mandado>("Mandados", HttpMethod.Post, param);
+                mandado =  await client.InvokeApiAsync<Manboss_mandado>("Mandados/Mandados", HttpMethod.Post, param);
 
             }
             catch (Exception e)
             {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return mandado;

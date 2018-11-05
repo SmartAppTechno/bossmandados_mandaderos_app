@@ -5,24 +5,24 @@
     <Jar>obj\Debug\lp\4\jl\arch-core-common.jar</Jar>
     <Jar>obj\Debug\lp\5\jl\arch-lifecycle-common.jar</Jar>
     <Jar>obj\Debug\lp\7\jl\support-annotations.jar</Jar>
-    <Jar>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\0\jl\glide-full-4.1.1.jar</Jar>
-    <Jar>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\10\jl\bin\classes.jar</Jar>
-    <Jar>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\11\jl\bin\classes.jar</Jar>
-    <Jar>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\12\jl\bin\classes.jar</Jar>
-    <Jar>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\13\jl\bin\classes.jar</Jar>
-    <Jar>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\2\jl\bin\classes.jar</Jar>
-    <Jar>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\4\jl\arch-core-common.jar</Jar>
-    <Jar>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\5\jl\arch-lifecycle-common.jar</Jar>
-    <Jar>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\6\jl\bin\classes.jar</Jar>
-    <Jar>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\7\jl\support-annotations.jar</Jar>
-    <Jar>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\8\jl\bin\classes.jar</Jar>
-    <Jar>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\9\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\0\jl\glide-full-4.1.1.jar</Jar>
+    <Jar>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\10\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\11\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\12\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\13\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\2\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\4\jl\arch-core-common.jar</Jar>
+    <Jar>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\5\jl\arch-lifecycle-common.jar</Jar>
+    <Jar>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\6\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\7\jl\support-annotations.jar</Jar>
+    <Jar>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\8\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\9\jl\bin\classes.jar</Jar>
   </Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\2\jl\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\8\jl\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\12\jl\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\13\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\2\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\8\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\12\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\13\jl\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\Debug\lp\2\jl\assets</ResolvedAssetDirectory>
@@ -30,9 +30,9 @@
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\2.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\8.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\12.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Projects\BossMandados\bossmandados_mandaderos_app\Common\obj\Debug\lp\13.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\2.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\8.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\12.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\RicardoEspinosa\Source\Repos\SmartAppTechno\bossmandados_mandaderos_app\Common\obj\Debug\lp\13.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

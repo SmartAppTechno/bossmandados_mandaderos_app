@@ -55,7 +55,7 @@ namespace BossMandadero.Activities
         private async void Register(object sender, EventArgs ea)
         {
             
-            int layout = Resource.Layout.Loading;
+            //int layout = Resource.Layout.Loading;
             int style = Resource.Style.AlertDialogDefault;
             Dialogs.CreateProgressDialog(this, style);
 

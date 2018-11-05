@@ -280,7 +280,7 @@ namespace BossMandadero.Activities
             Dialogs.DismissProgressDialog();
         }
 
-        public async void EndOrder(object sender, DialogClickEventArgs e)
+        public void EndOrder(object sender, DialogClickEventArgs e)
         {
             Intent intent = new Intent(this, typeof(PendingOrdersActivity));
             this.StartActivity(intent);

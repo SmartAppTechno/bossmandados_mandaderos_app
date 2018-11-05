@@ -30,12 +30,13 @@ namespace DataAccess.ActivityData
                     { "MandadoID", mandadoID.ToString() },
                     { "RepartidorID", repartidorID.ToString() }
                 };
-                var current = await client.InvokeApiAsync<int>("Chat", HttpMethod.Post, param);
+                var current = await client.InvokeApiAsync<int>("Chat/Chat", HttpMethod.Post, param);
                 ans = current;
 
             }
             catch (Exception e)
             {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return ans;
@@ -51,12 +52,13 @@ namespace DataAccess.ActivityData
                     { "Mensaje", message },
                     { "Rol", "2"}
                 };
-                var current = await client.InvokeApiAsync<bool>("Chat", HttpMethod.Post, param);
+                var current = await client.InvokeApiAsync<bool>("Chat/Mensaje", HttpMethod.Post, param);
                 ans = current;
 
             }
             catch (Exception e)
             {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return ans;
@@ -70,12 +72,13 @@ namespace DataAccess.ActivityData
                 {
                     { "MandadoID", mandadoID.ToString() }
                 };
-                var current = await client.InvokeApiAsync<List<Manboss_chat_mensaje>>("Chat", HttpMethod.Post, param);
+                var current = await client.InvokeApiAsync<List<Manboss_chat_mensaje>>("Chat/Conversacion", HttpMethod.Post, param);
                 ans = current;
 
             }
             catch (Exception e)
             {
+                string m = e.Message;
                 Dialogs.BasicDialog("No se pudo establecer conexión", "Error en al Red", context);
             }
             return ans;
