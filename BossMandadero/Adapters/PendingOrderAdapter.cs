@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Android;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
+using Android.Support.V4.Content;
 using Android.Views;
 using Android.Widget;
 using BossMandadero.Activities;
@@ -115,8 +118,16 @@ namespace BossMandadero.Adapters
         }
         private void GoToOrder(object sender, EventArgs ea)
         {
-            Intent intent = new Intent(activity, typeof(ActiveOrderActivity));
-            activity.StartActivity(intent);
+            if (ContextCompat.CheckSelfPermission(activity, Manifest.Permission.AccessFineLocation) == (int)Permission.Granted)
+            {
+                Intent intent = new Intent(activity, typeof(ActiveOrderActivity));
+                activity.StartActivity(intent);
+            }
+            else
+            {
+                ((PendingOrdersActivity)activity).RequestLocationPermission();
+
+            }
         }
     }
 }

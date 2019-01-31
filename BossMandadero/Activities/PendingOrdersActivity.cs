@@ -19,6 +19,11 @@ using Common.DBItems;
 using Common.Utils;
 using CoreLogic.ActivityCore;
 using static Android.Widget.AdapterView;
+using Android.Support.V4.Content;
+using Android;
+using Android.Content.PM;
+using Android.Support.V4.App;
+using Android.Support.Design.Widget;
 
 namespace BossMandadero.Activities
 {
@@ -64,11 +69,38 @@ namespace BossMandadero.Activities
             ordersListView.Adapter = adapter;
             Dialogs.DismissProgressDialog();
         }
+        public void RequestLocationPermission()
+        {
+            var requiredPermissions = new String[] { Manifest.Permission.AccessFineLocation };
+            if (ActivityCompat.ShouldShowRequestPermissionRationale(this, Manifest.Permission.AccessFineLocation))
+            {
+                Snackbar.Make(FindViewById(Android.Resource.Id.Content),
+                               Resource.String.pending_locationrationale,
+                               Snackbar.LengthIndefinite)
+                        .SetAction(Resource.String.ok,
+                                   new Action<View>(delegate (View obj) {
+                                       ActivityCompat.RequestPermissions(this, requiredPermissions, 1);
+                                   }
+                        )
+                ).Show();
+            }
+            else
+            {
+                ActivityCompat.RequestPermissions(this, requiredPermissions, 1);
+            }
+        }
         public async void StartOrder(int OrderID)
         {
-            await core.StartOrder(OrderID);
-            Intent intent = new Intent(this, typeof(ActiveOrderActivity));
-            this.StartActivity(intent);
+            if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.AccessFineLocation) == (int)Permission.Granted)
+            {
+                await core.StartOrder(OrderID);
+                Intent intent = new Intent(this, typeof(ActiveOrderActivity));
+                this.StartActivity(intent);
+            }
+            else
+            {
+                RequestLocationPermission();
+            }
         }
 
 
@@ -102,7 +134,7 @@ namespace BossMandadero.Activities
                     .InvokeZoomControlsEnabled(false)
                     .InvokeCompassEnabled(true);
 
-                FragmentTransaction fragTx = FragmentManager.BeginTransaction();
+                Android.App.FragmentTransaction fragTx = FragmentManager.BeginTransaction();
                 map.MapFrag = MapFragment.NewInstance(mapOptions);
                 fragTx.Add(Resource.Id.map, map.MapFrag, "map");
                 fragTx.Commit();
