@@ -17,6 +17,7 @@ using Common.DBItems;
 using Common.Utils;
 using Java.Util;
 using static Android.Gms.Maps.GoogleMap;
+using CoreLogic.ActivityCore;
 
 namespace BossMandadero
 {
@@ -28,6 +29,9 @@ namespace BossMandadero
         public LatLng Position { get; set; }
         public Route routeDrawer;
         private MapType mType;
+        public Polyline routeLine;
+
+        private GoogleDirectionsCore directionsCore;
 
         private Dialog mDialog;
 
@@ -43,6 +47,7 @@ namespace BossMandadero
             mType = type;
             Displayed = false;
             markers = new List<Marker>();
+            directionsCore = new GoogleDirectionsCore(Map, mAct.ApplicationContext);
         }
         public bool StartMap()
         {
@@ -107,7 +112,8 @@ namespace BossMandadero
             {
                 AddMarker(r.Latitud, r.Longitud);
             }
-
+            //agregar la polyline es opcional por lo que no la esperamos
+            directionsCore.AddRoadPolyline(Route[0].Id);
             routeDrawer = new Route(this, Position);
         }
 
